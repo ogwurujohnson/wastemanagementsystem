@@ -15,4 +15,6 @@ class agent
             echo "Welcome to the new routing";
         }
     }
+
+    public function allproperties
 }
