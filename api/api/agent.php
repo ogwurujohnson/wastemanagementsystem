@@ -8,6 +8,17 @@
 
 class agent
 {
+    private $con = "";
+    private $table = "";
+
+    function __construct(){
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        $db = "wastemanagement";
+        $this->con = mysqli_connect($host,$user,$pass,$db);
+    }
+
     public function index($formdata = ''){
         if($formdata != ''){
             echo $formdata;
@@ -16,5 +27,14 @@ class agent
         }
     }
 
-    public function allproperties
+    public function allproperties(){
+        $sql = "SELECT * FROM tblproperty";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
 }
