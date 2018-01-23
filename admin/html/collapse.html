@@ -1,0 +1,961 @@
+﻿<!doctype html>
+<html class="no-js " lang="en">
+
+<!-- Mirrored from thememakker.com/templates/nexa/html/collapse.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Jan 2018 00:30:09 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+
+<title>:: Nexa Bootstrap 4 Admin::</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- Favicon-->
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+<!-- Custom Css -->
+<link  rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+
+<body class="theme-orange">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">        
+        <div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+        <p>Please wait...</p>
+        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
+    </div>
+</div>
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div><!-- Search  -->
+<div class="search-bar">
+    <div class="search-icon"> <i class="material-icons">search</i> </div>
+    <input type="text" placeholder="Explore Nexa...">
+    <div class="close-search"> <i class="material-icons">close</i> </div>
+</div>
+
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="col-12">
+        
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href="index.html">Nexa</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
+            <li><a href="mail-inbox.html" class="inbox-btn hidden-sm-down" data-close="true"><i class="zmdi zmdi-email"></i></a></li>
+            <li class="dropdown menu-app hidden-sm-down"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="zmdi zmdi-apps"></i> </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="body">
+                        <ul class="menu">
+                            <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a></li>
+                            <li><a href="contact.html"><i class="zmdi zmdi-accounts-list"></i><span>Contacts</span></a></li>
+                            <li><a href="chat.html"><i class="zmdi zmdi-comment-text"></i><span>Chat</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-arrows"></i><span>Notes</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-view-column"></i><span>Taskboard</span></a></li>
+                            <li><a href="events.html"><i class="zmdi zmdi-calendar-note"></i><span>Calendar</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">            
+            <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="zmdi zmdi-search"></i></a></li>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="header">NOTIFICATIONS</li>
+                    <li class="body">
+                        <ul class="menu list-unstyled">
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-coral"> <i class="material-icons">person_add</i> </div>
+                                <div class="menu-info">
+                                    <h4>12 new members joined</h4>
+                                    <p> <i class="material-icons">access_time</i> 14 mins ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-turquoise"> <i class="material-icons">add_shopping_cart</i> </div>
+                                <div class="menu-info">
+                                    <h4>4 sales made</h4>
+                                    <p> <i class="material-icons">access_time</i> 22 mins ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle g-bg-cyan"> <i class="material-icons">delete_forever</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy Doe</b> deleted account</h4>
+                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle g-bg-blue"> <i class="material-icons">mode_edit</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy</b> changed name</h4>
+                                    <p> <i class="material-icons">access_time</i> 2 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-slategray"> <i class="material-icons">comment</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> commented your post</h4>
+                                    <p> <i class="material-icons">access_time</i> 4 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-seagreen"> <i class="material-icons">cached</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> updated status</h4>
+                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-blue"> <i class="material-icons">settings</i> </div>
+                                <div class="menu-info">
+                                    <h4>Settings updated</h4>
+                                    <p> <i class="material-icons">access_time</i> Yesterday </p>
+                                </div>
+                                </a> </li>
+                        </ul>
+                    </li>
+                    <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
+                </ul>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="header">TASKS</li>
+                    <li class="body">
+                        <ul class="menu tasks list-unstyled">
+                            <li> <a href="javascript:void(0);">
+                                <h4> Footer display issue <small>72%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Make new buttons <small>56%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Create new dashboard <small>68%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Solve transition issue <small>77%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Answer GitHub questions <small>87%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                        </ul>
+                    </li>
+                    <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true">
+                    <i class="zmdi zmdi-fullscreen"></i>                   
+                </a>
+            </li>
+            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar"> 
+    <!-- User Info -->
+    <div class="user-info">
+        <div class="image"> <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" /> </div>
+        <div class="info-container">
+            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">John Doe</div>
+            <div class="email">john.doe@example.com</div>
+            <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                    <li class="divider"></li>
+                    <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- #User Info --> 
+    <!-- Menu -->
+    <div class="menu">
+        <ul class="list">
+            <li class="header">MAIN NAVIGATION</li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                <ul class="ml-menu">
+                    <li><a href="index.html">Main Dashboard</a> </li>
+                    <li><a href="dashboard-rtl.html">RTL Dashboard</a></li>
+                    <li><a href="index2.html">Horizontal Menu</a></li>
+                    <li><a href="blog-dashboard.html">Blog Dashboard</a></li>
+                    <li><a href="ec-dashboard.html">Ecommerce Dashboard</a></li>
+                </ul>
+            </li>
+            <li> <a href="widgets.html"><i class="zmdi zmdi-delicious"></i><span>Widgets</span> </a> </li>
+    <li><a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a></li>
+            <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blogger</span> </a></li>
+    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
+                <ul class="ml-menu">
+                    <li><a href="ec-dashboard.html">Dashboard</a></li>
+                    <li><a href="ec-product.html">Product</a></li>
+                    <li><a href="ec-product-List.html">Product List</a></li>
+                    <li><a href="ec-product-detail.html">Product detail</a></li>
+                </ul>
+            </li>
+            <li class="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>User Interface (UI)</span> </a>
+                <ul class="ml-menu">
+                    <li><a href="typography.html">Typography</a> </li>
+                    <li><a href="helper-classes.html">Helper Classes</a></li>
+                    <li><a href="alerts.html">Alerts</a> </li>
+                    <li><a href="animations.html">Animations</a> </li>
+                    <li><a href="badges.html">Badges</a> </li>
+                    <li><a href="breadcrumbs.html">Breadcrumbs</a> </li>
+                    <li><a href="buttons.html">Buttons</a> </li>
+                    <li class="active"><a href="collapse.html">Collapse</a> </li>
+                    <li><a href="colors.html">Colors</a> </li>
+                    <li><a href="dialogs.html">Dialogs</a> </li>
+                    <li><a href="icons.html">Icons</a> </li>
+                    <li><a href="labels.html">Labels</a> </li>
+                    <li><a href="list-group.html">List Group</a> </li>
+                    <li><a href="media-object.html">Media Object</a> </li>
+                    <li><a href="modals.html">Modals</a> </li>
+                    <li><a href="notifications.html">Notifications</a> </li>
+                    <li><a href="pagination.html">Pagination</a> </li>
+                    <li><a href="preloaders.html">Preloaders</a> </li>
+                    <li><a href="progressbars.html">Progress Bars</a> </li>
+                    <li><a href="range-sliders.html">Range Sliders</a> </li>
+                    <li><a href="sortable-nestable.html">Sortable & Nestable</a> </li>
+                    <li><a href="tabs.html">Tabs</a> </li>
+                    <li><a href="waves.html">Waves</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span> </a>
+                <ul class="ml-menu">
+                    <li><a href="basic-form-elements.html">Basic Form Elements</a> </li>
+                    <li><a href="advanced-form-elements.html">Advanced Form Elements</a> </li>
+                    <li><a href="form-examples.html">Form Examples</a> </li>
+                    <li><a href="form-validation.html">Form Validation</a> </li>
+                    <li><a href="form-wizard.html">Form Wizard</a> </li>
+                    <li><a href="form-editors.html">Editors</a> </li>
+                    <li><a href="form-upload.html">File Upload</a></li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> </a>
+                <ul class="ml-menu">                        
+                    <li> <a href="normal-tables.html">Normal Tables</a> </li>
+                    <li> <a href="jquery-datatable.html">Jquery Datatables</a> </li>
+                    <li> <a href="editable-table.html">Editable Tables</a> </li>
+                    <li> <a href="footable.html">Foo Tables</a> </li>
+                    <li> <a href="table-color.html">Tables Color</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-image"></i><span>Medias</span> </a>
+                <ul class="ml-menu">
+                    <li> <a href="image-gallery.html">Image Gallery</a> </li>
+                    <li> <a href="carousel.html">Carousel</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-chart"></i><span>Charts</span> </a>
+                <ul class="ml-menu">
+                    <li> <a href="morris.html">Morris</a> </li>
+                    <li> <a href="flot.html">Flot</a> </li>
+                    <li> <a href="chartjs.html">ChartJS</a> </li>
+                    <li> <a href="sparkline.html">Sparkline</a> </li>
+                    <li> <a href="jquery-knob.html">Jquery Knob</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
+                <ul class="ml-menu">
+                    <li><a href="sign-in.html">Sign In</a> </li>
+                    <li><a href="sign-up.html">Sign Up</a> </li>
+                    <li><a href="forgot-password.html">Forgot Password</a> </li>
+                    <li><a href="404.html">Page 404</a> </li>
+                    <li><a href="500.html">Page 500</a> </li>
+                    <li><a href="page-offline.html">Page Offline</a> </li>
+                    <li><a href="locked.html">Locked Screen</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Extra Pages</span> </a>
+                <ul class="ml-menu">
+                    <li><a href="blank.html">Blank Page</a> </li>
+                    <li><a href="events.html">Calendar</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="contact.html">Contact list</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="invoices.html">Invoices</a></li>
+                    <li><a href="search-results.html">Search Results</a></li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-map"></i><span>Maps</span> </a>
+                <ul class="ml-menu">
+                    <li> <a href="google.html">Google Map</a> </li>
+                    <li> <a href="yandex.html">YandexMap</a> </li>
+                    <li> <a href="jvectormap.html">jVectorMap</a> </li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-trending-down"></i><span>Multi Level Menu</span> </a>
+                <ul class="ml-menu">
+                    <li> <a href="javascript:void(0);"> <span>Menu Item</span> </a> </li>
+                    <li> <a href="javascript:void(0);"> <span>Menu Item - 2</span> </a> </li>
+                    <li> <a href="javascript:void(0);" class="menu-toggle"> <span>Level - 2</span> </a>
+                        <ul class="ml-menu">
+                            <li> <a href="javascript:void(0);"> <span>Menu Item</span> </a> </li>
+                            <li> <a href="javascript:void(0);" class="menu-toggle"> <span>Level - 3</span> </a>
+                                <ul class="ml-menu">
+                                    <li> <a href="javascript:void(0);"> <span>Level - 4</span> </a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li> <a href="changelogs.html"><i class="zmdi zmdi-time-restore"></i><span>Changelogs</span> </a> </li>
+            <li class="header">LABELS</li>
+            <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a> </li>
+            <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a> </li>
+            <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-blue"></i><span>Information</span> </a> </li>
+        </ul>
+    </div>
+    <!-- #Menu --> 
+</aside>
+
+<!-- Right Sidebar -->
+<aside id="rightsidebar" class="right-sidebar">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#skins">Skins</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings">Setting</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
+                <div class="slim_scroll">
+                <h6>Flat Color</h6>
+                <ul class="choose-skin">                   
+                    <li data-theme="purple">
+                        <div class="purple"></div>
+                        <span>Purple</span> </li>                   
+                    <li data-theme="blue">
+                        <div class="blue"></div>
+                        <span>Blue</span> </li>
+                    <li data-theme="cyan">
+                        <div class="cyan"></div>
+                        <span>Cyan</span>
+                    </li>                        
+                </ul>                    
+                <h6>Multi Color</h6>
+                <ul class="choose-skin">                        
+                    <li data-theme="black">
+                        <div class="black"></div>
+                        <span>Black</span> </li>
+                    <li data-theme="deep-purple">
+                        <div class="deep-purple"></div>
+                        <span>Deep Purple</span> </li>
+                    <li data-theme="red">
+                        <div class="red"></div>
+                        <span>Red</span>
+                    </li>                        
+                </ul>                    
+                <h6>Gradient Color</h6>
+                <ul class="choose-skin">                    
+                    <li data-theme="green">
+                        <div class="green"></div>
+                        <span>Green</span> </li>
+                    <li data-theme="orange"  class="active">
+                        <div class="orange"></div>
+                        <span>Orange</span> </li>
+                    <li data-theme="blush">
+                        <div class="blush"></div>
+                        <span>Blush</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane pullUp" id="chat">
+            <div class="right_chat slim_scroll">
+                <div class="search">
+                    <div class="input-group">
+                        <div class="form-line">
+                            <input type="text" class="form-control" placeholder="Search..." required autofocus>
+                        </div>
+                    </div>
+                </div>
+                <h6>Recent</h6>
+                <ul class="list-unstyled">
+                    <li class="online">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="name">Sophia</span>
+                                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>                            
+                    </li>
+                    <li class="online">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="name">Grayson</span>
+                                    <span class="message">All the Lorem Ipsum generators on the</span>
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>                            
+                    </li>
+                    <li class="offline">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="name">Isabella</span>
+                                    <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>                            
+                    </li>
+                    <li class="me">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="name">John</span>
+                                    <span class="message">It is a long established fact that a reader</span>
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>                            
+                    </li>
+                    <li class="online">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="name">Alexander</span>
+                                    <span class="message">Richard McClintock, a Latin professor</span>
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>                            
+                    </li>                        
+                </ul>
+                <h6>Contacts</h6>
+                <ul class="list-unstyled">
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar10.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar6.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar7.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar8.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar9.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="online inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="online inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="offline inlineblock">
+                        <a href="javascript:void(0);">
+                            <div class="media">
+                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                <div class="media-body">
+                                    <span class="badge badge-outline status"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane slideLeft" id="settings">
+            <div class="settings slim_scroll">
+                <p class="text-left">General Settings</p>
+                <ul class="setting-list">
+                    <li> <span>Report Panel Usage</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li> <span>Email Redirect</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p class="text-left">System Settings</p>
+                <ul class="setting-list">
+                    <li> <span>Notifications</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li> <span>Auto Updates</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p class="text-left">Account Settings</p>
+                <ul class="setting-list">
+                    <li> <span>Offline</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li> <span>Location Permission</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Collapse
+                <small class="text-muted">Welcome to Nexa Application</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">UI</a></li>
+                    <li class="breadcrumb-item active">Collapse</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">       
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> EXAMPLE <small>Click the buttons below to show and hide another element via class changes. You can use a link with the <code>href</code> attribute, or a button with the <code>data-target</code> attribute. In both cases, the <code>data-toggle="collapse"</code> is required.</small> </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body"> <a class="btn g-bg-blue waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                            aria-controls="collapseExample"> LINK WITH HREF </a>
+                        <button class="btn btn-raised g-bg-blush2 waves-effect m-b-15" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample"> BUTTON WITH data-target </button>
+                        <div class="collapse" id="collapseExample">
+                            <div class="well"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                                craft beer labore wes anderson cred nesciunt sapiente ea proident. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>ACCORDION</h4>
+        </div>
+        <div class="row clearfix"> 
+            <!-- Basic Examples -->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> BASIC EXAMPLES <small>Extend the default collapse behavior to create an accordion with the panel component.</small> </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="ol-sm-12 col-md-12 col-lg-12"> <b>Panel Primary</b>
+                                <div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingOne_1">
+                                            <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1"> Collapsible Group Item #1 </a> </h4>
+                                        </div>
+                                        <div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingTwo_1">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseTwo_1" aria-expanded="false"
+                                                    aria-controls="collapseTwo_1"> Collapsible Group Item #2 </a> </h4>
+                                        </div>
+                                        <div id="collapseTwo_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_1">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingThree_1">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseThree_1" aria-expanded="false"
+                                                    aria-controls="collapseThree_1"> Collapsible Group Item #3 </a> </h4>
+                                        </div>
+                                        <div id="collapseThree_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_1">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> FULL BODY EXAMPLES <small>If you want to also colorful body, you need to add <code>.full-body</code> class to <code>.panel-group</code></small> </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="ol-sm-12 col-md-12 col-lg-12"> <b>Panel Primary</b>
+                                <div class="panel-group full-body" id="accordion_5" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingOne_5">
+                                            <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion_5" href="#collapseOne_5" aria-expanded="true" aria-controls="collapseOne_5"> Collapsible Group Item #1 </a> </h4>
+                                        </div>
+                                        <div id="collapseOne_5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_5">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingTwo_5">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_5" href="#collapseTwo_5" aria-expanded="false"
+                                                    aria-controls="collapseTwo_5"> Collapsible Group Item #2 </a> </h4>
+                                        </div>
+                                        <div id="collapseTwo_5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_5">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" role="tab" id="headingThree_5">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_5" href="#collapseThree_5" aria-expanded="false"
+                                                    aria-controls="collapseThree_5"> Collapsible Group Item #3 </a> </h4>
+                                        </div>
+                                        <div id="collapseThree_5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_5">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> EXAMPLES WITH MATERIAL DESIGN COLORS <small>You can use material design colors which examples are <code>.panel-col-pink, .panel-col-cyan</code> class</small> </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="panel-group" id="accordion_10" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-col-blue-grey">
+                                        <div class="panel-heading" role="tab" id="headingOne_10">
+                                            <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion_10" href="#collapseOne_10" aria-expanded="true" aria-controls="collapseOne_10"> Collapsible Group Item #1 </a> </h4>
+                                        </div>
+                                        <div id="collapseOne_10" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_10">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-col-blue-grey">
+                                        <div class="panel-heading" role="tab" id="headingTwo_10">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_10" href="#collapseTwo_10" aria-expanded="false"
+                                                    aria-controls="collapseTwo_10"> Collapsible Group Item #2 </a> </h4>
+                                        </div>
+                                        <div id="collapseTwo_10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_10">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-col-blue-grey">
+                                        <div class="panel-heading" role="tab" id="headingThree_10">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_10" href="#collapseThree_10" aria-expanded="false"
+                                                    aria-controls="collapseThree_10"> Collapsible Group Item #3 </a> </h4>
+                                        </div>
+                                        <div id="collapseThree_10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_10">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> FULL BODY EXAMPLES WITH MATERIAL DESIGN COLORS <small>If you want to also colorful body, you need to add <code>.full-body</code> class to <code>.panel-group</code></small> </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="ol-sm-12 col-md-12 col-lg-12">
+                                <div class="panel-group full-body" id="accordion_13" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-col-green">
+                                        <div class="panel-heading" role="tab" id="headingOne_13">
+                                            <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion_13" href="#collapseOne_13" aria-expanded="true" aria-controls="collapseOne_13"> Collapsible Group Item #1 </a> </h4>
+                                        </div>
+                                        <div id="collapseOne_13" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_13">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-col-green">
+                                        <div class="panel-heading" role="tab" id="headingTwo_13">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_13" href="#collapseTwo_13" aria-expanded="false"
+                                                    aria-controls="collapseTwo_13"> Collapsible Group Item #2 </a> </h4>
+                                        </div>
+                                        <div id="collapseTwo_13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_13">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-col-green">
+                                        <div class="panel-heading" role="tab" id="headingThree_13">
+                                            <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_13" href="#collapseThree_13" aria-expanded="false"
+                                                    aria-controls="collapseThree_13"> Collapsible Group Item #3 </a> </h4>
+                                        </div>
+                                        <div id="collapseThree_13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_13">
+                                            <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                accusamus labore sustainable VHS. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Jquery Core Js --> 
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+</body>
+
+<!-- Mirrored from thememakker.com/templates/nexa/html/collapse.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Jan 2018 00:30:09 GMT -->
+</html>
