@@ -12,6 +12,7 @@ class agent
     private $table = "";
 
     function __construct(){
+        session_start();
         $host = "localhost";
         $user = "root";
         $pass = "";
@@ -113,5 +114,32 @@ class agent
         }
         header('Content-Type:application/json');
         echo json_encode($result);
+    }
+
+    public function addproperty()
+    {
+        $data = array();
+        if(isset($_SESSION['userid'])) {
+            $id = $_SESSION['userid'];
+        }
+        if (isset($_POST['txtpropertyname'])) {
+            $propertyname = $propertygroupid = $address = $userid = "";
+            $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            if(!empty($propertyname) && !empty($propertygroupid) && !empty($address)){
+                $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
+                $res = mysqli_query($this->con, $sql);
+                if($res){
+                    $data['success'] = true;
+                }
+                else{
+                    $data['success'] = false;
+                }
+            }else{
+                $data['error'] = "empty";
+            }
+        }
+        echo json_encode($data);
     }
 }
