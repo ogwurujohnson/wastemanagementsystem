@@ -16,11 +16,12 @@ class App
     function __construct(){
         $url = $this->parseUrl();
 
-        if(file_exists("../api/".$url[0].".api"))
+        if(file_exists("../api/".$url[0].".php"))
         {
             $this->controller = $url[0];
             unset($url[0]);
         }
+        $this->controller = $url[0];
         $this->controller = new $this->controller;
 
         if(isset($url[1]))
