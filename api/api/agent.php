@@ -116,8 +116,7 @@ class agent
         echo json_encode($result);
     }
 
-    public function addproperty()
-    {
+    public function addproperty(){
         $data = array();
         if(isset($_SESSION['userid'])) {
             $id = $_SESSION['userid'];
@@ -141,5 +140,19 @@ class agent
             }
         }
         echo json_encode($data);
+
+    }
+
+    public function createticket(){
+        $data = array();
+        if(isset($_SESSION['userid'])){
+            $id = $_SESSION['userid'];
+        }
+        if (isset($_POST['txtticketsubject'])){
+            $ticketsubject = $ticketpriority = $ticketpropertyid = $userid = "";
+            $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtticketsubject']);
+            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['txtticketpriority']);
+        }
     }
 }
+
