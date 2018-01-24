@@ -37,4 +37,70 @@ class agent
         header('Content-Type:application/json');
         echo json_encode($result);
     }
+
+    public function agentproperties($formdata = ''){
+        $sql = "SELECT * FROM tblproperty WHERE user_id = $formdata";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $roww;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function propertygroups(){
+        $sql = "SELECT * FROM tblpropertygroup";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function allagents(){
+        $sql = "SELECT * FROM tbluser";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function alltickets(){
+        $sql = "SELECT * FROM tbltickets";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function opentickets(){
+        $sql = "SELECT * FROM tbltickets WHERE status = 'open'";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function ticketcategories(){
+        $sql = "SELECT * FROM tblticket_category";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
 }
