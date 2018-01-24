@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/api/api/users.php" description="function __construct(){" line="13" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/agent.php" afterPath="$PROJECT_DIR$/api/api/agent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/users.php" afterPath="$PROJECT_DIR$/api/api/users.php" />
-    </list>
+    <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +59,8 @@
       <file leaf-file-name="agent.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/api/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="130" column="162" lean-forward="false" selection-start-line="130" selection-start-column="162" selection-end-line="130" selection-end-column="162" />
+            <state relative-caret-position="-605">
+              <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
               <folding>
                 <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
                 <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
@@ -254,12 +250,12 @@
       <workItem from="1516597068038" duration="1452000" />
       <workItem from="1516744491164" duration="1789000" />
       <workItem from="1516746315398" duration="10888000" />
-      <workItem from="1516763711409" duration="9788000" />
+      <workItem from="1516763711409" duration="10252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29860000" />
+    <option name="totallyTimeSpent" value="30324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -649,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api/agent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="130" column="162" lean-forward="false" selection-start-line="130" selection-start-column="162" selection-end-line="130" selection-end-column="162" />
+        <state relative-caret-position="-605">
+          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
           <folding>
             <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
             <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
