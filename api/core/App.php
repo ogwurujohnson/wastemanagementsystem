@@ -21,7 +21,6 @@ class App
             $this->controller = $url[0];
             unset($url[0]);
         }
-        $this->controller = $url[0];
         $this->controller = new $this->controller;
 
         if(isset($url[1]))
