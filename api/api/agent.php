@@ -103,4 +103,15 @@ class agent
         header('Content-Type:application/json');
         echo json_encode($result);
     }
+
+    public function agentticket($formdata=''){
+        $sql = "SELECT * FROM tbltickets WHERE user_id = $formdata ";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
 }

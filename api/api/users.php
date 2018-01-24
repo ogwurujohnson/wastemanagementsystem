@@ -19,6 +19,10 @@ class users
         $this->con = mysqli_connect($host,$user,$pass,$db);
     }
 
+    public function index(){
+
+    }
+
     public function signin(){
         session_start();
         $data = array();
@@ -37,11 +41,11 @@ class users
                     $res=mysqli_query($this->con,$sql) or die(mysqli_error($this->con));
                     if(mysqli_num_rows($res)==1){
                         $row = mysqli_fetch_assoc($res);
-                        $_SESSION['userId']=$row['user_id'];
-                        $_SESSION['Account_Type']=$row['access'];
+                        $_SESSION['userid']=$row['user_id'];
+                        $_SESSION['accountype']=$row['access'];
 
                         mysqli_close($this->con);
-                        $data['accounttype'] = $_SESSION['access'];
+                        $data['accounttype'] = $_SESSION['accountype'];
                         $data['success'] = "success";
                     }
                     else{
@@ -61,8 +65,6 @@ class users
             header ('Location: index.php');
             exit();
         }
-
         echo json_encode($data);
-
     }
 }
