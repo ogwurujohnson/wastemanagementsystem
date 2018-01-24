@@ -12,6 +12,7 @@ class agent
     private $table = "";
 
     function __construct(){
+        session_start();
         $host = "localhost";
         $user = "root";
         $pass = "";
@@ -115,28 +116,43 @@ class agent
         echo json_encode($result);
     }
 
-    //$userid not working yet
+    public function addproperty(){
+        $data = array();
+        if(isset($_SESSION['userid'])) {
+            $id = $_SESSION['userid'];
+        }
+        if (isset($_POST['txtpropertyname'])) {
+            $propertyname = $propertygroupid = $address = $userid = "";
+            $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            if(!empty($propertyname) && !empty($propertygroupid) && !empty($address)){
+                $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
+                $res = mysqli_query($this->con, $sql);
+                if($res){
+                    $data['success'] = true;
+                }
+                else{
+                    $data['success'] = false;
+                }
+            }else{
+                $data['error'] = "empty";
+            }
+        }
+        echo json_encode($data);
+
+    }
+
     public function createticket(){
-        if(isset($_POST['txtticketsubject'])){
+        $data = array();
+        if(isset($_SESSION['userid'])){
+            $id = $_SESSION['userid'];
+        }
+        if (isset($_POST['txtticketsubject'])){
+            $ticketsubject = $ticketpriority = $ticketpropertyid = $userid = "";
             $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtticketsubject']);
-            $ticketcategory = mysqli_real_escape_string($this->con, $_POST['ddcategory']);
-            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddticketpriority']);
-            $ticketproperty = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
-            
-
-            $sql = "INSERT into tbltickets ('subject','category_id','status','priority','property_id','user_id')VALUES('$ticketsubject','$ticketcategory','pending','$ticketpriority','$ticketproperty','1')";
-
-            if(mysqli_query($this->con,$sql)){
-                $msg = array("status" => 1, "msg" => "Your Recorded Inserted Successfully");
-            }
-            else{
-                echo "Error: Not inserted"; 
-            }
-
-            $json = $msg;
-            header('Content-Type:application/json');
-            echo json_encode($json);
-
+            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['txtticketpriority']);
         }
     }
 }
+

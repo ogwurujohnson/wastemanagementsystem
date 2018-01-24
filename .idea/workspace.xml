@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/.htaccess" afterPath="$PROJECT_DIR$/api/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/agent.php" afterPath="$PROJECT_DIR$/api/api/agent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/users.php" afterPath="$PROJECT_DIR$/api/api/users.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,19 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agent.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="agent.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/api/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="155">
+              <caret line="130" column="162" lean-forward="false" selection-start-line="130" selection-start-column="162" selection-end-line="130" selection-end-column="162" />
               <folding>
-                <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-                <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-                <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-                <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-                <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-                <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-                <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+                <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+                <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+                <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+                <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+                <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+                <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+                <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+                <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+                <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
               </folding>
             </state>
           </provider>
@@ -100,14 +102,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+            <state relative-caret-position="24">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
-                <marker date="1516764788675" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
-                <marker date="1516764788675" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1516774006190" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+                <marker date="1516774006190" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1516774006190" expanded="true" signature="3159:3266" ph="INSERT INTO tbluser... " />
+                <marker date="1516774006190" expanded="true" signature="3452:3558" ph="INSERT INTO tbllogindetails... " />
               </folding>
             </state>
           </provider>
@@ -145,12 +149,12 @@
         <option value="$PROJECT_DIR$/php/.htaccess" />
         <option value="$PROJECT_DIR$/php/core/App.php" />
         <option value="$PROJECT_DIR$/api/init.php" />
-        <option value="$PROJECT_DIR$/api/api/agent.php" />
         <option value="$PROJECT_DIR$/sign-in.html" />
         <option value="$PROJECT_DIR$/js/sign-in.js" />
         <option value="$PROJECT_DIR$/api/.htaccess" />
         <option value="$PROJECT_DIR$/api/core/App.php" />
         <option value="$PROJECT_DIR$/api/api/users.php" />
+        <option value="$PROJECT_DIR$/api/api/agent.php" />
       </list>
     </option>
   </component>
@@ -216,7 +220,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wastemanagementsystem-old" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OfficeManagementSystem" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -250,12 +254,12 @@
       <workItem from="1516597068038" duration="1452000" />
       <workItem from="1516744491164" duration="1789000" />
       <workItem from="1516746315398" duration="10888000" />
-      <workItem from="1516763711409" duration="1201000" />
+      <workItem from="1516763711409" duration="9788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21273000" />
+    <option name="totallyTimeSpent" value="29860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -332,13 +336,15 @@
         <state relative-caret-position="1752">
           <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
-            <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-            <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+            <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
           </folding>
         </state>
       </provider>
@@ -366,8 +372,10 @@
         <state relative-caret-position="576">
           <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding>
-            <marker date="1516764788675" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
-            <marker date="1516764788675" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1516774006190" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+            <marker date="1516774006190" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1516774006190" expanded="true" signature="3159:3266" ph="INSERT INTO tbluser... " />
+            <marker date="1516774006190" expanded="true" signature="3452:3558" ph="INSERT INTO tbllogindetails... " />
           </folding>
         </state>
       </provider>
@@ -429,13 +437,15 @@
         <state relative-caret-position="648">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-            <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+            <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
           </folding>
         </state>
       </provider>
@@ -481,13 +491,15 @@
         <state relative-caret-position="168">
           <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-            <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+            <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
           </folding>
         </state>
       </provider>
@@ -549,13 +561,15 @@
         <state relative-caret-position="240">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
-            <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-            <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+            <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
           </folding>
         </state>
       </provider>
@@ -620,29 +634,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+    <entry file="file://$PROJECT_DIR$/api/api/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="24">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
-            <marker date="1516757786504" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="925:967" ph="SELECT * FRO... tblproperty" />
-            <marker date="1516757786504" expanded="true" signature="1278:1308" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1516757786504" expanded="true" signature="1605:1626" ph="SELECT * FRO... tbluser" />
-            <marker date="1516757786504" expanded="true" signature="1924:1948" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2247:2293" ph="SELECT * FRO... tbltickets" />
-            <marker date="1516757786504" expanded="true" signature="2597:2629" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774006190" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+            <marker date="1516774006190" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1516774006190" expanded="true" signature="3159:3266" ph="INSERT INTO tbluser... " />
+            <marker date="1516774006190" expanded="true" signature="3452:3558" ph="INSERT INTO tbllogindetails... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/api/users.php">
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+        <state relative-caret-position="155">
+          <caret line="130" column="162" lean-forward="false" selection-start-line="130" selection-start-column="162" selection-end-line="130" selection-end-column="162" />
           <folding>
-            <marker date="1516764788675" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
-            <marker date="1516764788675" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1516774387826" expanded="true" signature="608:633" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="950:992" ph="SELECT * FRO... tblproperty" />
+            <marker date="1516774387826" expanded="true" signature="1303:1333" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1516774387826" expanded="true" signature="1630:1651" ph="SELECT * FRO... tbluser" />
+            <marker date="1516774387826" expanded="true" signature="1949:1973" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2272:2318" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="2622:2654" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1516774387826" expanded="true" signature="2965:3006" ph="SELECT * FRO... tbltickets" />
+            <marker date="1516774387826" expanded="true" signature="3928:4064" ph="INSERT INTO tblproperty... " />
           </folding>
         </state>
       </provider>
