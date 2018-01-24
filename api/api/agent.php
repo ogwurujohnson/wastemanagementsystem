@@ -114,4 +114,29 @@ class agent
         header('Content-Type:application/json');
         echo json_encode($result);
     }
+
+    //$userid not working yet
+    public function createticket(){
+        if(isset($_POST['txtticketsubject'])){
+            $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtticketsubject']);
+            $ticketcategory = mysqli_real_escape_string($this->con, $_POST['ddcategory']);
+            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddticketpriority']);
+            $ticketproperty = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
+            
+
+            $sql = "INSERT into tbltickets ('subject','category_id','status','priority','property_id','user_id')VALUES('$ticketsubject','$ticketcategory','pending','$ticketpriority','$ticketproperty','1')";
+
+            if(mysqli_query($this->con,$sql)){
+                $msg = array("status" => 1, "msg" => "Your Recorded Inserted Successfully");
+            }
+            else{
+                echo "Error: Not inserted"; 
+            }
+
+            $json = $msg;
+            header('Content-Type:application/json');
+            echo json_encode($json);
+
+        }
+    }
 }
