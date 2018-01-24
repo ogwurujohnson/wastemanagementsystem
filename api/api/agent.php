@@ -43,7 +43,7 @@ class agent
         $res = mysqli_query($this->con,$sql);
         $result = [];
         while($row = mysqli_fetch_row($res)){
-            $result[] = $roww;
+            $result[] = $row;
         }
         header('Content-Type:application/json');
         echo json_encode($result);
