@@ -116,11 +116,9 @@ class agent
         echo json_encode($result);
     }
 
-    public function addproperty(){
+    public function addproperty($userid = ''){
         $data = array();
-        if(isset($_SESSION['userid'])) {
-            $id = $_SESSION['userid'];
-        }
+        $id = $userid;
         if (isset($_POST['txtpropertyname'])) {
             $propertyname = $propertygroupid = $address = $userid = "";
             $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
@@ -128,7 +126,7 @@ class agent
             $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
             if(!empty($propertyname) && !empty($propertygroupid) && !empty($address)){
                 $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
-                $res = mysqli_query($this->con, $sql);
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if($res){
                     $data['success'] = true;
                 }
