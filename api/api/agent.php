@@ -167,6 +167,8 @@ class agent
         echo json_encode($data);
     }
 
+    
+
     /**
      *method for updating properties added by agents
      */
@@ -197,7 +199,7 @@ class agent
     public function deleteproperty($propertyid = ''){
         $data = array();
         $id = 2;
-        if(isset($_POST['btndeleteproperty'])){
+        if(isset($_POST)){
 
             $sql = "DELETE FROM tblproperty WHERE id = '$id' ";
             $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
@@ -210,5 +212,22 @@ class agent
         }
         echo json_encode($data);
     }
+
+    public function deactivateagentaccount($userid = ''){
+        $data = array();
+        $id = 6;
+        $sql = "UPDATE tbllogindetails SET activation = '1' WHERE user_id = '$id' ";
+        $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+        if($res){
+            $data['success'] = true;
+        }
+        else{
+            $data['success'] = false;
+        }
+        
+        echo json_encode($data);
+    }
+
+
 }
 
