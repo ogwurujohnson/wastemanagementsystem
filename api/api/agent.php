@@ -106,9 +106,7 @@ class agent
         echo json_encode($result);
     }
 
-    /**
-     * 
-     */
+    
     public function agentticket($formdata=''){
         $sql = "SELECT * FROM tbltickets WHERE user_id = $formdata ";
         $res = mysqli_query($this->con,$sql);
