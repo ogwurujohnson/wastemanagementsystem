@@ -12,6 +12,7 @@ class agent
     private $table = "";
 
     function __construct(){
+        session_start();
         $host = "localhost";
         $user = "root";
         $pass = "";
@@ -103,4 +104,53 @@ class agent
         header('Content-Type:application/json');
         echo json_encode($result);
     }
+
+    public function agentticket($formdata=''){
+        $sql = "SELECT * FROM tbltickets WHERE user_id = $formdata ";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        while($row = mysqli_fetch_row($res)){
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function addproperty($userid = ''){
+        $data = array();
+        $id = $userid;
+        if (isset($_POST['txtpropertyname'])) {
+            $propertyname = $propertygroupid = $address = $userid = "";
+            $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            if(!empty($propertyname) && !empty($propertygroupid) && !empty($address)){
+                $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if($res){
+                    $data['success'] = true;
+                }
+                else{
+                    $data['success'] = false;
+                }
+            }else{
+                $data['error'] = "empty";
+            }
+        }
+        echo json_encode($data);
+
+    }
+
+    public function createticket(){
+        $data = array();
+        if(isset($_SESSION['userid'])){
+            $id = $_SESSION['userid'];
+        }
+        if (isset($_POST['txtticketsubject'])){
+            $ticketsubject = $ticketpriority = $ticketpropertyid = $userid = "";
+            $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtticketsubject']);
+            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['txtticketpriority']);
+        }
+    }
 }
+

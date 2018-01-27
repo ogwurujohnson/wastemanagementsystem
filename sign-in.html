@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>Gafista | Sign In</title>
+    <title>:: Gafista Signin::</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Custom Css -->
@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/authentication.css">
     <link rel="stylesheet" href="assets/css/color_skins.css">
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/sign-in.js"></script>
 </head>
 
 <body class="theme-orange">
@@ -26,11 +24,11 @@
                 <div class="col-lg-12">
                     <div class="header slideDown">
                         <div class="logo"><img src="assets/images/logo.png" alt="Nexa"></div>
-                        <h1>Gafista</h1>
+                        <h1></h1>
                         <ul class="list-unstyled l-social">
-                            <li><a href="#"><i class="zmdi zmdi-facebook-box"></i></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-linkedin-box"></i></a></li>                            
-                            <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                            <li><a href="sign-in.html#"><i class="zmdi zmdi-facebook-box"></i></a></li>
+                            <li><a href="sign-in.html#"><i class="zmdi zmdi-linkedin-box"></i></a></li>                            
+                            <li><a href="sign-in.html#"><i class="zmdi zmdi-twitter"></i></a></li>
                         </ul>
                     </div>                        
                 </div>
@@ -38,16 +36,20 @@
                     <h5 class="title">Sign in to your Account</h5>
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="email" class="form-control" name="txtemail">
-                            <label class="form-label">Email</label>
+                            <input type="text" class="form-control">
+                            <label class="form-label">Username</label>
                         </div>
                     </div>
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="password" class="form-control" name="txtpassword">
+                            <input type="password" class="form-control">
                             <label class="form-label">Password</label>
                         </div>
                     </div>
+                    <div>
+                        <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-cyan">
+                        <label for="rememberme">Remember Me</label>
+                    </div>                        
                 </form>
                 <div class="col-lg-12">
                     <a href="index.html" class="btn btn-raised btn-primary waves-effect">SIGN IN</a>

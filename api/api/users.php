@@ -12,6 +12,7 @@ class users
     private $table = "";
 
     function __construct(){
+        session_start();
         $host = "localhost";
         $user = "root";
         $pass = "";
@@ -19,8 +20,11 @@ class users
         $this->con = mysqli_connect($host,$user,$pass,$db);
     }
 
+    public function index(){
+
+    }
+
     public function signin(){
-        session_start();
         $data = array();
         if(isset($_POST['txtemail'])){
             $userName = $userPassword = " ";
@@ -37,11 +41,11 @@ class users
                     $res=mysqli_query($this->con,$sql) or die(mysqli_error($this->con));
                     if(mysqli_num_rows($res)==1){
                         $row = mysqli_fetch_assoc($res);
-                        $_SESSION['userId']=$row['user_id'];
-                        $_SESSION['Account_Type']=$row['access'];
+                        $_SESSION['userid']=$row['user_id'];
+                        $_SESSION['accountype']=$row['access'];
 
                         mysqli_close($this->con);
-                        $data['accounttype'] = $_SESSION['access'];
+                        $data['accounttype'] = $_SESSION['accountype'];
                         $data['success'] = "success";
                     }
                     else{
@@ -61,8 +65,41 @@ class users
             header ('Location: index.php');
             exit();
         }
-
         echo json_encode($data);
+    }
 
+    public function signup(){
+        $data = array();
+        if(isset($_POST['txtemail'])) {
+            $firstname = $lastname = $phone = $email = "";
+            $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
+            $lastname = mysqli_real_escape_string($this->con, $_POST['txtlastname']);
+            $phone = mysqli_real_escape_string($this->con, $_POST['txtphone']);
+            $email = mysqli_real_escape_string($this->con, $_POST['txtemail']);
+            $password = mysqli_real_escape_string($this->con, $_POST['txtfirstpassword']);
+            $password2 = mysqli_real_escape_string($this->con, $_POST['txtsecondpassword']);
+
+            if(!empty($email) && !empty($phone) && !empty($firstname) && !empty($lastname) && !empty($password)){
+                if($password2 != $password){
+                    $data['error'] = "password_mismatch";
+                }else {
+                    $sql = "INSERT INTO tbluser (firstname, lastname, phone, email) VALUES ('$firstname','$lastname','$phone','$email')";
+                    $res = mysqli_query($this->con, $sql);
+                    if ($res) {
+                        $id = mysqli_insert_id($this->con);
+                        $sql = "INSERT INTO tbllogindetails (email, password, access, user_id) VALUES ('$email','$password','agent','$id')";
+                        $res = mysqli_query($this->con, $sql);
+                        if($res) {
+                            $data['success'] = true;
+                        }else{
+                            $data['success'] = false;
+                        }
+                    } else {
+                        $data['success'] = false;
+                    }
+                }
+            }
+        }
+        echo json_encode($data);
     }
 }
