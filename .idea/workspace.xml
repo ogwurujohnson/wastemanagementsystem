@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/api/users.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/sign-in.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/core/App.php" afterPath="$PROJECT_DIR$/api/core/App.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,16 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -39,36 +26,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/init.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/core/controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="agent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <marker date="1516747081272" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-              </folding>
+            <state relative-caret-position="192">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,18 +39,20 @@
       <file leaf-file-name="sign-in.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sign-in.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="864">
+              <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding>
+                <marker date="1517022328295" expanded="true" signature="3229:3236" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/core/App.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
                 <element signature="e#6#66#0#PHP" expanded="true" />
               </folding>
@@ -95,14 +60,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/api/users.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+            <state relative-caret-position="216">
+              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
-                <marker date="1516753007907" expanded="true" signature="774:835" ph="SELECT email... tbllogindetails" />
-                <marker date="1516753007907" expanded="true" signature="1099:1197" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1517022185227" expanded="true" signature="35602:35609" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,8 +75,54 @@
       <file leaf-file-name="sign-in.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sign-in.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="960">
+              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-up.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sign-up.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/api/users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+              <folding>
+                <marker date="1517022013662" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+                <marker date="1517022013662" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1517022013662" expanded="true" signature="3035:3097" ph="SELECT email... tbllogindetails" />
+                <marker date="1517022013662" expanded="true" signature="3421:3528" ph="INSERT INTO tbluser... " />
+                <marker date="1517022013662" expanded="true" signature="3730:3836" ph="INSERT INTO tbllogindetails... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-up.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sign-up.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authentication.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/authentication.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,7 +137,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>max-width:350px;</find>
+      <find>Sign in to your Account</find>
+      <find>SIGN UP</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -139,13 +157,17 @@
         <option value="$PROJECT_DIR$/php/api/agent.php" />
         <option value="$PROJECT_DIR$/php/.htaccess" />
         <option value="$PROJECT_DIR$/php/core/App.php" />
-        <option value="$PROJECT_DIR$/api/.htaccess" />
         <option value="$PROJECT_DIR$/api/init.php" />
+        <option value="$PROJECT_DIR$/api/.htaccess" />
         <option value="$PROJECT_DIR$/api/api/agent.php" />
-        <option value="$PROJECT_DIR$/sign-in.html" />
-        <option value="$PROJECT_DIR$/js/sign-in.js" />
-        <option value="$PROJECT_DIR$/api/api/users.php" />
         <option value="$PROJECT_DIR$/api/core/App.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/sign-in.js" />
+        <option value="$PROJECT_DIR$/assets/css/authentication.css" />
+        <option value="$PROJECT_DIR$/sign-in.html" />
+        <option value="$PROJECT_DIR$/js/sign-up.js" />
+        <option value="$PROJECT_DIR$/sign-up.html" />
+        <option value="$PROJECT_DIR$/api/api/users.php" />
       </list>
     </option>
   </component>
@@ -177,39 +199,798 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="wastemanagementsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wastemanagementsystem" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wastemanagementsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wastemanagementsystem" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wastemanagementsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wastemanagementsystem" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gafista" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gafista" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wastemanagementsystem-old" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../schoolhub" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/api/api" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/vcs.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/wastemanagementsystem.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/404.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/about.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/404.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/500.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/advanced-form-elements.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/alerts.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/animations.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/countTo.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/datatablescripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/flotchartsscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/footable.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/fullcalendarscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/jvectormap.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/knob.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/libscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/mainscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/morrisscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/sparkline.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/bundles/vendorscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/animate_page.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/authentication.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/blog.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/chatapp.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/color_skins.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/ecommerce.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/hm-style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/inbox.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/rtl.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/css/timeline.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/animation-bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/black_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/blog-page-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/blog-page-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/blog-page-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blog/blog-page-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/blush_loginbg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/deep_purple_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/10.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/11.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/12.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/13.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/14.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/15.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/ecommerce/9.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/11.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/12.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/13.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/14.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/15.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-11.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-12.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-13.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-14.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-15.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/image-gallery/thumb/thumb-9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/lg/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/lg/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/lg/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/lg/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/logo-placeholder.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/logo.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/orange_loginbg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/profile_av.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/puppy-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/puppy-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/puppy-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/puppy-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/red_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/sm/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/sm/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/sm/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/sm/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/sm/avatar5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/xs/avatar9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/blog/blog.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/calendar/calendar.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/cards/basic.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/chartjs.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/flot.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/jquery-knob.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/jquery-knob.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/morris.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/charts/sparkline.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ecommerce.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/forms/advanced-form-elements.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/forms/basic-form-elements.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/forms/editors.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/forms/form-validation.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/forms/form-wizard.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/index2.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/maps/google.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/maps/jvectormap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/medias/image-gallery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/tables/editable-table.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/tables/footable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/tables/jquery-datatable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ui/animations.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ui/dialogs.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ui/notifications.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ui/range-sliders.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/ui/sortable-nestable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/js/pages/widgets/infobox/infobox-1.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/animate-css/animate.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/autosize/autosize.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue-horizontal.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/saturation.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-notify/bootstrap-notify.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-select/css/bootstrap-select.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/bootstrap/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/chartjs/Chart.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/chartjs/Chart.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/ckeditor/ckeditor.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/dropzone/dropzone.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/dropzone/dropzone.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/editable-table/mindmup-editabletable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/footable-bootstrap/css/footable.bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/footable-bootstrap/css/footable.standalone.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/fullcalendar/fullcalendar.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/gmaps/gmaps.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/ion-rangeslider/css/ion.rangeSlider.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/ion-rangeslider/img/sprite-skin-flat.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/ion-rangeslider/js/ion.rangeSlider.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/buttons.flash.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/buttons.html5.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/buttons.print.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-inputmask/jquery.inputmask.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-knob/jquery.knob.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-sparkline/jquery.sparkline.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-spinner/css/bootstrap-spinner.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-spinner/js/jquery.spinner.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-steps/jquery.steps.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jquery-validation/jquery.validate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/css/lightgallery.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/img/loading.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/img/video-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/img/vimeo-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/img/youtube-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/js/lightgallery-all.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/momentjs/moment.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/morrisjs/morris.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/morrisjs/morris.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/multi-select/css/multi-select.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/multi-select/img/switch.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/multi-select/js/jquery.multi-select.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/nestable/jquery-nestable.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/nestable/jquery.nestable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/nouislider/nouislider.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/nouislider/nouislider.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/raphael/raphael.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/sweetalert/sweetalert.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/sweetalert/sweetalert.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/waitme/waitMe.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/waitme/waitMe.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/badges.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/basic-form-elements.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blank.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blog-dashboard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blog-details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blog-grid.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blog-list.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/blog-post.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/breadcrumbs.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/buttons.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/carousel.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/changelogs.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/chartjs.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/chat.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/collapse.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/colors.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/contact.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/dashboard-rtl.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/dialogs.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/ec-dashboard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/ec-product-List.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/ec-product-detail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/ec-product.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/editable-table.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/events.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/flot.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/footable.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/forgot-password.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/form-editors.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/form-examples.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/form-upload.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/form-validation.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/form-wizard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/google.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/helper-classes.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/icons.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/image-gallery.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/index2.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/invoices.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/jquery-datatable.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/jquery-knob.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/jvectormap.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/labels.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/list-group.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/locked.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/mail-compose.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/mail-inbox.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/mail-single.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/media-object.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/modals.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/morris.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/normal-tables.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/notifications.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/page-offline.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/pagination.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/preloaders.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/pricing.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/profile.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/progressbars.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/range-sliders.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/search-results.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/sign-in.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/sign-up.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/sortable-nestable.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/sparkline.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/table-color.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/tabs.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/timeline.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/typography.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/waves.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/widgets.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/yandex.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/.htaccess</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/api/agent.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/api/users.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/core/App.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/core/controller.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/init.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/countTo.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/datatablescripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/flotchartsscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/footable.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/fullcalendarscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/jvectormap.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/knob.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/libscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/mainscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/morrisscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/sparkline.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/bundles/vendorscripts.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/animate_page.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/authentication.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/blog.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/chatapp.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/color_skins.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/ecommerce.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/hm-style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/inbox.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/rtl.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/timeline.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/animation-bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/black_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/blog-page-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/blog-page-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/blog-page-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blog/blog-page-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/blush_loginbg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/deep_purple_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/10.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/11.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/12.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/13.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/14.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/15.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/ecommerce/9.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/11.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/12.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/13.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/14.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/15.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-11.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-12.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-13.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-14.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-15.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/image-gallery/thumb/thumb-9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/lg/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/lg/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/lg/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/lg/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/logo-placeholder.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/logo.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/orange_loginbg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/profile_av.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/puppy-1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/puppy-2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/puppy-3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/puppy-4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/red_profile_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/sm/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/sm/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/sm/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/sm/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/sm/avatar5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar10.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar7.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/xs/avatar9.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/blog/blog.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/calendar/calendar.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/cards/basic.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/chartjs.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/flot.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/jquery-knob.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/jquery-knob.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/morris.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/charts/sparkline.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ecommerce.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/forms/advanced-form-elements.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/forms/basic-form-elements.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/forms/editors.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/forms/form-validation.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/forms/form-wizard.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/index2.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/maps/google.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/maps/jvectormap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/medias/image-gallery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/tables/editable-table.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/tables/footable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/tables/jquery-datatable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ui/animations.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ui/dialogs.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ui/notifications.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ui/range-sliders.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/ui/sortable-nestable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/pages/widgets/infobox/infobox-1.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/animate-css/animate.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/autosize/autosize.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue-horizontal.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/saturation.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-notify/bootstrap-notify.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-select/css/bootstrap-select.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/bootstrap/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/chartjs/Chart.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/chartjs/Chart.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/ckeditor/ckeditor.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/dropzone/dropzone.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/dropzone/dropzone.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/editable-table/mindmup-editabletable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/footable-bootstrap/css/footable.bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/footable-bootstrap/css/footable.standalone.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/fullcalendar/fullcalendar.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/gmaps/gmaps.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/ion-rangeslider/css/ion.rangeSlider.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/ion-rangeslider/img/sprite-skin-flat.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/ion-rangeslider/js/ion.rangeSlider.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/buttons.flash.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/buttons.html5.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/buttons.print.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-inputmask/jquery.inputmask.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-knob/jquery.knob.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-sparkline/jquery.sparkline.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-spinner/css/bootstrap-spinner.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-spinner/js/jquery.spinner.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-steps/jquery.steps.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jquery-validation/jquery.validate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/css/lightgallery.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lgd41d.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lgd641.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lgd641.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lgd641.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lgd641.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/img/loading.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/img/video-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/img/vimeo-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/img/youtube-play.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/js/lightgallery-all.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/momentjs/moment.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/morrisjs/morris.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/morrisjs/morris.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/multi-select/css/multi-select.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/multi-select/img/switch.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/multi-select/js/jquery.multi-select.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/nestable/jquery-nestable.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/nestable/jquery.nestable.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/nouislider/nouislider.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/nouislider/nouislider.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/raphael/raphael.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/sweetalert/sweetalert.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/sweetalert/sweetalert.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/waitme/waitMe.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/waitme/waitMe.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/blog-details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/blog.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/case-details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/case-studies.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/contact.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/animate.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/font-awesome.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/magnific-popup.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/meanmenu.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/owl.carousel.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/responsive.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/db_schema/wastemanagement.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/faq.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfont93e3.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfont93e3.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfont93e3.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfont93e3.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfont93e3.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/fonts/fontawesome-webfontd41d.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/gallery.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/about.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-114x114.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-120x120.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-144x144.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-152x152.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-180x180.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-57x57.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-72x72.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon-76x76.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/apple-touch-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/b1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/b2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/b3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/blog_1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/blog_2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/blog_3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/call_to_action_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/case-details.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/chart.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/commentar_1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/commentar_2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/company.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/favicon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/g6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/hover_shape.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/bulb.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/click.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/form.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/growth.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/idea.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/rocket.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/search.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/icon/team.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/kap-jasa-434783.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/lightbulb-made-green-grass-19336251.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/logo2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/newsletter_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/p6.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/page_hd.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/preloader.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/pricing_pack.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/pricing_pack_2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/pricing_pack_3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/r1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/r2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/r3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/rlt_1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/rlt_2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/rlt_3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/rlt_4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/service_details.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/signature.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/slide1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/slide2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/slide3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/teastimonial_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/testimonial_1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/tm.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/tm2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/tm3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/tm4.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/traffic_chart.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/vedio_bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/whychoose.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/index-2.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/custom.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/isotope.pkgd.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/jquery-2.2.4.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/jquery.counterup.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/jquery.magnific-popup.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/jquery.meanmenu.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/jquery.scrollUp.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/modernizr.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/owl.animate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/owl.carousel.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/sign-in.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/waypoints.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service-details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sign-in.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sign-up.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/team.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/depositphotos_3262364-stock-photo-eco-recycling.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/profile-bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/images/profilebg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lg-.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lg-n1z373.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lg-n1z373.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lg-n1z373.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lg-n1z373.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/fonts/Material-Design-Iconic-Font-v=2.2.0.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/depositphotos_3262364-stock-photo-eco-recycling.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/profile-bg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/images/profilebg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lg-.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lg-n1z373.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lg-n1z373.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lg-n1z373.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/plugins/light-gallery/fonts/lg-n1z373.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/403385223-recycling-wallpapers.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/userdash.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/video/Waste and Recycling.mp4</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/3.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/agent-profile.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lgd41d.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lgd641.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lgd641.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lgd641.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/assets/plugins/light-gallery/fonts/lgd641.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/favicon.ico</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/html/ui_kit.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -237,33 +1018,52 @@
       <workItem from="1516591365786" duration="5115000" />
       <workItem from="1516597068038" duration="1452000" />
       <workItem from="1516744491164" duration="1789000" />
-      <workItem from="1516746315398" duration="7311000" />
+      <workItem from="1516746315398" duration="10888000" />
+      <workItem from="1516763711409" duration="10252000" />
+      <workItem from="1516857734521" duration="670000" />
+      <workItem from="1516870819686" duration="19000" />
+      <workItem from="1516996660489" duration="8950000" />
+      <workItem from="1517021888943" duration="1082000" />
     </task>
+    <task id="LOCAL-00001" summary="SignIn and SignUp">
+      <created>1517021997249</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1517021997249</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SignIn and SignUp">
+      <created>1517022464119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1517022464119</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16495000" />
+    <option name="totallyTimeSpent" value="41045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -273,6 +1073,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="SignIn and SignUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="SignIn and SignUp" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -280,11 +1084,184 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/sign-in.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2712">
+          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/core/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <marker date="1517022328295" expanded="true" signature="3229:3236" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <marker date="1517022013662" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3035:3097" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3421:3528" ph="INSERT INTO tbluser... " />
+            <marker date="1517022013662" expanded="true" signature="3730:3836" ph="INSERT INTO tbllogindetails... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sign-in.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/core/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1752">
+          <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <marker date="1517022328295" expanded="true" signature="3229:3236" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <folding>
+            <marker date="1517022013662" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3035:3097" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3421:3528" ph="INSERT INTO tbluser... " />
+            <marker date="1517022013662" expanded="true" signature="3730:3836" ph="INSERT INTO tbllogindetails... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sign-in.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -300,7 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -318,9 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -328,9 +1301,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <marker date="1516747081272" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -338,7 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -364,9 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -374,9 +1341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <marker date="1516747081272" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -392,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,7 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -426,9 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -436,24 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <marker date="1516747081272" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sign-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sign-in.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -461,7 +1402,28 @@
     <entry file="file://$PROJECT_DIR$/api/init.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/core/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -474,51 +1436,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+    <entry file="file://$PROJECT_DIR$/api/core/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/core/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="120">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
             <element signature="e#6#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <marker date="1516747081272" expanded="true" signature="583:608" ph="SELECT * FRO... tblproperty" />
+            <marker date="1517022185227" expanded="true" signature="35602:35609" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/authentication.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding>
+            <marker date="1517022328295" expanded="true" signature="3229:3236" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sign-in.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign-up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sign-up.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+        <state relative-caret-position="414">
+          <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
           <folding>
-            <marker date="1516753007907" expanded="true" signature="774:835" ph="SELECT email... tbllogindetails" />
-            <marker date="1516753007907" expanded="true" signature="1099:1197" ph="SELECT * FRO... tbllogindetails" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/core/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <marker date="1517022013662" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3035:3097" ph="SELECT email... tbllogindetails" />
+            <marker date="1517022013662" expanded="true" signature="3421:3528" ph="INSERT INTO tbluser... " />
+            <marker date="1517022013662" expanded="true" signature="3730:3836" ph="INSERT INTO tbllogindetails... " />
           </folding>
         </state>
       </provider>

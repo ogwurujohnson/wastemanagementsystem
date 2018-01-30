@@ -2392,7 +2392,11 @@ padding: 14px 36px;
 text-transform: uppercase;
 margin-top: 10px;
 }
-.call-to-action-text a.btn:hover{background:#ebba16;transition: all 0.4s ease-in-out 0s;color:#242424;}
+    .call-to-action-text a.btn:hover {
+        background: #26c53a;
+        transition: all 0.4s ease-in-out 0s;
+        color: #fff;
+    }
 
 /*
 23.404 Page Section 
