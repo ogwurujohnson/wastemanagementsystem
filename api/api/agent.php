@@ -40,8 +40,9 @@ class agent
         echo json_encode($result);
     }
 
-    public function agentproperties($formdata = ''){
-        $sql = "SELECT * FROM tblproperty WHERE user_id = $formdata";
+    public function agentproperties($userid = ''){
+        $id = $userid;
+        $sql = "SELECT * FROM tblproperty WHERE user_id = $id";
         $res = mysqli_query($this->con,$sql);
         $result = [];
         while($row = mysqli_fetch_row($res)){
@@ -106,8 +107,10 @@ class agent
         echo json_encode($result);
     }
 
-    public function agentticket($formdata=''){
-        $sql = "SELECT * FROM tbltickets WHERE user_id = $formdata ";
+    
+    public function agentticket($userid = ''){
+        $id = $userid;
+        $sql = "SELECT * FROM tbltickets WHERE user_id = $id ";
         $res = mysqli_query($this->con,$sql);
         $result = [];
         while($row = mysqli_fetch_row($res)){
@@ -119,7 +122,7 @@ class agent
 
     public function addproperty($userid = ''){
         $data = array();
-        $id = 6;
+        $id = $userid;
         if (isset($_POST['txtpropertyname'])) {
             $propertyname = $propertygroupid = $address = $userid = "";
             $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
@@ -138,9 +141,46 @@ class agent
                 $data['error'] = "empty";
             }
         }
-        header('Content-Type:application/json');
         echo json_encode($data);
 
+    }
+
+    public function addpropertygroup(){
+        $data = array();
+        if(isset($_POST['txtpropertytype'])){
+            $propertytype = mysqli_real_escape_string($this->con, $_POST['txtpropertytype']);
+            $propertyprice = mysqli_real_escape_string($this->con, $_POST['txtpropertyprice']);
+            if(!empty($propertytype) && !empty($propertyprice)){
+                $sql = "INSERT INTO tblpropertygroup (property_type, property_price) VALUES ('$propertytype','$propertyprice') ";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if($res){
+                    $data['success'] = true;
+                }
+                else{
+                    $data['success'] = false;
+                }
+            }else{
+                $data['error'] = "empty";
+            }
+        }
+        echo json_encode($data);
+    }
+
+    public function deletepropertygroup($propertygroupid = ''){
+        $data = array();
+        $id = 5;
+        if(isset($_POST)){
+
+            $sql = "DELETE FROM tblpropertygroup WHERE id = '$id' ";
+            $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+            if($res){
+                $data['success'] = true;
+            }
+            else{
+                $data['success'] = false;
+            }
+        }
+        echo json_encode($data);
     }
 
     public function createticket($userid = ''){
@@ -166,6 +206,29 @@ class agent
         }
         echo json_encode($data);
     }
+
+    public function fundwallet($userid = ''){
+        $data = array();
+        $id = 6;
+        if(isset($_POST['txtamount'])){
+            $walletamount = mysqli_real_escape_string($this->con, $_POST['txtamount']);
+            if(!empty($walletamount)){
+                $sql = "INSERT into tblwallet (amount,user_id) VALUES ('$walletamount','$id') ";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if($res){
+                    $data['success'] = true;
+                }
+                else{
+                    $data['success'] = false;
+                }
+            }else{
+                $data['error'] = "empty";
+            }
+        }
+        echo json_encode($data);
+    }
+
+
 
     /**
      *method for updating properties added by agents
@@ -197,7 +260,7 @@ class agent
     public function deleteproperty($propertyid = ''){
         $data = array();
         $id = 2;
-        if(isset($_POST['btndeleteproperty'])){
+        if(isset($_POST)){
 
             $sql = "DELETE FROM tblproperty WHERE id = '$id' ";
             $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
@@ -210,5 +273,24 @@ class agent
         }
         echo json_encode($data);
     }
+
+    public function deactivateagentaccount($userid = ''){
+        $data = array();
+        $id = 6;
+        $sql = "UPDATE tbllogindetails SET activation = '1' WHERE user_id = '$id' ";
+        $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+        if($res){
+            $data['success'] = true;
+        }
+        else{
+            $data['success'] = false;
+        }
+        
+        echo json_encode($data);
+    }
+
+    
+
+
 }
 
