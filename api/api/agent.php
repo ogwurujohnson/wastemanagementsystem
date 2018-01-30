@@ -40,8 +40,9 @@ class agent
         echo json_encode($result);
     }
 
-    public function agentproperties($formdata = ''){
-        $sql = "SELECT * FROM tblproperty WHERE user_id = $formdata";
+    public function agentproperties($userid = ''){
+        $id = $userid;
+        $sql = "SELECT * FROM tblproperty WHERE user_id = $id";
         $res = mysqli_query($this->con,$sql);
         $result = [];
         while($row = mysqli_fetch_row($res)){
@@ -107,8 +108,9 @@ class agent
     }
 
     
-    public function agentticket($formdata=''){
-        $sql = "SELECT * FROM tbltickets WHERE user_id = $formdata ";
+    public function agentticket($userid = ''){
+        $id = $userid;
+        $sql = "SELECT * FROM tbltickets WHERE user_id = $id ";
         $res = mysqli_query($this->con,$sql);
         $result = [];
         while($row = mysqli_fetch_row($res)){
