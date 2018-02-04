@@ -39,10 +39,10 @@ $(document).ready(function () {
                 }
                 else if (data.success === "success") {
                     console.log(data);
-                    if(data.accounttype === "agent") {
-                        document.location.href = 'user/dashboard.php';
+                    if(data.accounttype === "admin") {
+                        document.location.href = 'admin/index.html';
                     }else{
-                        document.location.href = 'admin/dashboard.php';
+                        document.location.href = 'user/index.html';
                     }
                 }
             });
