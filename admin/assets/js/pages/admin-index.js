@@ -26,6 +26,10 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
+function getAllUsers() {
+    
+}
+
 function logout(){
     var data = "";
     var xmlhttp = new XMLHttpRequest();

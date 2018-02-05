@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 20, 2018 at 04:22 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.1
+-- Host: localhost
+-- Generation Time: Feb 05, 2018 at 04:06 PM
+-- Server version: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -49,15 +51,24 @@ CREATE TABLE `tbllastlogin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblogindetails`
+-- Table structure for table `tbllogindetails`
 --
 
-CREATE TABLE `tblogindetails` (
+CREATE TABLE `tbllogindetails` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `access` varchar(255) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbllogindetails`
+--
+
+INSERT INTO `tbllogindetails` (`id`, `email`, `password`, `access`, `user_id`) VALUES
+(2, 'daviddisu8@gmail.com', 'password', 'admin', 6),
+(3, 'ogwurujohnson@gmail.com', 'test', 'agent', 7);
 
 -- --------------------------------------------------------
 
@@ -74,6 +85,13 @@ CREATE TABLE `tblproperty` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tblproperty`
+--
+
+INSERT INTO `tblproperty` (`id`, `property_name`, `propertygroup_id`, `address`, `user_id`, `date`) VALUES
+(2, 'Sango Estate', 1, 'Nigeria', 6, '2018-01-25 05:31:40');
+
 -- --------------------------------------------------------
 
 --
@@ -82,10 +100,17 @@ CREATE TABLE `tblproperty` (
 
 CREATE TABLE `tblpropertygroup` (
   `id` int(11) NOT NULL,
-  `property_name` varchar(255) NOT NULL,
+  `property_type` varchar(255) NOT NULL,
   `property_price` int(245) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblpropertygroup`
+--
+
+INSERT INTO `tblpropertygroup` (`id`, `property_type`, `property_price`, `date`) VALUES
+(1, 'Real Estate', 5000, '2018-01-23 22:32:07');
 
 -- --------------------------------------------------------
 
@@ -128,9 +153,16 @@ CREATE TABLE `tbluser` (
   `lastname` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `access` varchar(30) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbluser`
+--
+
+INSERT INTO `tbluser` (`id`, `firstname`, `lastname`, `phone`, `email`, `date`) VALUES
+(6, 'David', 'Disu', '08188621047', 'daviddisu8@gmail.com', '2018-01-24 05:23:12'),
+(7, 'Johnson', 'Ogwuru', '0801122334', 'ogwurujohnson@gmail.com', '2018-01-26 22:11:27');
 
 -- --------------------------------------------------------
 
@@ -165,9 +197,9 @@ ALTER TABLE `tbllastlogin`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `tblogindetails`
+-- Indexes for table `tbllogindetails`
 --
-ALTER TABLE `tblogindetails`
+ALTER TABLE `tbllogindetails`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
@@ -228,20 +260,20 @@ ALTER TABLE `tblbilling`
 ALTER TABLE `tbllastlogin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `tblogindetails`
+-- AUTO_INCREMENT for table `tbllogindetails`
 --
-ALTER TABLE `tblogindetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbllogindetails`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tblproperty`
 --
 ALTER TABLE `tblproperty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tblpropertygroup`
 --
 ALTER TABLE `tblpropertygroup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbltickets`
 --
@@ -256,7 +288,7 @@ ALTER TABLE `tblticket_category`
 -- AUTO_INCREMENT for table `tbluser`
 --
 ALTER TABLE `tbluser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tblwallet`
 --
@@ -280,10 +312,10 @@ ALTER TABLE `tbllastlogin`
   ADD CONSTRAINT `tbllastlogin_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
 
 --
--- Constraints for table `tblogindetails`
+-- Constraints for table `tbllogindetails`
 --
-ALTER TABLE `tblogindetails`
-  ADD CONSTRAINT `tblogindetails_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
+ALTER TABLE `tbllogindetails`
+  ADD CONSTRAINT `tbllogindetails_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
 
 --
 -- Constraints for table `tblproperty`
@@ -305,6 +337,7 @@ ALTER TABLE `tbltickets`
 --
 ALTER TABLE `tblwallet`
   ADD CONSTRAINT `tblwallet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -70,7 +70,7 @@ class agent
         echo json_encode($result);
     }
 
-    public function allagents()
+    public function getAllUsers()
     {
         $sql = "SELECT * FROM tbluser";
         $res = mysqli_query($this->con, $sql);
