@@ -44,7 +44,7 @@ class users
                         $_SESSION['userid']=$row['user_id'];
                         $_SESSION['accountype']=$row['access'];
                         $_SESSION['useremail'] = $row['email'];
-                        $_SESSIOn['password'] = $row['password'];
+                        $_SESSION['userpassword'] = $row['password'];
 
                         mysqli_close($this->con);
                         $data['accounttype'] = $_SESSION['accountype'];

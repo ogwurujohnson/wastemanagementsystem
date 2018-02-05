@@ -15,6 +15,8 @@
 <!-- Custom Css -->
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/admin-index.js"></script>
 </head>
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -171,7 +173,7 @@
                     <i class="zmdi zmdi-fullscreen"></i>                   
                 </a>
             </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="#" class="mega-menu" data-close="true" id="logout"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
@@ -184,20 +186,18 @@
             <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" />
         </div>
         <div class="info-container">
-            <div class="name" data-toggle="dropdown">John Doe</div>
+            <div class="name" data-toggle="dropdown" id="username">John Doe</div>
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
                 <ul class="dropdown-menu slideUp">
                     <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Ticket</a></li>
                     <li class="divider"></li>
                     <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
                 </ul>
             </div>
-            <div class="email">john.doe@example.com</div>
+            <div class="email" id="useremail">john.doe@example.com</div>
         </div>
     </div>
     <!-- #User Info --> 
@@ -603,7 +603,7 @@
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
-                    <li class="breadcrumb-item active">Dashboard 1</li>
+                    <li class="breadcrumb-item active">Dashboard</li>
                 </ul>
             </div>
         </div>

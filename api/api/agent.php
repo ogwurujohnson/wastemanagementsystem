@@ -82,6 +82,16 @@ class agent
         echo json_encode($result);
     }
 
+    public function getAgentDetails(){
+        $id = $_SESSION['userid'];
+        $sql = "SELECT * FROM tbluser WHERE id='".$id."'";
+        $res = mysqli_query($this->con, $sql);
+        $row = mysqli_fetch_row($res);
+        $result = $row;
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function alltickets()
     {
         $sql = "SELECT * FROM tbltickets";
@@ -294,17 +304,27 @@ class agent
 
     private function authUser()
     {
-        if (isset($_POST['useremail']) && isset($_POST['password'])) {
-            $email = mysqli_real_escape_string($this->con, $_POST['useremail']);
-            $password = mysqli_real_escape_string($this->con, $_POST['password']);
+        if (isset($_SESSION['useremail']) && isset($_SESSION['userpassword'])) {
+            $email = mysqli_real_escape_string($this->con, $_SESSION['useremail']);
+            $password = mysqli_real_escape_string($this->con, $_SESSION['userpassword']);
             $sql = "SELECT * FROM tbllogindetails WHERE email='" . $email . "' AND password='" . $password . "' LIMIT 1";
             $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
-            if (mysqli_num_rows($res)!= 1) {
+            if ($res) {
+                $this->data['isLoggedIn'] = true;
+            }else{
                 $this->data['isLoggedIn'] = false;
                 echo json_encode($this->data);
                 die();
             }
+        }else{
+            $this->data['isLoggedIn'] = false;
+            echo json_encode($this->data);
+            die();
         }
+    }
+
+    public function logout(){
+        session_destroy();
     }
 }
 
