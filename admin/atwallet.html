@@ -6,22 +6,32 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title>:: Gafista::</title>
+<title>::Gafista User::</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- Favicon-->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/plugins/morrisjs/morris.css"/>
 <!-- Custom Css -->
-<link  rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
 </head>
-<body class="theme-orange">
+
+<body class="theme-cyan index2">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
-    <div class="loader">        
-        <div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
+    <div class="loader">
+        <div class="preloader">
+            <div class="spinner-layer pl-cyan">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
         <p>Please wait...</p>
-        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
     </div>
 </div>
 
@@ -36,32 +46,8 @@
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
-        
-        <div class="navbar-header">
-            <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">Gafiata</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-left">
-            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-            <li><a href="mail-inbox.html" class="inbox-btn hidden-sm-down" data-close="true"><i class="zmdi zmdi-email"></i></a></li>
-            <li class="dropdown menu-app hidden-sm-down"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="zmdi zmdi-apps"></i> </a>
-                <ul class="dropdown-menu slideDown">
-                    <li class="body">
-                        <ul class="menu">
-                            <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a></li>
-                            <li><a href="contact.html"><i class="zmdi zmdi-accounts-list"></i><span>Contacts</span></a></li>
-                            <li><a href="chat.html"><i class="zmdi zmdi-comment-text"></i><span>Chat</span></a></li>
-                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-arrows"></i><span>Notes</span></a></li>
-                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-view-column"></i><span>Taskboard</span></a></li>
-                            <li><a href="events.html"><i class="zmdi zmdi-calendar-note"></i><span>Calendar</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
-        <ul class="nav navbar-nav navbar-right">            
+        <div class="navbar-header"> <a href="javascript:void(0);" class="h-bars"></a> <a class="navbar-brand" href="index.html">Gafista</a></div>
+        <ul class="nav navbar-nav navbar-right">
             <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="zmdi zmdi-search"></i></a></li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
@@ -83,28 +69,7 @@
                                     <h4>4 sales made</h4>
                                     <p> <i class="material-icons">access_time</i> 22 mins ago </p>
                                 </div>
-                                </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle g-bg-cyan"> <i class="material-icons">delete_forever</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy Doe</b> deleted account</h4>
-                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
-                                </div>
-                                </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle g-bg-blue"> <i class="material-icons">mode_edit</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy</b> changed name</h4>
-                                    <p> <i class="material-icons">access_time</i> 2 hours ago </p>
-                                </div>
-                                </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-slategray"> <i class="material-icons">comment</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> commented your post</h4>
-                                    <p> <i class="material-icons">access_time</i> 4 hours ago </p>
-                                </div>
-                                </a> </li>
+                                </a> </li>                            
                             <li> <a href="javascript:void(0);">
                                 <div class="icon-circle l-seagreen"> <i class="material-icons">cached</i> </div>
                                 <div class="menu-info">
@@ -127,7 +92,7 @@
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
                 </a>
-                <ul class="dropdown-menu slideDown">
+                <ul class="dropdown-menu slideLeft">
                     <li class="header">TASKS</li>
                     <li class="body">
                         <ul class="menu tasks list-unstyled">
@@ -148,17 +113,11 @@
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                 </div>
-                                </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <h4> Solve transition issue <small>77%</small> </h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
-                                </div>
-                                </a> </li>
+                                </a> </li>                            
                             <li> <a href="javascript:void(0);">
                                 <h4> Answer GitHub questions <small>87%</small> </h4>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                    <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                 </div>
                                 </a> </li>
                         </ul>
@@ -166,165 +125,92 @@
                     <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
                 </ul>
             </li>
-            <li>
-                <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true">
-                    <i class="zmdi zmdi-fullscreen"></i>                   
-                </a>
-            </li>
             <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
 </nav>
 
-<!-- Left Sidebar -->
-<aside id="leftsidebar" class="sidebar"> 
-    <!-- User Info -->
-    <div class="user-info">
-        <div class="image"> <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" /> </div>
-        <div class="info-container">
-            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">John Doe</div>
-            <div class="email">john.doe@example.com</div>
-            <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
-                <ul class="dropdown-menu pull-right">
-                    <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
-                    <li class="divider"></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                    <li class="divider"></li>
-                    <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- #User Info --> 
-    <!-- Menu -->
+<div class="menu-container">
     <div class="menu">
-        <ul class="list">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="active"> <a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+        <ul class="pullDown">
+            <li><a href="index2.html">Dashboard</a>
                 
             </li>
-                     
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ticket</span> </a>
-                <ul class="ml-menu">
-                    
-                    <li> <a href="vticket.html">View Ticket</a></li>
-                    <li><a href="ticket_timeline.html">Tickect Timeline</a></li>
-                    
-                </ul>
-            </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>Property</span> </a>
-                <ul class="ml-menu">
-                        <li> <a href="vproperty.html">View Property</a></li>
-                        <li> <a href="add_property.html">Add Property</a></li>
-                        <li> <a href="add_property.html">Add Property Group</a></li>
-                </ul>
-            </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts"></i><span>Users/Agents</span> </a>
-                <ul class="ml-menu">
-                        <li><a href="contact.html">View Clients</a></li>
-                        <li><a href="form-validation.html">Create Clients</a> </li>
-                        <li><a href="contact.html">View Agents</a></li>
 
-                    <li><a href="basic-form-elements.html">Basic Form Elements</a> </li>
-                    <li><a href="advanced-form-elements.html">Advanced Form Elements</a> </li>
-                    <li><a href="form-examples.html">Form Examples</a> </li>
-                   
-                    <li><a href="form-wizard.html">Form Wizard</a> </li>
-                    <li><a href="form-editors.html">Editors</a> </li>
-                    <li><a href="form-upload.html">File Upload</a></li>
-                </ul>
+            <li><a href="userprofile.html">My Profile</a>
+                
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Reports</span> </a>
-                <ul class="ml-menu">                        
-                    <li> <a href="normal-tables.html">Normal Tables</a> </li>
-                    <li> <a href="jquery-datatable.html">Jquery Datatables</a> </li>
-                    <li> <a href="editable-table.html">Editable Tables</a> </li>
-                    <li> <a href="footable.html">Foo Tables</a> </li>
-                    <li> <a href="table-color.html">Tables Color</a> </li>
-                </ul>
-            </li>
-            
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-money"></i><span>Payments</span> </a>
-                <ul class="ml-menu">
-                        <li><a href="invoices.html">Invoices</a></li>
-                </ul>
-            </li>
-            
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Extra Pages</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="blank.html">Blank Page</a> </li>
-                    <li><a href="events.html">Calendar</a></li>
-                    <li><a href="profile.html">Profile</a></li>
+            <li><a href="javascript:void(0)">Wallet</a>
+                <ul class="pullDown">                                   
+                    <li><a href="uvwallet.html">View Wallet</a> </li>
+                    <li><a href="atwallet.html">Add to Wallet</a> </li>
                     
-                    <li><a href="chat.html">Chat</a></li>
-                    
-                    <li><a href="pricing.html">Pricing</a></li>
-                   
-                    <li><a href="search-results.html">Search Results</a></li>
                 </ul>
             </li>
-            
-            
-            
-            
+            <li><a href="javascript:void(0)">Ticket</a>
+                <ul class="pullDown">
+                    <li><a href="cuticket.html">Create Ticket</a> </li>
+                    <li><a href="vuticket.html">View Ticket</a> </li>
+                                    
+                </ul>
+            </li>
+
+            <li><a href="javascript:void(0)">Property</a>
+                <ul class="pullDown">
+                    <li><a href="cuproperty.html">Create Property</a> </li>
+                    <li><a href="vuproperty.html">View Property</a> </li>
+                                    
+                </ul>
+            </li>
+           
+           
+             
         </ul>
     </div>
-    <!-- #Menu --> 
-</aside>
+</div>
 
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="form-validation.html#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="form-validation.html#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="form-validation.html#settings">Setting</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index2.html#skins">Skins</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#chat">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#settings">Setting</a></li>
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
-                <div class="slim_scroll">
-                <h6>Flat Color</h6>
-                <ul class="choose-skin">                   
-                    <li data-theme="purple">
-                        <div class="purple"></div>
-                        <span>Purple</span> </li>                   
-                    <li data-theme="blue">
-                        <div class="blue"></div>
-                        <span>Blue</span> </li>
-                    <li data-theme="cyan">
-                        <div class="cyan"></div>
-                        <span>Cyan</span>
-                    </li>                        
-                </ul>                    
+            <ul class="choose-skin slim_scroll">
+                <h6>Flat Color</h6>                    
+                <li data-theme="purple">
+                    <div class="purple"></div>
+                    <span>Purple</span> </li>                   
+                <li data-theme="blue">
+                    <div class="blue"></div>
+                    <span>Blue</span> </li>
+                <li data-theme="cyan" class="active">
+                    <div class="cyan"></div>
+                    <span>Cyan</span> </li>
                 <h6>Multi Color</h6>
-                <ul class="choose-skin">                        
-                    <li data-theme="black">
-                        <div class="black"></div>
-                        <span>Black</span> </li>
-                    <li data-theme="deep-purple">
-                        <div class="deep-purple"></div>
-                        <span>Deep Purple</span> </li>
-                    <li data-theme="red">
-                        <div class="red"></div>
-                        <span>Red</span>
-                    </li>                        
-                </ul>                    
+                <li data-theme="black">
+                    <div class="black"></div>
+                    <span>Black</span> </li>
+                <li data-theme="deep-purple">
+                    <div class="deep-purple"></div>
+                    <span>Deep Purple</span> </li>
+                <li data-theme="red">
+                    <div class="red"></div>
+                    <span>Red</span> </li>
                 <h6>Gradient Color</h6>
-                <ul class="choose-skin">                    
-                    <li data-theme="green">
-                        <div class="green"></div>
-                        <span>Green</span> </li>
-                    <li data-theme="orange"  class="active">
-                        <div class="orange"></div>
-                        <span>Orange</span> </li>
-                    <li data-theme="blush">
-                        <div class="blush"></div>
-                        <span>Blush</span>
-                    </li>
-                </ul>
-            </div>
+                <li data-theme="green">
+                    <div class="green"></div>
+                    <span>Green</span> </li>
+                <li data-theme="orange">
+                    <div class="orange"></div>
+                    <span>Orange</span> </li>
+                <li data-theme="blush">
+                    <div class="blush"></div>
+                    <span>Blush</span> </li>
+            </ul>
         </div>
         <div role="tabpanel" class="tab-pane pullUp" id="chat">
             <div class="right_chat slim_scroll">
@@ -561,25 +447,68 @@
     </div>
 </aside>
 
+<!-- Chat-launcher -->
+<div class="chat-launcher"></div>
+<div class="chat-wrapper">
+    <div class="card">
+        <div class="header">
+            <h2>TL Groups</h2>                    
+        </div>
+        <div class="body">
+            <div class="chat-widget">
+            <ul class="chat-scroll-list clearfix">
+                <li class="left float-left">
+                    <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
+                    <div class="chat-info">
+                        <a class="name" href="index2.html#">Alexander</a>
+                        <span class="datetime">6:12</span>                            
+                        <span class="message">Hello, John </span>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="chat-info"><span class="datetime">6:15</span> <span class="message">Hi, Alexander<br> How are you!</span> </div>
+                </li>
+                <li class="right">
+                    <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
+                </li>
+                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
+                    <div class="chat-info"> <a class="name" href="index2.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
+                </li>
+                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
+                    <div class="chat-info"> <a class="name" href="index2.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
+                </li>
+                    <li class="right">
+                    <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
+                </li>
+            </ul>
+            </div>
+            <div class="input-group">
+                <div class="form-line">
+                    <input type="text" class="form-control date" placeholder="Enter your email...">
+                </div>
+                <span class="input-group-addon"> <i class="material-icons">send</i> </span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Form Validation
-                    <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
+                
+                <h2 class="text-muted">Welcome to Gafista Application
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
-                    <li class="breadcrumb-item active">Form Validation</li>
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
+                    <li class="breadcrumb-item active">Dashboard</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container-fluid">
-        <!-- Basic Validation -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
@@ -597,46 +526,23 @@
                     </div>
                     <div class="body">
                         <form id="form_validation" method="POST">
-                            <div class="form-group ">
-                            <p> Select Client Name </p>
-                            <select class="form-control">
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                                
-                                
-                            </select>
-                        </div>
+                          
+                            
 
 
                         
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="text" class="form-control" name="address" required>
-                                    <label class="form-label">Property Name</label>
+                                    <label class="form-label">Enter Amount</label>
                                 </div>
                             </div>
 
-                            <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="address" required>
-                                <label class="form-label">Address</label>
-                            </div>
-                        </div>
-
+                            
 
                             
                             
-                            <div class="form-group form-float">
-                                <p> Property Group </p>
-                                <select class="form-control">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    
-                                    
-                                </select>
-                            </div>
+                            
                             <div class="form-group">
                                 <input type="checkbox" id="checkbox" name="checkbox">
                                 <label for="checkbox">I have entered all the details correctly</label>
@@ -647,8 +553,15 @@
                 </div>
             </div>
         </div>
-        <!-- #END# Basic Validation --> 
-        
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <p class="m-b-0">© 2018 Gafista Admin </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -656,10 +569,43 @@
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/plugins/jquery-validation/jquery.validate.js"></script> <!-- Jquery Validation Plugin Css --> 
-<script src="assets/plugins/jquery-steps/jquery.steps.js"></script> <!-- JQuery Steps Plugin Js --> 
+<script src="assets/bundles/countTo.bundle.js"></script>
+<script src="assets/bundles/sparkline.bundle.js"></script>
+<script src="assets/js/pages/widgets/infobox/infobox-1.js"></script>
+<script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
-<script src="assets/js/pages/forms/form-validation.js"></script> 
+<script src="assets/bundles/mainscripts.bundle.js"></script> 
+<script src="assets/js/pages/index2.js"></script>
+<script>
+    /*global $ */
+    $(document).ready(function() {
+        "use strict";
+        $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+        //Checks if li has sub (ul) and adds class for toggle icon - just an UI
+      
+        $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+      
+        $(".menu > ul > li").hover(function(e) {
+          if ($(window).width() > 943) {
+            $(this).children("ul").stop(true, false).fadeToggle(150);
+            e.preventDefault();
+          }
+        });
+        //If width is more than 943px dropdowns are displayed on hover    
+        $(".menu > ul > li").on('click',function() {
+          if ($(window).width() <= 943) {
+            $(this).children("ul").fadeToggle(150);
+          }
+        });
+        //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+      
+        $(".h-bars").on('click',function(e) {
+          $(".menu > ul").toggleClass('show-on-mobile');
+          e.preventDefault();
+        });
+        //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+      
+      });
+    </script>    
 </body>
-</html>
+</html> 
