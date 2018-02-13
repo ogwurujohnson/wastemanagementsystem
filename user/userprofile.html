@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user-index.js"></script>
 </head>
 
 <body class="theme-cyan index2">
@@ -125,7 +127,7 @@
                     <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
                 </ul>
             </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="#" class="mega-menu" id="logout" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
@@ -134,11 +136,11 @@
 <div class="menu-container">
     <div class="menu">
         <ul class="pullDown">
-            <li><a href="index2.html">Dashboard</a>
+            <li><a href="index.html">Dashboard</a>
                 
             </li>
 
-            <li><a href="index2.html">My Profile</a>
+            <li><a href="index.html">My Profile</a>
                 
             </li>
             <li><a href="javascript:void(0)">Wallet</a>
@@ -164,9 +166,9 @@
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index2.html#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#settings">Setting</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index.html#skins">Skins</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#chat">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#settings">Setting</a></li>
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
@@ -451,7 +453,7 @@
                 <li class="left float-left">
                     <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
                     <div class="chat-info">
-                        <a class="name" href="index2.html#">Alexander</a>
+                        <a class="name" href="index.html#">Alexander</a>
                         <span class="datetime">6:12</span>                            
                         <span class="message">Hello, John </span>
                     </div>
@@ -463,10 +465,10 @@
                     <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
                 </li>
                     <li class="right">
                     <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
@@ -493,8 +495,9 @@
                     <div class="profile-image float-md-right"> <img src="assets/images/profile_av.jpg" alt=""> </div>
                 </div>
                 <div class="col-lg-6 col-md-8 col-12">
-                    <h4 class="m-t-5 m-b-0"><strong>John</strong> Deo</h4>
-                    <span class="job_post">Ui UX Designer</span>
+                    <h4 class="m-t-5 m-b-0"><strong id="firstname">John</strong> <span id="lastname">Deo</span></h4>
+                    <span class="job_post" id="useremail"></span>
+                    <span class="job_post" id="phonenumber"></span>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     <div class="m-t-10">
                         <button class="btn btn-raised btn-default">Follow</button>

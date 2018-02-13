@@ -6,7 +6,7 @@
  * Time: 5:35 AM
  */
 
-class agent
+class client
 {
     private $con = "";
     private $table = "";
@@ -45,7 +45,7 @@ class agent
         echo json_encode($result);
     }
 
-    public function agentproperties($userid = '')
+    public function clientproperties($userid = '')
     {
         $id = $userid;
         $sql = "SELECT * FROM tblproperty WHERE user_id = $id";
@@ -82,7 +82,7 @@ class agent
         echo json_encode($result);
     }
 
-    public function getAgentDetails(){
+    public function getClientDetails(){
         $id = $_SESSION['userid'];
         $sql = "SELECT * FROM tbluser WHERE id='".$id."'";
         $res = mysqli_query($this->con, $sql);
@@ -129,7 +129,7 @@ class agent
     }
 
 
-    public function agentticket($userid = '')
+    public function clientticket($userid = '')
     {
         $id = $userid;
         $sql = "SELECT * FROM tbltickets WHERE user_id = $id ";
@@ -142,13 +142,26 @@ class agent
         echo json_encode($result);
     }
 
+    public function clientproperty($userid = '')
+    {
+        $id = $_SESSION['userid'];
+        $sql = "SELECT * FROM tblproperty WHERE user_id = $id ";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        while ($row = mysqli_fetch_row($res)) {
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function addproperty($userid = '')
     {
-        $id = $userid;
+        $id = $_SESSION['userid'];
         if (isset($_POST['txtpropertyname'])) {
             $propertyname = $propertygroupid = $address = $userid = "";
             $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
-            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['ddpropertygroupid']);
             $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
             if (!empty($propertyname) && !empty($propertygroupid) && !empty($address)) {
                 $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
@@ -206,12 +219,13 @@ class agent
     {
         $id = $_SESSION['userid'];
         if (isset($_POST['txtticketsubject'])) {
-            $ticketsubject = $ticketpriority = $ticketpropertyid = $userid = "";
+            $ticketsubject = $ticketpriority = $ticketpropertyid = $pickupdate = $userid = "";
             $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtticketsubject']);
             $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddticketpriority']);
             $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
+            $pickupdate = mysqli_real_escape_string($this->con, $_POST['txtpickupdate']);
             if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
-                $sql = "INSERT INTO tbltickets (subject,status,priority,property_id,user_id) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id')";
+                $sql = "INSERT INTO tbltickets (subject,status,priority,property_id,user_id,pickup_date) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id','$pickupdate')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if ($res) {
                     $this->data['success'] = true;
@@ -288,7 +302,7 @@ class agent
         echo json_encode($this->data);
     }
 
-    public function deactivateagentaccount($userid = '')
+    public function deactivateclientaccount($userid = '')
     {
         $id = 6;
         $sql = "UPDATE tbllogindetails SET activation = '1' WHERE user_id = '$id' ";
