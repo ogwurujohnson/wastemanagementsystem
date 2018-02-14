@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 05, 2018 at 04:06 PM
+-- Generation Time: Feb 07, 2018 at 05:43 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -68,7 +68,21 @@ CREATE TABLE `tbllogindetails` (
 
 INSERT INTO `tbllogindetails` (`id`, `email`, `password`, `access`, `user_id`) VALUES
 (2, 'daviddisu8@gmail.com', 'password', 'admin', 6),
-(3, 'ogwurujohnson@gmail.com', 'test', 'agent', 7);
+(3, 'ogwurujohnson@gmail.com', 'test', 'admin', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblpayments`
+--
+
+CREATE TABLE `tblpayments` (
+  `id` int(11) NOT NULL,
+  `User_Id` int(11) NOT NULL,
+  `Transaction_Id` varchar(255) NOT NULL,
+  `Amount` varchar(255) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -173,7 +187,7 @@ INSERT INTO `tbluser` (`id`, `firstname`, `lastname`, `phone`, `email`, `date`) 
 CREATE TABLE `tblwallet` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `amount` int(11) NOT NULL,
+  `balance` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -202,6 +216,12 @@ ALTER TABLE `tbllastlogin`
 ALTER TABLE `tbllogindetails`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `tblpayments`
+--
+ALTER TABLE `tblpayments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tblproperty`
@@ -264,6 +284,11 @@ ALTER TABLE `tbllastlogin`
 --
 ALTER TABLE `tbllogindetails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tblpayments`
+--
+ALTER TABLE `tblpayments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tblproperty`
 --
