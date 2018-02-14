@@ -1,12 +1,12 @@
 // JavaScript source code
 $(document).ready(function(){
     getUserDetails();
-    getTicketList();
+    getPropertyList();
     $('#logout').click(function(){
         logout();
     });
 
-    $('#frmEditTicket').submit(function (event) {
+    $('#frmEditProperty').submit(function (event) {
         var formData = {
             'txtpropertyname': $('input[name=txtpropertyname]').val(),
             'txtpropertysubject':$('input[name=txtpropertysubject]').val(),
@@ -60,7 +60,7 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
-function getTicketList() {
+function getPropertyList() {
     //fetch list of all tickets
     var data = '';
     var xmlhttp = new XMLHttpRequest();
@@ -73,26 +73,24 @@ function getTicketList() {
                 var count = 0;
                 for(var i = 0; i<data.length; i++){
                     count++;
-                    var html = '<tr id="tr'+data[i].id+'">\n' +
-                        '<td><span>'+count+'</span></td>'+
+                    var html = '<tr>\n' +
+                        '<td><span>'+count+'</span></td>\n' +
                         '<td><h5>'+data[i].name+'</h5></td>\n' +
-                        '<td><h5>'+data[i].propertyname+'</h5></td>\n' +
-                        '<td><span class="text-muted">'+data[i].subject+'</span></td>\n' +
-                        '<td>'+data[i].propertygroup+'</td>\n' +
-                        '<td><span class="col-green">'+data[i].status+'</span></td>\n' +
-                        '<td>'+data[i].priority+'</td>\n'+
-                        '<td>'+data[i].pickup_date+'</td>\n'+
+                        '<td><span class="text-muted">randomised words even slightly believable</span></td>\n' +
+                        '<td>$16.00</td>\n' +
+                        '<td><span>In Stock</span></td>\n' +
+                        '<td><span></span></td>\n' +
                         '<td>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green" data-toggle="modal" data-target="#editticket"><i class="zmdi zmdi-edit" onclick="editTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deleteTicket(\''+data[i].id+'\')"></i></a>\n' +
+                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>\n' +
+                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>\n' +
                         '</td>\n' +
                         '</tr>';
-                    $('#tblticketlist').append(html);
+                    $('#tblpropertylist').append(html);
                 }
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/alltickets", true);
+    xmlhttp.open("GET", "/gafista/api/agent/allproperties", true);
     xmlhttp.send();
 }
 
@@ -125,7 +123,7 @@ function deleteTicket(id){
     xmlhttp.send();
 }
 
-function editTicket(id){
+function editProperty(id){
     var ticketid = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {

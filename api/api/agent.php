@@ -38,8 +38,14 @@ class agent
         $sql = "SELECT * FROM tblproperty";
         $res = mysqli_query($this->con, $sql);
         $result = [];
-        while ($row = mysqli_fetch_row($res)) {
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
             $result[] = $row;
+            $sql1 = "SELECT firstname, lastname FROM tbluser WHERE id='".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]["name"] = $row1["firstname"]." ".$row1["lastname"];
+            $count++;
         }
         header('Content-Type:application/json');
         echo json_encode($result);
@@ -407,7 +413,9 @@ class agent
             $ticketstatus = mysqli_real_escape_string($this->con, $_POST['ddpropertystatus']);
             $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddpropertypriority']);
             $propertygroup = mysqli_real_escape_string($this->con, $_POST['ddpropertygroup']);
-            if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
+            $propertypickuptime = mysqli_real_escape_string($this->con, $_POST['propertypickuptime']);
+
+            if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($propertygroup) && !empty($ticketstatus) && $propertypickuptime) {
                 $sql = "INSERT into tbltickets (subject,status,priority,property_id,user_id) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if ($res) {

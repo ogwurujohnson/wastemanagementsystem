@@ -4,14 +4,18 @@
     <bookmark url="file://$PROJECT_DIR$/api/api/users.php" description="function __construct(){" line="13" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="New Database Schema">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" />
+    <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-pickup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-property.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket-timeline.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/js/pages/admin-index.js" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pickup.html" afterPath="$PROJECT_DIR$/admin/pickup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/ticket_timeline.html" afterPath="$PROJECT_DIR$/admin/ticket_timeline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/vproperty.html" afterPath="$PROJECT_DIR$/admin/vproperty.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/vticket.html" afterPath="$PROJECT_DIR$/admin/vticket.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/agent.php" afterPath="$PROJECT_DIR$/api/api/agent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_schema/wastemanagement.sql" afterPath="$PROJECT_DIR$/db_schema/wastemanagement.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,9 +29,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4776">
-              <caret line="199" column="31" lean-forward="false" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="45" />
+            <state relative-caret-position="259">
+              <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
               <folding>
+                <element signature="n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -35,13 +41,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-ticket.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin-ticket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="219">
+              <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
               <folding>
-                <marker date="1518638720177" expanded="false" signature="993:1345" ph="{...}" />
+                <marker date="1518651679941" expanded="false" signature="993:1345" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -50,62 +56,136 @@
       <file leaf-file-name="agent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9576">
-              <caret line="404" column="47" lean-forward="false" selection-start-line="404" selection-start-column="47" selection-end-line="404" selection-end-column="47" />
+            <state relative-caret-position="364">
+              <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="21" />
               <folding>
-                <marker date="1518638720445" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
-                <marker date="1518638720445" expanded="true" signature="1106:1148" ph="SELECT * FRO... tblproperty" />
-                <marker date="1518638720445" expanded="true" signature="1461:1491" ph="SELECT * FRO... tblpropertygroup" />
-                <marker date="1518638720445" expanded="true" signature="1798:1819" ph="SELECT * FRO... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="2129:2154" ph="SELECT * FRO... tblpayments" />
-                <marker date="1518638720445" expanded="true" signature="2488:2518" ph="SELECT id FR... tbllogindetails" />
-                <marker date="1518638720445" expanded="true" signature="2795:2813" ph="SELECT id FR... tbllogindetails" />
-                <marker date="1518638720445" expanded="true" signature="2795:2821" ph="SELECT id FR... tblpayments" />
-                <marker date="1518638720445" expanded="true" signature="3097:3122" ph="SELECT id FR... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="3401:3427" ph="SELECT id FR... tblproperty" />
-                <marker date="1518638720445" expanded="true" signature="3707:3737" ph="SELECT Amoun... tblpayments" />
-                <marker date="1518638720445" expanded="true" signature="4096:4117" ph="SELECT * FRO... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="4096:4128" ph="SELECT * FRO... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="4096:4136" ph="SELECT * FRO... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="4395:4419" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="4612:4662" ph="SELECT first... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="4612:4682" ph="SELECT first... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="4885:4975" ph="SELECT prope... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="5168:5251" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518638720445" expanded="true" signature="5603:5649" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="5961:5993" ph="SELECT * FRO... tblticket_category" />
-                <marker date="1518638720445" expanded="true" signature="6336:6377" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="7218:7354" ph="INSERT INTO tblproperty... " />
-                <marker date="1518638720445" expanded="true" signature="8133:8235" ph="INSERT INTO tblpropertygroup... " />
-                <marker date="1518638720445" expanded="true" signature="8702:8723" ph="{...}" />
-                <marker date="1518638720445" expanded="true" signature="12343:12731" ph="{...}" />
-                <marker date="1518638720445" expanded="true" signature="12395:12435" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12844" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12845" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12846" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12853" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12854" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="12811:12855" ph="DELETE FROM " />
-                <marker date="1518638720445" expanded="true" signature="13200:13235" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="13200:13249" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518638720445" expanded="true" signature="13442:13512" ph="SELECT first... tbluser" />
-                <marker date="1518638720445" expanded="true" signature="13715:13805" ph="SELECT prope... tblproperty" />
-                <marker date="1518638720445" expanded="true" signature="13998:14081" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518638720445" expanded="true" signature="15004:15152" ph="INSERT into tbltickets... " />
-                <marker date="1518638720445" expanded="true" signature="15595:15625" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518638720445" expanded="true" signature="15949:16014" ph="UPDATE tbllo... " />
-                <marker date="1518638720445" expanded="true" signature="16592:16683" ph="SELECT * FRO... tbllogindetails" />
-                <marker date="1518638720445" expanded="true" signature="16592:16691" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1518652327053" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
+                <marker date="1518652327053" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="1423:1465" ph="SELECT * FRO... tblproperty" />
+                <marker date="1518652327053" expanded="true" signature="1778:1808" ph="SELECT * FRO... tblpropertygroup" />
+                <marker date="1518652327053" expanded="true" signature="2115:2136" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="2446:2471" ph="SELECT * FRO... tblpayments" />
+                <marker date="1518652327053" expanded="true" signature="2805:2835" ph="SELECT id FR... tbllogindetails" />
+                <marker date="1518652327053" expanded="true" signature="3112:3130" ph="SELECT id FR... tbllogindetails" />
+                <marker date="1518652327053" expanded="true" signature="3112:3138" ph="SELECT id FR... tblpayments" />
+                <marker date="1518652327053" expanded="true" signature="3414:3439" ph="SELECT id FR... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="3718:3744" ph="SELECT id FR... tblproperty" />
+                <marker date="1518652327053" expanded="true" signature="4024:4054" ph="SELECT Amoun... tblpayments" />
+                <marker date="1518652327053" expanded="true" signature="4413:4434" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="4413:4445" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="4413:4453" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="4712:4736" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="4929:4979" ph="SELECT first... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="4929:4999" ph="SELECT first... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="5202:5292" ph="SELECT prope... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="5485:5568" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652327053" expanded="true" signature="5920:5966" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="6278:6310" ph="SELECT * FRO... tblticket_category" />
+                <marker date="1518652327053" expanded="true" signature="6653:6694" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="7535:7671" ph="INSERT INTO tblproperty... " />
+                <marker date="1518652327053" expanded="true" signature="8450:8552" ph="INSERT INTO tblpropertygroup... " />
+                <marker date="1518652327053" expanded="true" signature="9019:9040" ph="{...}" />
+                <marker date="1518652327053" expanded="true" signature="9108:9153" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="10077:10225" ph="INSERT INTO tbltickets... " />
+                <marker date="1518652327053" expanded="true" signature="10898:10967" ph="INSERT into tblwallet... " />
+                <marker date="1518652327053" expanded="true" signature="12039:12171" ph="UPDATE tblpr... " />
+                <marker date="1518652327053" expanded="true" signature="12660:13048" ph="{...}" />
+                <marker date="1518652327053" expanded="true" signature="12712:12752" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13161" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13162" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13163" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13170" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13171" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13128:13172" ph="DELETE FROM " />
+                <marker date="1518652327053" expanded="true" signature="13517:13552" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="13517:13566" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652327053" expanded="true" signature="13759:13829" ph="SELECT first... tbluser" />
+                <marker date="1518652327053" expanded="true" signature="14032:14122" ph="SELECT prope... tblproperty" />
+                <marker date="1518652327053" expanded="true" signature="14315:14398" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652327053" expanded="true" signature="15470:15618" ph="INSERT into tbltickets... " />
+                <marker date="1518652327053" expanded="true" signature="16061:16091" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652327053" expanded="true" signature="16415:16480" ph="UPDATE tbllo... " />
+                <marker date="1518652327053" expanded="true" signature="17058:17149" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1518652327053" expanded="true" signature="17058:17157" ph="SELECT * FRO... tbllogindetails" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign-in.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sign-in.js">
+      <file leaf-file-name="admin-property.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-property.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="49" column="7" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="49" selection-end-column="7" />
+            <state relative-caret-position="204">
+              <caret line="77" column="63" lean-forward="false" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vproperty.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/vproperty.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pickup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/pickup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="281" column="39" lean-forward="false" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-pickup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-pickup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-ticket-timeline.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-ticket-timeline.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -114,58 +194,20 @@
       <file leaf-file-name="vticket.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/vticket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16560">
-              <caret line="690" column="75" lean-forward="false" selection-start-line="690" selection-start-column="75" selection-end-line="690" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic-form-elements.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/basic-form-elements.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34104">
-              <caret line="1421" column="0" lean-forward="false" selection-start-line="1421" selection-start-column="0" selection-end-line="1421" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pickup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/pickup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18336">
-              <caret line="764" column="43" lean-forward="false" selection-start-line="764" selection-start-column="43" selection-end-line="764" selection-end-column="43" />
+            <state relative-caret-position="317">
+              <caret line="285" column="35" lean-forward="false" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
               <folding>
-                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/api/users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-              <folding>
-                <element signature="e#6#86#0#PHP" expanded="true" />
-                <marker date="1517839258515" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
-                <marker date="1517839258515" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
-                <marker date="1517839258515" expanded="true" signature="3169:3231" ph="SELECT email... tbllogindetails" />
-                <marker date="1517839258515" expanded="true" signature="3555:3662" ph="INSERT INTO tbluser... " />
-                <marker date="1517839258515" expanded="true" signature="3864:3970" ph="INSERT INTO tbllogindetails... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2328">
-              <caret line="97" column="72" lean-forward="false" selection-start-line="97" selection-start-column="72" selection-end-line="97" selection-end-column="72" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -181,11 +223,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>max-width:350px;</find>
-      <find>Sign in to your Account</find>
-      <find>SIGN UP</find>
-      <find>margin-top:200px;</find>
-      <find>$data</find>
       <find>name</find>
       <find>zmdi zmdi-power</find>
       <find>20</find>
@@ -193,7 +230,29 @@
       <find>Scarlett</find>
       <find>john.doe@example.com</find>
       <find>randomised words even slightly believable</find>
+      <find>Extra</find>
+      <find>John</find>
+      <find>powe</find>
+      <find>john doe</find>
+      <find>john</find>
       <find>John Doe</find>
+      <find>power</find>
+      <find>product</find>
+      <find>Simple Black Clock</find>
+      <find>leftsidebar</find>
+      <find>left</find>
+      <find>nexa</find>
+      <find>leftsi</find>
+      <find>calendar</find>
+      <find>shopping_cart</find>
+      <find>search</find>
+      <find>rightsi</find>
+      <find>rights</find>
+      <find>zmdi zmdi-search</find>
+      <find>all</find>
+      <find>navbar</find>
+      <find>nav</find>
+      <find>alltickets</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,10 +280,16 @@
         <option value="$PROJECT_DIR$/js/sign-in.js" />
         <option value="$PROJECT_DIR$/api/api/users.php" />
         <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-index.js" />
+        <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket-timeline.js" />
+        <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-pickup.js" />
         <option value="$PROJECT_DIR$/admin/index.html" />
+        <option value="$PROJECT_DIR$/admin/ticket_timeline.html" />
+        <option value="$PROJECT_DIR$/admin/pickup.html" />
         <option value="$PROJECT_DIR$/admin/vticket.html" />
-        <option value="$PROJECT_DIR$/api/api/agent.php" />
         <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" />
+        <option value="$PROJECT_DIR$/admin/vproperty.html" />
+        <option value="$PROJECT_DIR$/api/api/agent.php" />
+        <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-property.js" />
       </list>
     </option>
   </component>
@@ -323,14 +388,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../schoolhub" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin/assets/js/pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/admin/assets/js/pages" />
       <recent name="$PROJECT_DIR$/admin/assets/js" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/api/api" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/admin/assets/js/pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,7 +447,7 @@
       <workItem from="1518375107554" duration="805000" />
       <workItem from="1518550152855" duration="4196000" />
       <workItem from="1518641918817" duration="765000" />
-      <workItem from="1518639480153" duration="157000" />
+      <workItem from="1518639480153" duration="11746000" />
     </task>
     <task id="LOCAL-00001" summary="SignIn and SignUp">
       <created>1517021997249</created>
@@ -433,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517843302432</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ticket View&#10;Ticket Delete">
+      <created>1518639802370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1518639802370</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94743000" />
+    <option name="totallyTimeSpent" value="106332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -473,7 +545,8 @@
     <MESSAGE value="Authenticate User" />
     <MESSAGE value="Make Admin Dashboard Active&#10;Logout API" />
     <MESSAGE value="New Database Schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Database Schema" />
+    <MESSAGE value="Ticket View&#10;Ticket Delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ticket View&#10;Ticket Delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -482,41 +555,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/core/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1752">
-          <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sign-in.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
@@ -536,7 +574,7 @@
         <state relative-caret-position="576">
           <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
+            <element signature="e#6#86#0#PHP" expanded="false" />
             <marker date="1517839258515" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
             <marker date="1517839258515" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
             <marker date="1517839258515" expanded="true" signature="3169:3231" ph="SELECT email... tbllogindetails" />
@@ -777,7 +815,7 @@
         <state relative-caret-position="1056">
           <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
           <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
+            <element signature="e#6#86#0#PHP" expanded="false" />
             <marker date="1517839258515" expanded="true" signature="811:872" ph="SELECT email... tbllogindetails" />
             <marker date="1517839258515" expanded="true" signature="1136:1234" ph="SELECT * FRO... tbllogindetails" />
             <marker date="1517839258515" expanded="true" signature="3169:3231" ph="SELECT email... tbllogindetails" />
@@ -795,32 +833,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pickup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18336">
-          <caret line="764" column="43" lean-forward="false" selection-start-line="764" selection-start-column="43" selection-end-line="764" selection-end-column="43" />
-          <folding>
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/basic-form-elements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34104">
           <caret line="1421" column="0" lean-forward="false" selection-start-line="1421" selection-start-column="0" selection-end-line="1421" selection-end-column="69" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4776">
-          <caret line="199" column="31" lean-forward="false" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,72 +849,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vticket.html">
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-ticket-timeline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16560">
-          <caret line="690" column="75" lean-forward="false" selection-start-line="690" selection-start-column="75" selection-end-line="690" selection-end-column="75" />
+        <state relative-caret-position="48">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-pickup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9576">
-          <caret line="404" column="47" lean-forward="false" selection-start-line="404" selection-start-column="47" selection-end-line="404" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
           <folding>
-            <marker date="1518638720445" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
-            <marker date="1518638720445" expanded="true" signature="1106:1148" ph="SELECT * FRO... tblproperty" />
-            <marker date="1518638720445" expanded="true" signature="1461:1491" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1518638720445" expanded="true" signature="1798:1819" ph="SELECT * FRO... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="2129:2154" ph="SELECT * FRO... tblpayments" />
-            <marker date="1518638720445" expanded="true" signature="2488:2518" ph="SELECT id FR... tbllogindetails" />
-            <marker date="1518638720445" expanded="true" signature="2795:2813" ph="SELECT id FR... tbllogindetails" />
-            <marker date="1518638720445" expanded="true" signature="2795:2821" ph="SELECT id FR... tblpayments" />
-            <marker date="1518638720445" expanded="true" signature="3097:3122" ph="SELECT id FR... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="3401:3427" ph="SELECT id FR... tblproperty" />
-            <marker date="1518638720445" expanded="true" signature="3707:3737" ph="SELECT Amoun... tblpayments" />
-            <marker date="1518638720445" expanded="true" signature="4096:4117" ph="SELECT * FRO... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="4096:4128" ph="SELECT * FRO... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="4096:4136" ph="SELECT * FRO... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="4395:4419" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="4612:4662" ph="SELECT first... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="4612:4682" ph="SELECT first... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="4885:4975" ph="SELECT prope... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="5168:5251" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518638720445" expanded="true" signature="5603:5649" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="5961:5993" ph="SELECT * FRO... tblticket_category" />
-            <marker date="1518638720445" expanded="true" signature="6336:6377" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="7218:7354" ph="INSERT INTO tblproperty... " />
-            <marker date="1518638720445" expanded="true" signature="8133:8235" ph="INSERT INTO tblpropertygroup... " />
-            <marker date="1518638720445" expanded="true" signature="8702:8723" ph="{...}" />
-            <marker date="1518638720445" expanded="true" signature="12343:12731" ph="{...}" />
-            <marker date="1518638720445" expanded="true" signature="12395:12435" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12844" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12845" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12846" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12853" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12854" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="12811:12855" ph="DELETE FROM " />
-            <marker date="1518638720445" expanded="true" signature="13200:13235" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="13200:13249" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518638720445" expanded="true" signature="13442:13512" ph="SELECT first... tbluser" />
-            <marker date="1518638720445" expanded="true" signature="13715:13805" ph="SELECT prope... tblproperty" />
-            <marker date="1518638720445" expanded="true" signature="13998:14081" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518638720445" expanded="true" signature="15004:15152" ph="INSERT into tbltickets... " />
-            <marker date="1518638720445" expanded="true" signature="15595:15625" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518638720445" expanded="true" signature="15949:16014" ph="UPDATE tbllo... " />
-            <marker date="1518638720445" expanded="true" signature="16592:16683" ph="SELECT * FRO... tbllogindetails" />
-            <marker date="1518638720445" expanded="true" signature="16592:16691" ph="SELECT * FRO... tbllogindetails" />
+            <element signature="n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ticket_timeline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="219">
+          <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
           <folding>
-            <marker date="1518638720177" expanded="false" signature="993:1345" ph="{...}" />
+            <marker date="1518651679941" expanded="false" signature="993:1345" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/vticket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="285" column="35" lean-forward="false" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pickup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="281" column="39" lean-forward="false" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api/agent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="21" />
+          <folding>
+            <marker date="1518652327053" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
+            <marker date="1518652327053" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="1423:1465" ph="SELECT * FRO... tblproperty" />
+            <marker date="1518652327053" expanded="true" signature="1778:1808" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1518652327053" expanded="true" signature="2115:2136" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="2446:2471" ph="SELECT * FRO... tblpayments" />
+            <marker date="1518652327053" expanded="true" signature="2805:2835" ph="SELECT id FR... tbllogindetails" />
+            <marker date="1518652327053" expanded="true" signature="3112:3130" ph="SELECT id FR... tbllogindetails" />
+            <marker date="1518652327053" expanded="true" signature="3112:3138" ph="SELECT id FR... tblpayments" />
+            <marker date="1518652327053" expanded="true" signature="3414:3439" ph="SELECT id FR... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="3718:3744" ph="SELECT id FR... tblproperty" />
+            <marker date="1518652327053" expanded="true" signature="4024:4054" ph="SELECT Amoun... tblpayments" />
+            <marker date="1518652327053" expanded="true" signature="4413:4434" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="4413:4445" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="4413:4453" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="4712:4736" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="4929:4979" ph="SELECT first... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="4929:4999" ph="SELECT first... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="5202:5292" ph="SELECT prope... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="5485:5568" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652327053" expanded="true" signature="5920:5966" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="6278:6310" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1518652327053" expanded="true" signature="6653:6694" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="7535:7671" ph="INSERT INTO tblproperty... " />
+            <marker date="1518652327053" expanded="true" signature="8450:8552" ph="INSERT INTO tblpropertygroup... " />
+            <marker date="1518652327053" expanded="true" signature="9019:9040" ph="{...}" />
+            <marker date="1518652327053" expanded="true" signature="9108:9153" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="10077:10225" ph="INSERT INTO tbltickets... " />
+            <marker date="1518652327053" expanded="true" signature="10898:10967" ph="INSERT into tblwallet... " />
+            <marker date="1518652327053" expanded="true" signature="12039:12171" ph="UPDATE tblpr... " />
+            <marker date="1518652327053" expanded="true" signature="12660:13048" ph="{...}" />
+            <marker date="1518652327053" expanded="true" signature="12712:12752" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13161" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13162" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13163" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13170" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13171" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13128:13172" ph="DELETE FROM " />
+            <marker date="1518652327053" expanded="true" signature="13517:13552" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="13517:13566" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652327053" expanded="true" signature="13759:13829" ph="SELECT first... tbluser" />
+            <marker date="1518652327053" expanded="true" signature="14032:14122" ph="SELECT prope... tblproperty" />
+            <marker date="1518652327053" expanded="true" signature="14315:14398" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652327053" expanded="true" signature="15470:15618" ph="INSERT into tbltickets... " />
+            <marker date="1518652327053" expanded="true" signature="16061:16091" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652327053" expanded="true" signature="16415:16480" ph="UPDATE tbllo... " />
+            <marker date="1518652327053" expanded="true" signature="17058:17149" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1518652327053" expanded="true" signature="17058:17157" ph="SELECT * FRO... tbllogindetails" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-property.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="77" column="63" lean-forward="false" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/vproperty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
