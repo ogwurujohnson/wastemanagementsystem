@@ -73,7 +73,7 @@ function getPropertyList() {
                 var count = 0;
                 for(var i = 0; i<data.length; i++){
                     count++;
-                    var html = '<tr>\n' +
+                    var html = '<tr id="tr'+data[i].id+'">\n' +
                         '<td><span>'+count+'</span></td>\n' +
                         '<td><h5>'+data[i].name+'</h5></td>\n' +
                         '<td><span>'+data[i].property_name+'</span></td>\n' +
@@ -82,7 +82,7 @@ function getPropertyList() {
                         '<td><span>'+data[i].date+'</span></td>\n' +
                         '<td>\n' +
                         '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>\n' +
+                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deleteProperty(\''+data[i].id+'\')"></i></a>\n' +
                         '</td>\n' +
                         '</tr>';
                     $('#tblpropertylist').append(html);
@@ -106,7 +106,7 @@ function logout(){
     xmlhttp.send();
 }
 
-function deleteTicket(id){
+function deleteProperty(id){
     var data = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -119,7 +119,7 @@ function deleteTicket(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/deleteTicket/"+data, true);
+    xmlhttp.open("GET", "/gafista/api/agent/deleteproperty/"+data, true);
     xmlhttp.send();
 }
 

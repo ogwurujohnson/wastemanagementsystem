@@ -361,7 +361,7 @@ class agent
         $id = $propertyid;
         if (isset($_POST)) {
 
-            $sql = "DELETE FROM tblproperty WHERE id = '$id' ";
+            $sql = "DELETE FROM tblproperty WHERE id = '$id'";
             $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
             if ($res) {
                 $this->data['success'] = true;
