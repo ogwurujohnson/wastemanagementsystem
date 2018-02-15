@@ -252,9 +252,9 @@ class agent
 
     public function addpropertygroup()
     {
-        if (isset($_POST['txtpropertytype'])) {
-            $propertytype = mysqli_real_escape_string($this->con, $_POST['txtpropertytype']);
-            $propertyprice = mysqli_real_escape_string($this->con, $_POST['txtpropertyprice']);
+        if (isset($_POST['txtpropertygroupname'])) {
+            $propertytype = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupname']);
+            $propertyprice = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupprice']);
             if (!empty($propertytype) && !empty($propertyprice)) {
                 $sql = "INSERT INTO tblpropertygroup (property_type, property_price) VALUES ('$propertytype','$propertyprice') ";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));

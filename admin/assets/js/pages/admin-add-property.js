@@ -26,7 +26,7 @@ $(document).ready(function(){
                     $("#feedback").html("Empty Fields!");
                     $("#feedback").css({'color':'red'});
                 }
-                else if (data.success === "success") {
+                else if (data.success === true) {
                     alert('Property Added Successfully!');
                 }
             });
