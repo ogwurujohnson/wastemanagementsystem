@@ -2,26 +2,20 @@
 $(document).ready(function(){
     getUserDetails();
     getPropertyList();
+    getPropertyGroup()
     $('#logout').click(function(){
         logout();
     });
 
-    $('#frmEditProperty').submit(function (event) {
+    $('#frmAddProperty').submit(function (event) {
         var formData = {
-            'txtpropertyname': $('input[name=txtpropertyname]').val(),
-            'txtpropertysubject':$('input[name=txtpropertysubject]').val(),
-            'ddpropertygroup':$('select[name=ddpropertygroup]').val(),
-            'ddpropertystatus':$('select[name=ddpropertystatus]').val(),
-            'ddpropertypriority':$('select[name=ddpropertypriority]').val(),
-            'propertypickuptime':$('input[name=propertypickuptime]').val(),
-            'propertyid':$('input[name=propertyid]').val()
+            'ddPropertyGroup': $('select[name=ddPropertyGroup]').val(),
+            'txtpropertyname':$('input[name=txtpropertyname]').val(),
+            'txtpropertyaddress':$('input[name=txtpropertyaddress]').val()
         };
-
-        console.log(formData);
-
-/*        $.ajax({
+        $.ajax({
             type: 'POST',
-            url: 'api/users/signin',
+            url: '/gafista/api/agent/addproperty',
             data: formData,
             dataType: 'json',
             encode: true
@@ -33,10 +27,9 @@ $(document).ready(function(){
                     $("#feedback").css({'color':'red'});
                 }
                 else if (data.success === "success") {
-                    console.log(data);
+                    alert('Property Added Successfully!');
                 }
             });
-*/
         event.preventDefault();
     });
 });
@@ -114,8 +107,9 @@ function getPropertyGroup() {
             if (data.isLoggedIn === false) {
                 document.location.href = "../sign-in.html";
             } else {
+                console.log(data);
                 for(var i = 0; i < data.length; i++) {
-                    var html = '<option value="'+data[0].id+'" selected>'+data[0].property_type+'</option>';
+                    var html = '<option value="'+data[i].id+'" selected>'+data[i].property_type+'</option>';
                     $('#ddPropertyGroup').append(html);
                 }
             }

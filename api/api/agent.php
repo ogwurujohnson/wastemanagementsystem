@@ -226,14 +226,14 @@ class agent
         echo json_encode($result);
     }
 
-    public function addproperty($userid = '')
+    public function addproperty()
     {
-        $id = $userid;
+        $id = $_SESSION['userid'];
         if (isset($_POST['txtpropertyname'])) {
             $propertyname = $propertygroupid = $address = $userid = "";
             $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
-            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
-            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['ddPropertyGroup']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtpropertyaddress']);
             if (!empty($propertyname) && !empty($propertygroupid) && !empty($address)) {
                 $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));

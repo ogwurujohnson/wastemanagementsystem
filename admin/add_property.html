@@ -197,15 +197,14 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Form Validation
-                    <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
+                <h2>Add Property
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
-                    <li class="breadcrumb-item active">Form Validation</li>
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
+                    <li class="breadcrumb-item"><a href="vproperty.html">Property</a></li>
+                    <li class="breadcrumb-item active">Add Property</li>
                 </ul>
             </div>
         </div>
@@ -216,61 +215,33 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="header">
-                        
+
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="body">
-                        <form id="form_validation" method="POST">
-                            <div class="form-group ">
-                            <p> Select Client Name </p>
-                            <select class="form-control">
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                                
-                                
-                            </select>
-                        </div>
-
-
-                        
+                        <form id="frmAddProperty" method="POST">
+                            <div class="form-group">
+                                <select class="form-control" name="ddPropertyGroup" id="ddPropertyGroup" required>
+                                    <option value="" selected>select property group</option>
+                                </select>
+                            </div>
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="address" required>
+                                    <input type="text" class="form-control" name="txtpropertyname" required>
                                     <label class="form-label">Property Name</label>
                                 </div>
                             </div>
-
                             <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="address" required>
+                                <input type="text" class="form-control" name="txtpropertyaddress" required>
                                 <label class="form-label">Address</label>
                             </div>
                         </div>
-
-
-                            
-                            
-                            <div class="form-group form-float">
-                                <p> Property Group </p>
-                                <select class="form-control">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    
-                                    
-                                </select>
-                            </div>
                             <div class="form-group">
-                                <input type="checkbox" id="checkbox" name="checkbox">
+                                <input type="checkbox" id="checkbox" name="checkbox" required>
                                 <label for="checkbox">I have entered all the details correctly</label>
                             </div>
                             <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>
