@@ -10,11 +10,17 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+
 <link rel="stylesheet" href="assets/plugins/morrisjs/morris.css"/>
 <!-- Custom Css -->
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/createticket.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user-index.js"></script>
 </head>
 
 <body class="theme-cyan index2">
@@ -125,7 +131,7 @@
                     <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
                 </ul>
             </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="#" class="mega-menu" id="logout" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
@@ -134,7 +140,7 @@
 <div class="menu-container">
     <div class="menu">
         <ul class="pullDown">
-            <li><a href="index2.html">Dashboard</a>
+            <li><a href="index.html">Dashboard</a>
                 
             </li>
 
@@ -173,9 +179,9 @@
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index2.html#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#settings">Setting</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index.html#skins">Skins</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#chat">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#settings">Setting</a></li>
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
@@ -460,7 +466,7 @@
                 <li class="left float-left">
                     <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
                     <div class="chat-info">
-                        <a class="name" href="index2.html#">Alexander</a>
+                        <a class="name" href="index.html#">Alexander</a>
                         <span class="datetime">6:12</span>                            
                         <span class="message">Hello, John </span>
                     </div>
@@ -472,10 +478,10 @@
                     <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
                 </li>
                     <li class="right">
                     <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
@@ -525,42 +531,33 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form id="form_validation" method="POST">
-                          
-                            
-
-
-                        
+                        <form id="create_ticket" method="POST" action="api/client/createticket">
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="address" required>
-                                    <label class="form-label">Type Subject</label>
+                                    <input type="text" class="form-control" name="txtticketsubject" required>
+                                    <label class="form-label">Ticket Subject</label>
                                 </div>
                             </div>
-
                             <div class="form-group form-float">
                                 <p> Select Priority </p>
-                                <select class="form-control">
-                                    <option>Low</option>
-                                    <option>Higih</option>
-                                    <option>Medium</option>
-                                    
-                                    
-                                </select>
+                                <select name="ddticketpriority" class="form-control">
+                                    <option value="low">Low</option>
+                                    <option value="high">High</option>
+                                    <option value="medium">Medium</option>
+                               </select>
                             </div>
-
-
-                            
-                            
                             <div class="form-group form-float">
                                 <p> Property Group </p>
-                                <select class="form-control">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    
-                                    
+                                <select  name="ddproperty" class="form-control">
+                                    <option value="1">Estate</option>
+                                    <option value="2">GRA</option>
+                                    <option value="5">Crescent</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" name="txtpickupdate" class="datepicker form-control" placeholder="Please choose a date...">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" id="checkbox" name="checkbox">
@@ -595,6 +592,15 @@
 
 <script src="assets/bundles/mainscripts.bundle.js"></script> 
 <script src="assets/js/pages/index2.js"></script>
+
+<script src="assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js -->
+<!-- Bootstrap Material Datetime Picker Plugin Js -->
+<script src="assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script src="assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js -->
+
+
+<script src="assets/js/pages/forms/basic-form-elements.js"></script>
+
 <script>
     /*global $ */
     $(document).ready(function() {

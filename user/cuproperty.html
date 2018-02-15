@@ -10,11 +10,15 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/morrisjs/morris.css"/>
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/addproperty.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user-index.js"></script>
+    <script src="assets/plugins/momentjs/moment.js"></script>
 </head>
 
 <body class="theme-cyan index2">
@@ -125,7 +129,7 @@
                     <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
                 </ul>
             </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="#" class="mega-menu" id="logout" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
@@ -134,7 +138,7 @@
 <div class="menu-container">
     <div class="menu">
         <ul class="pullDown">
-            <li><a href="index2.html">Dashboard</a>
+            <li><a href="index.html">Dashboard</a>
                 
             </li>
 
@@ -173,9 +177,9 @@
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index2.html#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#settings">Setting</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index.html#skins">Skins</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#chat">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index.html#settings">Setting</a></li>
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
@@ -460,7 +464,7 @@
                 <li class="left float-left">
                     <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
                     <div class="chat-info">
-                        <a class="name" href="index2.html#">Alexander</a>
+                        <a class="name" href="index.html#">Alexander</a>
                         <span class="datetime">6:12</span>                            
                         <span class="message">Hello, John </span>
                     </div>
@@ -472,10 +476,10 @@
                     <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
                 </li>
                 <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="index2.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
+                    <div class="chat-info"> <a class="name" href="index.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
                 </li>
                     <li class="right">
                     <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
@@ -512,52 +516,31 @@
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
-                    <div class="header">
-                        
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+
                     <div class="body">
-                        <form id="form_validation" method="POST">
-                          
-                            
-
-
-                        
+                        <form id="add_property" method="POST" action="api/client/addproperty">
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="address" required>
+                                    <input type="text" class="form-control" name="txtpropertyname" placeholder="example: House owner's name, Office name, Church name" required>
                                     <label class="form-label">Property Name</label>
                                 </div>
                             </div>
 
                             <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="address" required>
-                                <label class="form-label">Address</label>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="txtaddress" required>
+                                    <label class="form-label">Address</label>
+                                </div>
                             </div>
-                        </div>
-
-
-                            
-                            
                             <div class="form-group form-float">
                                 <p> Property Group </p>
-                                <select class="form-control">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    
-                                    
+                                <select name="ddpropertygroupid" class="form-control show-tick">
+                                    <option value="1">Estate</option>
+                                    <option value="2">GRA</option>
+                                    <option value="3">Church</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
                                 <input type="checkbox" id="checkbox" name="checkbox">
                                 <label for="checkbox">I have entered all the details correctly</label>
@@ -589,8 +572,8 @@
 <script src="assets/js/pages/widgets/infobox/infobox-1.js"></script>
 <script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script> 
-<script src="assets/js/pages/index2.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+
 <script>
     /*global $ */
     $(document).ready(function() {

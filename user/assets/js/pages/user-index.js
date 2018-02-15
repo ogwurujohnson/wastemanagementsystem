@@ -19,10 +19,13 @@ function getUserDetails(){
             }else{
                 $('#username').html(data[1]+" "+data[2]);
                 $('#useremail').html(data[4]);
+                $('#phonenumber').html(data[3]);
+                $('#firstname').html(data[1]);
+                $('#lastname').html(data[2]);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "/gafista/api/client/getClientDetails", true);
     xmlhttp.send();
 }
 
@@ -38,6 +41,6 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "/gafista/api/client/logout", true);
     xmlhttp.send();
 }
