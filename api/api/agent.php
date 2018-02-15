@@ -92,6 +92,21 @@ class agent
         echo json_encode($result);
     }
 
+    public function getAllClients(){
+        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'agent'";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
+            $sql1 = "SELECT * FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[] = $row1;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function getAllPayments()
     {
         $sql = "SELECT * FROM tblpayments";
