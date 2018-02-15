@@ -41,14 +41,14 @@
 <div class="overlay"></div><!-- Search  -->
 <div class="search-bar">
     <div class="search-icon"> <i class="material-icons">search</i> </div>
-    <input type="text" placeholder="Explore Nexa...">
+    <input type="text" placeholder="Explore Gafista...">
     <div class="close-search"> <i class="material-icons">close</i> </div>
 </div>
 
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
-        <div class="navbar-header"> <a href="javascript:void(0);" class="h-bars"></a> <a class="navbar-brand" href="index.html">Nexa</a></div>
+        <div class="navbar-header"> <a href="javascript:void(0);" class="h-bars"></a> <a class="navbar-brand" href="index.html">Gafista</a></div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="zmdi zmdi-search"></i></a></li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
@@ -516,10 +516,10 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
                 <div class="card">
                     <div class="body">
-                        <h3>50.5 Gb</h3>
-                        <p class="text-muted">Traffic this month</p>
+                        <h3 id="clientpropertiescount"></h3>
+                        <p class="text-muted">Total Number of Properties</p>
                         <div class="progress">
-                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                         </div>
                         <span class="text-small">4% higher than last month</span> </div>
                 </div>
@@ -528,7 +528,7 @@
                 <div class="card">
                     <div class="body">
                         <h3>26.8%</h3>
-                        <p class="text-muted">Server Load</p>
+                        <p class="text-muted">Wallet Balance</p>
                         <div class="progress">
                             <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                         </div>
@@ -539,7 +539,7 @@
                 <div class="card">
                     <div class="body">
                         <h3 >$ 14,500</h3>
-                        <p class="text-muted">Total Sale</p>
+                        <p class="text-muted">Total Amount Billed</p>
                         <div class="progress">
                             <div class="progress-bar l-amber" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                         </div>
@@ -549,8 +549,8 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
                 <div class="card">
                     <div class="body">
-                        <h3>1,600</h3>
-                        <p class="text-muted">Total Feedbacks</p>
+                        <h3 id="clientticketcount"></h3>
+                        <p class="text-muted">Total Tickets Opened</p>
                         <div class="progress">
                             <div class="progress-bar l-blue" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                         </div>
@@ -580,17 +580,17 @@
                             <div class="col-lg-4 col-md-4 col-sm-4 text-center m-b-20">                               
                                 <h3 class="counter m-b-0">$4,516</h3>
                                 <small class="text-muted">Sales Report</small>
-                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="rgb(134, 139, 239)">7,5,3,1,5,9,8,5,2,6,5,4,2,5,8,4,5,6,3,5,7,8</div>
+                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="#6cc719">7,5,3,1,5,9,8,5,2,6,5,4,2,5,8,4,5,6,3,5,7,8</div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 text-center m-b-20">
                                 <h3 class="counter m-b-0">$6,481</h3>
                                 <small class="text-muted">Annual Revenue </small>
-                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="rgb(25, 161, 183)">2,5,8,4,5,6,3,5,7,8,4,6,7,5,3,1,5,9,8,5,5,4</div>
+                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="rgb(254, 191, 15)">2,5,8,4,5,6,3,5,7,8,4,6,7,5,3,1,5,9,8,5,5,4</div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 text-center m-b-20">
                                 <h3 class="counter m-b-0">$3,915</h3>
                                 <small class="text-muted">Monthly Revenue</small>
-                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="rgb(254, 191, 15)">6,5,4,3,2,1,9,8,7,8,5,2,2,5,8,4,5,6,7,8,4,6</div>
+                                <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="3" data-bar-Spacing="6" data-bar-Color="#b8ff2c94">6,5,4,3,2,1,9,8,7,8,5,2,2,5,8,4,5,6,7,8,4,6</div>
                             </div>
                         </div>
                         <div id="area_chart" class="graph"></div>
@@ -671,167 +671,6 @@
             </div>
         </div>
        
-        <div class="row clearfix">
-            <div class="col-sm-12">
-                 <div class="card">
-                    <div class="header">
-                        <h2>Latest Properties</h2>
-                        <small>Latest additions to your property stack </small>
-
-                    </div>
-                    <div class="body">
-                        <div class="table-responsive social_media_table">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Property Name</th>
-                                        <th>Property Address</th>
-                                        <th>Property Group</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span class="list-icon linkedin"><i class="zmdi zmdi-linkedin"></i></span>
-                                        </td>
-                                        <td><span class="list-name">Linked In</span>
-                                            <span class="text-muted">Florida, United States</span>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><span class="list-icon twitter-table"><i class="zmdi zmdi-twitter"></i></span>
-                                        </td>
-                                        <td><span class="list-name">Twitter</span>
-                                            <span class="text-muted">Arkansas, United States</span>
-                                        </td>
-                                        <td>7K</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><span class="list-icon facebook"><i class="zmdi zmdi-facebook"></i></span>
-                                        </td>
-                                        <td><span class="list-name">Facebook</span>
-                                            <span class="text-muted">Illunois, United States</span>
-                                        </td>
-                                        <td>15K</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><span class="list-icon google"><i class="zmdi zmdi-google-plus"></i></span>
-                                        </td>
-                                        <td><span class="list-name">Google Plus</span>
-                                            <span class="text-muted">Arizona, United States</span>
-                                        </td>
-                                        <td>15K</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><span class="list-icon youtube"><i class="zmdi zmdi-youtube-play"></i></span>
-                                        </td>
-                                        <td><span class="list-name">YouTube</span>
-                                            <span class="text-muted">Alaska, United States</span>
-                                        </td>
-                                        <td>15K</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-       
-        <div class="row clearfix">
-           <div class="col-lg-12 col-md-12">
-               <div class="card ">
-                   <div class="header">
-                       <h2>Ticket Overview</h2>
-
-                   </div>
-                   <div class="body table-responsive sales_overview">
-                       <table class="table table-hover table-borderless">
-                           <thead>
-                               <tr>
-                                   <th>#</th>
-                                   <th style="width:40%;">Title</th>
-                                   <th class="number">Priority</th>
-                                   <th style="width:20%;">Property</th>
-                                   <th style="width:20%;">State</th>
-                                   <th style="width:5%;" class="actions"></th>
-                               </tr>
-                           </thead>
-                           <tbody class="no-border-x">
-                               <tr>
-                                   <td>1</td>
-                                   <td>Sony Xperia M4</td>
-                                   <td class="number">$149</td>
-                                   <td>Aug 23, 2017</td>
-                                   <td><span class="badge badge-success">Completed</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>2</td>
-                                   <td>Apple iPhone 6</td>
-                                   <td class="number">$535</td>
-                                   <td>Aug 20, 2017</td>
-                                   <td><span class="badge badge-success">Completed</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>3</td>
-                                   <td>Samsung Galaxy S7</td>
-                                   <td class="number">$583</td>
-                                   <td>Aug 18, 2017</td>
-                                   <td><span class="badge badge-warning">Pending</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>4</td>
-                                   <td>HTC One M9</td>
-                                   <td class="number">$350</td>
-                                   <td>Aug 15, 2017</td>
-                                   <td><span class="badge badge-warning">Pending</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>5</td>
-                                   <td>Sony Xperia Z5</td>
-                                   <td class="number">$495</td>
-                                   <td>Aug 13, 2017</td>
-                                   <td><span class="badge badge-danger">Cancelled</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>6</td>
-                                   <td>Samsung Galaxy S9</td>
-                                   <td class="number">$583</td>
-                                   <td>Aug 18, 2017</td>
-                                   <td><span class="badge badge-warning">Pending</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>7</td>
-                                   <td>HTC One M13</td>
-                                   <td class="number">$350</td>
-                                   <td>Aug 15, 2017</td>
-                                   <td><span class="badge badge-warning">Pending</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>
-                               <tr>
-                                   <td>8</td>
-                                   <td>Sony Xperia M4</td>
-                                   <td class="number">$149</td>
-                                   <td>Aug 23, 2017</td>
-                                   <td><span class="badge badge-success">Completed</span></td>
-                                   <td class="actions"><a href="index.html#" class="icon"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
-                               </tr>                               
-                           </tbody>
-                       </table>
-                   </div>
-               </div>
-           </div>           
-        </div>
         <div class="row clearfix">
             <div class="col-lg-12">
                 <div class="card">
