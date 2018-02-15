@@ -73,7 +73,7 @@ function getClientList() {
                 var count = 0;
                 for(var i = 0; i<data.length; i++){
                     count++;
-                    var html = '            <li class="c_list">\n' +
+                    var html = '            <li class="c_list" id="div'+data[i].id+'">\n' +
                         '                <div class="row">\n' +
                         '                    <div class="col-lg-5 col-md-5 col-10">\n' +
                         '                        <div class="control">\n' +
@@ -95,7 +95,7 @@ function getClientList() {
                         '                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>\n' +
                         '                                <ul class="dropdown-menu">\n' +
                         '                                    <li><a href="javascript:void(0);">Edit</a></li>\n' +
-                        '                                    <li><a href="javascript:void(0);">Delete</a></li>\n' +
+                        '                                    <li><a onclick="deleteClient(\''+data[i].id+'\')" href="#">Delete</a></li>\n' +
                         '                                </ul>\n' +
                         '                            </li>\n' +
                         '                        </ul>\n' +
@@ -103,7 +103,7 @@ function getClientList() {
                         '                </div>\n' +
                         '                <div class="action_btn">\n' +
                         '                    <a href="javascript:void(0);" class="btn btn-default col-green"><i class="zmdi zmdi-edit"></i></a>\n' +
-                        '                    <a href="javascript:void(0);" class="btn btn-default col-red"><i class="zmdi zmdi-delete"></i></a>\n' +
+                        '                    <a href="#" onclick="deleteClient(\''+data[i].id+'\')" class="btn btn-default col-red"><i class="zmdi zmdi-delete"></i></a>\n' +
                         '                </div>\n' +
                         '            </li>';
                     $('#clientlist').append(html);
@@ -127,7 +127,7 @@ function logout(){
     xmlhttp.send();
 }
 
-function deleteProperty(id){
+function deleteClient(id){
     var data = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -136,11 +136,11 @@ function deleteProperty(id){
             if (data.isLoggedIn === false) {
                 document.location.href = "../sign-in.html";
             } else {
-                $('#tr' + id).hide(100);
+                $('#div' + id).hide(100);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/deleteproperty/"+data, true);
+    xmlhttp.open("GET", "/gafista/api/agent/deactivateclient/"+data, true);
     xmlhttp.send();
 }
 

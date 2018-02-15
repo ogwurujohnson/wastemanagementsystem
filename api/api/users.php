@@ -37,7 +37,7 @@ class users
                 if(mysqli_num_rows($checkdb)>=1){
                     $password = $userPassword;
                     $userPassword = $password;
-                    $sql="SELECT * FROM tbllogindetails WHERE email='".$userName."' AND password='".$userPassword."' LIMIT 1";
+                    $sql="SELECT * FROM tbllogindetails WHERE email='".$userName."' AND password='".$userPassword."' AND activated='1' LIMIT 1";
                     $res=mysqli_query($this->con,$sql) or die(mysqli_error($this->con));
                     if(mysqli_num_rows($res)==1){
                         $row = mysqli_fetch_assoc($res);

@@ -93,7 +93,7 @@ class agent
     }
 
     public function getAllClients(){
-        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'agent'";
+        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'agent' AND activated = 1";
         $res = mysqli_query($this->con, $sql);
         $result = [];
         $count = 0;
@@ -105,6 +105,18 @@ class agent
         }
         header('Content-Type:application/json');
         echo json_encode($result);
+    }
+
+    public function deactivateclient($clientid = ''){
+        $id = $clientid;
+        $sql = "UPDATE tbllogindetails SET activated = 0 WHERE user_id = '$id'";
+        $res = mysqli_query($this->con, $sql);
+        if($res){
+            $this->data["success"] = true;
+        }else{
+            $this->data["success"] = false;
+        }
+        echo json_encode($this->data);
     }
 
     public function getAllPayments()
