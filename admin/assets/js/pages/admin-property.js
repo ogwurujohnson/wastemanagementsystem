@@ -76,10 +76,10 @@ function getPropertyList() {
                     var html = '<tr>\n' +
                         '<td><span>'+count+'</span></td>\n' +
                         '<td><h5>'+data[i].name+'</h5></td>\n' +
-                        '<td><span class="text-muted">randomised words even slightly believable</span></td>\n' +
-                        '<td>$16.00</td>\n' +
-                        '<td><span>In Stock</span></td>\n' +
-                        '<td><span></span></td>\n' +
+                        '<td><span>'+data[i].property_name+'</span></td>\n' +
+                        '<td>'+data[i].propertygroupname+'</td>\n' +
+                        '<td><span>'+data[i].address+'</span></td>\n' +
+                        '<td><span>'+data[i].date+'</span></td>\n' +
                         '<td>\n' +
                         '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>\n' +
                         '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>\n' +

@@ -45,6 +45,10 @@ class agent
             $res1 = mysqli_query($this->con,$sql1);
             $row1 = mysqli_fetch_assoc($res1);
             $result[$count]["name"] = $row1["firstname"]." ".$row1["lastname"];
+            $sql1 = "SELECT property_type FROM tblpropertygroup WHERE id='".$row["propertygroup_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]["propertygroupname"] = $row1['property_type'];
             $count++;
         }
         header('Content-Type:application/json');

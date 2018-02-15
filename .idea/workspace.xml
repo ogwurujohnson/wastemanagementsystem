@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-pickup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-property.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket-timeline.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-ticket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pickup.html" afterPath="$PROJECT_DIR$/admin/pickup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/ticket_timeline.html" afterPath="$PROJECT_DIR$/admin/ticket_timeline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/vproperty.html" afterPath="$PROJECT_DIR$/admin/vproperty.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/vticket.html" afterPath="$PROJECT_DIR$/admin/vticket.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/js/pages/admin-property.js" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-property.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api/agent.php" afterPath="$PROJECT_DIR$/api/api/agent.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,73 +48,74 @@
       <file leaf-file-name="agent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="21" />
+            <state relative-caret-position="368">
+              <caret line="50" column="74" lean-forward="true" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
               <folding>
-                <marker date="1518652327053" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
-                <marker date="1518652327053" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="1423:1465" ph="SELECT * FRO... tblproperty" />
-                <marker date="1518652327053" expanded="true" signature="1778:1808" ph="SELECT * FRO... tblpropertygroup" />
-                <marker date="1518652327053" expanded="true" signature="2115:2136" ph="SELECT * FRO... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="2446:2471" ph="SELECT * FRO... tblpayments" />
-                <marker date="1518652327053" expanded="true" signature="2805:2835" ph="SELECT id FR... tbllogindetails" />
-                <marker date="1518652327053" expanded="true" signature="3112:3130" ph="SELECT id FR... tbllogindetails" />
-                <marker date="1518652327053" expanded="true" signature="3112:3138" ph="SELECT id FR... tblpayments" />
-                <marker date="1518652327053" expanded="true" signature="3414:3439" ph="SELECT id FR... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="3718:3744" ph="SELECT id FR... tblproperty" />
-                <marker date="1518652327053" expanded="true" signature="4024:4054" ph="SELECT Amoun... tblpayments" />
-                <marker date="1518652327053" expanded="true" signature="4413:4434" ph="SELECT * FRO... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="4413:4445" ph="SELECT * FRO... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="4413:4453" ph="SELECT * FRO... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="4712:4736" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="4929:4979" ph="SELECT first... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="4929:4999" ph="SELECT first... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="5202:5292" ph="SELECT prope... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="5485:5568" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518652327053" expanded="true" signature="5920:5966" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="6278:6310" ph="SELECT * FRO... tblticket_category" />
-                <marker date="1518652327053" expanded="true" signature="6653:6694" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="7535:7671" ph="INSERT INTO tblproperty... " />
-                <marker date="1518652327053" expanded="true" signature="8450:8552" ph="INSERT INTO tblpropertygroup... " />
-                <marker date="1518652327053" expanded="true" signature="9019:9040" ph="{...}" />
-                <marker date="1518652327053" expanded="true" signature="9108:9153" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="10077:10225" ph="INSERT INTO tbltickets... " />
-                <marker date="1518652327053" expanded="true" signature="10898:10967" ph="INSERT into tblwallet... " />
-                <marker date="1518652327053" expanded="true" signature="12039:12171" ph="UPDATE tblpr... " />
-                <marker date="1518652327053" expanded="true" signature="12660:13048" ph="{...}" />
-                <marker date="1518652327053" expanded="true" signature="12712:12752" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13161" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13162" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13163" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13170" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13171" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13128:13172" ph="DELETE FROM " />
-                <marker date="1518652327053" expanded="true" signature="13517:13552" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="13517:13566" ph="SELECT * FRO... tbltickets" />
-                <marker date="1518652327053" expanded="true" signature="13759:13829" ph="SELECT first... tbluser" />
-                <marker date="1518652327053" expanded="true" signature="14032:14122" ph="SELECT prope... tblproperty" />
-                <marker date="1518652327053" expanded="true" signature="14315:14398" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518652327053" expanded="true" signature="15470:15618" ph="INSERT into tbltickets... " />
-                <marker date="1518652327053" expanded="true" signature="16061:16091" ph="SELECT prope... tblpropertygroup" />
-                <marker date="1518652327053" expanded="true" signature="16415:16480" ph="UPDATE tbllo... " />
-                <marker date="1518652327053" expanded="true" signature="17058:17149" ph="SELECT * FRO... tbllogindetails" />
-                <marker date="1518652327053" expanded="true" signature="17058:17157" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1518652947788" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
+                <marker date="1518652947788" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="1226:1308" ph="SELECT prope... tblproperty" />
+                <marker date="1518652947788" expanded="true" signature="1703:1745" ph="SELECT * FRO... tblproperty" />
+                <marker date="1518652947788" expanded="true" signature="2058:2088" ph="SELECT * FRO... tblpropertygroup" />
+                <marker date="1518652947788" expanded="true" signature="2395:2416" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="2726:2751" ph="SELECT * FRO... tblpayments" />
+                <marker date="1518652947788" expanded="true" signature="3085:3115" ph="SELECT id FR... tbllogindetails" />
+                <marker date="1518652947788" expanded="true" signature="3392:3410" ph="SELECT id FR... tbllogindetails" />
+                <marker date="1518652947788" expanded="true" signature="3392:3418" ph="SELECT id FR... tblpayments" />
+                <marker date="1518652947788" expanded="true" signature="3694:3719" ph="SELECT id FR... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="3998:4024" ph="SELECT id FR... tblproperty" />
+                <marker date="1518652947788" expanded="true" signature="4304:4334" ph="SELECT Amoun... tblpayments" />
+                <marker date="1518652947788" expanded="true" signature="4693:4714" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="4693:4725" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="4693:4733" ph="SELECT * FRO... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="4992:5016" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="5209:5259" ph="SELECT first... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="5209:5279" ph="SELECT first... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="5482:5572" ph="SELECT prope... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="5765:5848" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652947788" expanded="true" signature="6200:6246" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="6558:6590" ph="SELECT * FRO... tblticket_category" />
+                <marker date="1518652947788" expanded="true" signature="6933:6974" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="7815:7951" ph="INSERT INTO tblproperty... " />
+                <marker date="1518652947788" expanded="true" signature="8730:8832" ph="INSERT INTO tblpropertygroup... " />
+                <marker date="1518652947788" expanded="true" signature="9299:9320" ph="{...}" />
+                <marker date="1518652947788" expanded="true" signature="9388:9433" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="10357:10505" ph="INSERT INTO tbltickets... " />
+                <marker date="1518652947788" expanded="true" signature="11178:11247" ph="INSERT into tblwallet... " />
+                <marker date="1518652947788" expanded="true" signature="12319:12451" ph="UPDATE tblpr... " />
+                <marker date="1518652947788" expanded="true" signature="12940:13328" ph="{...}" />
+                <marker date="1518652947788" expanded="true" signature="12992:13032" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13441" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13442" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13443" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13450" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13451" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13408:13452" ph="DELETE FROM " />
+                <marker date="1518652947788" expanded="true" signature="13797:13832" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="13797:13846" ph="SELECT * FRO... tbltickets" />
+                <marker date="1518652947788" expanded="true" signature="14039:14109" ph="SELECT first... tbluser" />
+                <marker date="1518652947788" expanded="true" signature="14312:14402" ph="SELECT prope... tblproperty" />
+                <marker date="1518652947788" expanded="true" signature="14595:14678" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652947788" expanded="true" signature="15750:15898" ph="INSERT into tbltickets... " />
+                <marker date="1518652947788" expanded="true" signature="16341:16371" ph="SELECT prope... tblpropertygroup" />
+                <marker date="1518652947788" expanded="true" signature="16695:16760" ph="UPDATE tbllo... " />
+                <marker date="1518652947788" expanded="true" signature="17338:17429" ph="SELECT * FRO... tbllogindetails" />
+                <marker date="1518652947788" expanded="true" signature="17338:17437" ph="SELECT * FRO... tbllogindetails" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-property.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin-property.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-property.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="77" column="63" lean-forward="false" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+            <state relative-caret-position="300">
+              <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vproperty.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vproperty.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/vproperty.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
@@ -251,8 +244,8 @@
       <find>zmdi zmdi-search</find>
       <find>all</find>
       <find>navbar</find>
-      <find>nav</find>
       <find>alltickets</find>
+      <find>nav</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -447,7 +440,7 @@
       <workItem from="1518375107554" duration="805000" />
       <workItem from="1518550152855" duration="4196000" />
       <workItem from="1518641918817" duration="765000" />
-      <workItem from="1518639480153" duration="11746000" />
+      <workItem from="1518639480153" duration="12328000" />
     </task>
     <task id="LOCAL-00001" summary="SignIn and SignUp">
       <created>1517021997249</created>
@@ -505,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518639802370</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Navigation changes">
+      <created>1518652565486</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1518652565486</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106332000" />
+    <option name="totallyTimeSpent" value="106914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -546,7 +546,8 @@
     <MESSAGE value="Make Admin Dashboard Active&#10;Logout API" />
     <MESSAGE value="New Database Schema" />
     <MESSAGE value="Ticket View&#10;Ticket Delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ticket View&#10;Ticket Delete" />
+    <MESSAGE value="Navigation changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigation changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -954,66 +955,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api/agent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="21" />
+        <state relative-caret-position="368">
+          <caret line="50" column="74" lean-forward="true" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
           <folding>
-            <marker date="1518652327053" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
-            <marker date="1518652327053" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="1423:1465" ph="SELECT * FRO... tblproperty" />
-            <marker date="1518652327053" expanded="true" signature="1778:1808" ph="SELECT * FRO... tblpropertygroup" />
-            <marker date="1518652327053" expanded="true" signature="2115:2136" ph="SELECT * FRO... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="2446:2471" ph="SELECT * FRO... tblpayments" />
-            <marker date="1518652327053" expanded="true" signature="2805:2835" ph="SELECT id FR... tbllogindetails" />
-            <marker date="1518652327053" expanded="true" signature="3112:3130" ph="SELECT id FR... tbllogindetails" />
-            <marker date="1518652327053" expanded="true" signature="3112:3138" ph="SELECT id FR... tblpayments" />
-            <marker date="1518652327053" expanded="true" signature="3414:3439" ph="SELECT id FR... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="3718:3744" ph="SELECT id FR... tblproperty" />
-            <marker date="1518652327053" expanded="true" signature="4024:4054" ph="SELECT Amoun... tblpayments" />
-            <marker date="1518652327053" expanded="true" signature="4413:4434" ph="SELECT * FRO... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="4413:4445" ph="SELECT * FRO... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="4413:4453" ph="SELECT * FRO... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="4712:4736" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="4929:4979" ph="SELECT first... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="4929:4999" ph="SELECT first... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="5202:5292" ph="SELECT prope... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="5485:5568" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518652327053" expanded="true" signature="5920:5966" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="6278:6310" ph="SELECT * FRO... tblticket_category" />
-            <marker date="1518652327053" expanded="true" signature="6653:6694" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="7535:7671" ph="INSERT INTO tblproperty... " />
-            <marker date="1518652327053" expanded="true" signature="8450:8552" ph="INSERT INTO tblpropertygroup... " />
-            <marker date="1518652327053" expanded="true" signature="9019:9040" ph="{...}" />
-            <marker date="1518652327053" expanded="true" signature="9108:9153" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="10077:10225" ph="INSERT INTO tbltickets... " />
-            <marker date="1518652327053" expanded="true" signature="10898:10967" ph="INSERT into tblwallet... " />
-            <marker date="1518652327053" expanded="true" signature="12039:12171" ph="UPDATE tblpr... " />
-            <marker date="1518652327053" expanded="true" signature="12660:13048" ph="{...}" />
-            <marker date="1518652327053" expanded="true" signature="12712:12752" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13161" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13162" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13163" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13170" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13171" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13128:13172" ph="DELETE FROM " />
-            <marker date="1518652327053" expanded="true" signature="13517:13552" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="13517:13566" ph="SELECT * FRO... tbltickets" />
-            <marker date="1518652327053" expanded="true" signature="13759:13829" ph="SELECT first... tbluser" />
-            <marker date="1518652327053" expanded="true" signature="14032:14122" ph="SELECT prope... tblproperty" />
-            <marker date="1518652327053" expanded="true" signature="14315:14398" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518652327053" expanded="true" signature="15470:15618" ph="INSERT into tbltickets... " />
-            <marker date="1518652327053" expanded="true" signature="16061:16091" ph="SELECT prope... tblpropertygroup" />
-            <marker date="1518652327053" expanded="true" signature="16415:16480" ph="UPDATE tbllo... " />
-            <marker date="1518652327053" expanded="true" signature="17058:17149" ph="SELECT * FRO... tbllogindetails" />
-            <marker date="1518652327053" expanded="true" signature="17058:17157" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1518652947788" expanded="true" signature="735:760" ph="SELECT * FRO... tblproperty" />
+            <marker date="1518652947788" expanded="true" signature="953:1023" ph="SELECT first... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="1226:1308" ph="SELECT prope... tblproperty" />
+            <marker date="1518652947788" expanded="true" signature="1703:1745" ph="SELECT * FRO... tblproperty" />
+            <marker date="1518652947788" expanded="true" signature="2058:2088" ph="SELECT * FRO... tblpropertygroup" />
+            <marker date="1518652947788" expanded="true" signature="2395:2416" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="2726:2751" ph="SELECT * FRO... tblpayments" />
+            <marker date="1518652947788" expanded="true" signature="3085:3115" ph="SELECT id FR... tbllogindetails" />
+            <marker date="1518652947788" expanded="true" signature="3392:3410" ph="SELECT id FR... tbllogindetails" />
+            <marker date="1518652947788" expanded="true" signature="3392:3418" ph="SELECT id FR... tblpayments" />
+            <marker date="1518652947788" expanded="true" signature="3694:3719" ph="SELECT id FR... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="3998:4024" ph="SELECT id FR... tblproperty" />
+            <marker date="1518652947788" expanded="true" signature="4304:4334" ph="SELECT Amoun... tblpayments" />
+            <marker date="1518652947788" expanded="true" signature="4693:4714" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="4693:4725" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="4693:4733" ph="SELECT * FRO... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="4992:5016" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="5209:5259" ph="SELECT first... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="5209:5279" ph="SELECT first... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="5482:5572" ph="SELECT prope... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="5765:5848" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652947788" expanded="true" signature="6200:6246" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="6558:6590" ph="SELECT * FRO... tblticket_category" />
+            <marker date="1518652947788" expanded="true" signature="6933:6974" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="7815:7951" ph="INSERT INTO tblproperty... " />
+            <marker date="1518652947788" expanded="true" signature="8730:8832" ph="INSERT INTO tblpropertygroup... " />
+            <marker date="1518652947788" expanded="true" signature="9299:9320" ph="{...}" />
+            <marker date="1518652947788" expanded="true" signature="9388:9433" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="10357:10505" ph="INSERT INTO tbltickets... " />
+            <marker date="1518652947788" expanded="true" signature="11178:11247" ph="INSERT into tblwallet... " />
+            <marker date="1518652947788" expanded="true" signature="12319:12451" ph="UPDATE tblpr... " />
+            <marker date="1518652947788" expanded="true" signature="12940:13328" ph="{...}" />
+            <marker date="1518652947788" expanded="true" signature="12992:13032" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13441" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13442" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13443" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13450" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13451" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13408:13452" ph="DELETE FROM " />
+            <marker date="1518652947788" expanded="true" signature="13797:13832" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="13797:13846" ph="SELECT * FRO... tbltickets" />
+            <marker date="1518652947788" expanded="true" signature="14039:14109" ph="SELECT first... tbluser" />
+            <marker date="1518652947788" expanded="true" signature="14312:14402" ph="SELECT prope... tblproperty" />
+            <marker date="1518652947788" expanded="true" signature="14595:14678" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652947788" expanded="true" signature="15750:15898" ph="INSERT into tbltickets... " />
+            <marker date="1518652947788" expanded="true" signature="16341:16371" ph="SELECT prope... tblpropertygroup" />
+            <marker date="1518652947788" expanded="true" signature="16695:16760" ph="UPDATE tbllo... " />
+            <marker date="1518652947788" expanded="true" signature="17338:17429" ph="SELECT * FRO... tbllogindetails" />
+            <marker date="1518652947788" expanded="true" signature="17338:17437" ph="SELECT * FRO... tbllogindetails" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-property.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="77" column="63" lean-forward="false" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,6 +1028,14 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/pages/admin-property.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
