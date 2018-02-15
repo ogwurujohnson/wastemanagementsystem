@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68891548-5354-46c7-955b-5fb5a9ce59b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/assets/js/pages/admin-property-group.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view_property_grp.html" afterPath="$PROJECT_DIR$/admin/view_property_grp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/contact.html" afterPath="$PROJECT_DIR$/admin/contact.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,13 +71,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_property_grp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view_property_grp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view_property_grp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="208" column="72" lean-forward="false" selection-start-line="208" selection-start-column="72" selection-end-line="208" selection-end-column="72" />
+            <state relative-caret-position="178">
+              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="195" selection-end-column="8" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="244" column="33" lean-forward="false" selection-start-line="244" selection-start-column="33" selection-end-line="244" selection-end-column="33" />
+              <folding>
                 <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -178,8 +189,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>powe</find>
-      <find>john doe</find>
       <find>john</find>
       <find>John Doe</find>
       <find>power</find>
@@ -196,18 +205,20 @@
       <find>alltickets</find>
       <find>zmdi zmdi-search</find>
       <find>delete</find>
-      <find>search</find>
       <find>john Do</find>
       <find>Form Validation</find>
       <find>getP</find>
       <find>rightsi</find>
-      <find>rights</find>
       <find>form va</find>
-      <find>lefts</find>
       <find>searc</find>
-      <find>nav</find>
       <find>normal</find>
       <find>tblpropertygrouplist</find>
+      <find>deletepropertygroup</find>
+      <find>rights</find>
+      <find>nav</find>
+      <find>lefts</find>
+      <find>search</find>
+      <find>container-fluid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,6 +262,7 @@
         <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-add-property.js" />
         <option value="$PROJECT_DIR$/admin/assets/js/pages/admin-property-group.js" />
         <option value="$PROJECT_DIR$/admin/view_property_grp.html" />
+        <option value="$PROJECT_DIR$/admin/contact.html" />
       </list>
     </option>
   </component>
@@ -409,7 +421,7 @@
       <workItem from="1518375107554" duration="805000" />
       <workItem from="1518550152855" duration="4196000" />
       <workItem from="1518641918817" duration="765000" />
-      <workItem from="1518639480153" duration="24153000" />
+      <workItem from="1518639480153" duration="25039000" />
     </task>
     <task id="LOCAL-00001" summary="SignIn and SignUp">
       <created>1517021997249</created>
@@ -523,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518665097963</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Property Group Page">
+      <created>1518666751772</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1518666751772</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118739000" />
+    <option name="totallyTimeSpent" value="119625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -573,7 +592,8 @@
     <MESSAGE value="Add property to db" />
     <MESSAGE value="Add Property Group Page Active" />
     <MESSAGE value="Add Property Group Page to DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Property Group Page to DB" />
+    <MESSAGE value="Property Group Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Property Group Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -582,13 +602,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/core/App.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1064,10 +1077,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view_property_grp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="208" column="72" lean-forward="false" selection-start-line="208" selection-start-column="72" selection-end-line="208" selection-end-column="72" />
+        <state relative-caret-position="178">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="195" selection-end-column="8" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="244" column="33" lean-forward="false" selection-start-line="244" selection-start-column="33" selection-end-line="244" selection-end-column="33" />
+          <folding>
             <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
