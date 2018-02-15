@@ -12,6 +12,8 @@
 <!-- Custom Css -->
 <link  rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/admin-add-property.js"></script>
 </head>
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -109,101 +111,86 @@
 </nav>
 
 <!-- Left Sidebar -->
-<aside id="leftsidebar" class="sidebar"> 
+<aside id="leftsidebar" class="sidebar">
     <!-- User Info -->
     <div class="user-info">
-        <div class="image"> <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" /> </div>
+        <div class="image">
+            <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" />
+        </div>
         <div class="info-container">
-            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">John Doe</div>
-            <div class="email">john.doe@example.com</div>
-            <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
-                <ul class="dropdown-menu pull-right">
+            <div class="name" data-toggle="dropdown" id="username">John Doe</div>
+            <div class="btn-group user-helper-dropdown">
+                <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
+                <ul class="dropdown-menu slideUp">
                     <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
-                    <li class="divider"></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                     <li class="divider"></li>
                     <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
                 </ul>
             </div>
+            <div class="email" id="useremail">john.doe@example.com</div>
         </div>
     </div>
-    <!-- #User Info --> 
+    <!-- #User Info -->
     <!-- Menu -->
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active"> <a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
-                
+
             </li>
-                     
+
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ticket</span> </a>
                 <ul class="ml-menu">
-                    
+
                     <li> <a href="vticket.html">View Ticket</a></li>
                     <li><a href="ticket_timeline.html">Tickect Timeline</a></li>
-                    
+
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>Property</span> </a>
+            <li> <a href="pickup.html" class="menu-toggle"><i class="zmdi zmdi-car"></i><span>Assign Pick-Ups</span> </a></li>
+
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Property</span> </a>
                 <ul class="ml-menu">
-                        <li> <a href="vproperty.html">View Property</a></li>
-                        <li> <a href="add_property.html">Add Property</a></li>
-                        <li> <a href="add_property.html">Add Property Group</a></li>
+                    <li> <a href="vproperty.html">View Property</a></li>
+                    <li> <a href="add_property.html">Add Property</a></li>
+                    <li> <a href="add_property_grp.html">Add Property Group</a></li>
+                    <li> <a href="view_property_grp.html">View Property Groups</a></li>
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts"></i><span>Users/Agents</span> </a>
                 <ul class="ml-menu">
-                        <li><a href="contact.html">View Clients</a></li>
-                        <li><a href="form-validation.html">Create Clients</a> </li>
-                        <li><a href="contact.html">View Agents</a></li>
+                    <li><a href="contact.html">View Clients</a></li>
+                    <li><a href="create_user.html">Create Clients</a> </li>
+                    <li><a href="contact.html">View Agents</a></li>
+                    <li><a href="create_agent.html">Create Agents</a></li>
 
-                    <li><a href="basic-form-elements.html">Basic Form Elements</a> </li>
-                    <li><a href="advanced-form-elements.html">Advanced Form Elements</a> </li>
-                    <li><a href="form-examples.html">Form Examples</a> </li>
-                   
-                    <li><a href="form-wizard.html">Form Wizard</a> </li>
-                    <li><a href="form-editors.html">Editors</a> </li>
+
                     <li><a href="form-upload.html">File Upload</a></li>
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Reports</span> </a>
-                <ul class="ml-menu">                        
-                    <li> <a href="normal-tables.html">Normal Tables</a> </li>
-                    <li> <a href="jquery-datatable.html">Jquery Datatables</a> </li>
-                    <li> <a href="editable-table.html">Editable Tables</a> </li>
-                    <li> <a href="footable.html">Foo Tables</a> </li>
-                    <li> <a href="table-color.html">Tables Color</a> </li>
+                <ul class="ml-menu">
+                    <li> <a href="vreport.html">View Report</a> </li>
+
                 </ul>
             </li>
-            
+
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-money"></i><span>Payments</span> </a>
                 <ul class="ml-menu">
-                        <li><a href="invoices.html">Invoices</a></li>
+
+                    <li><a href="wallet.html">Wallet</a></li>
+                    <li><a href="billing.html">Billing</a></li>
+
                 </ul>
             </li>
-            
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Extra Pages</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="blank.html">Blank Page</a> </li>
-                    <li><a href="events.html">Calendar</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    
-                    <li><a href="chat.html">Chat</a></li>
-                    
-                    <li><a href="pricing.html">Pricing</a></li>
-                   
-                    <li><a href="search-results.html">Search Results</a></li>
-                </ul>
-            </li>
-            
-            
-            
-            
+
+
+
+
+
         </ul>
     </div>
-    <!-- #Menu --> 
+    <!-- #Menu -->
 </aside>
 
 <section class="content">
