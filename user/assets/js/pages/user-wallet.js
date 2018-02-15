@@ -1,3 +1,6 @@
+/**
+ * Created by BlackHatJohnny on 15/02/2018.
+ */
 // JavaScript source code
 $(document).ready(function(){
     getUserDetails();
@@ -68,7 +71,7 @@ function getAllClientTicketCount() {
 }
 
 function getAllUsers() {
-    
+
 }
 
 function logout(){

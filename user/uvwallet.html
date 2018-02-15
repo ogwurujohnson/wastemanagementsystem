@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user-wallet.js"></script>
 </head>
 
 <body class="theme-cyan index2">
@@ -125,7 +127,7 @@
                     <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
                 </ul>
             </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="sign-in.html" class="mega-menu" id="logout" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
             <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         </ul>
     </div>
@@ -516,8 +518,8 @@
             <div class="col-xl-4 col-lg-5 col-md-12">
                 <div class="card member-card">
                     <div class="header l-blue">
-                        <h4 class="m-t-0">Matthew Deo</h4>
-                        <small>Top Coustomer</small>
+                        <h4 class="m-t-0" id="username"></h4>
+                        <small>Client</small>
                     </div>
                     <div class="member-img">
                         <a href="profile.html" class="">
@@ -543,7 +545,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                            <p class="text-muted" id="useremail">,</p><p class="text-muted" id="phonenumber">,</p>
                         </div>
                         <hr>
                         <div class="row">
