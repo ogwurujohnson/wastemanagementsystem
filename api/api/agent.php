@@ -107,6 +107,21 @@ class agent
         echo json_encode($result);
     }
 
+    public function getAllAdmins(){
+        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'admin' AND activated = 1";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
+            $sql1 = "SELECT * FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[] = $row1;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function addNewClient(){
         if (isset($_POST['txtfirstname'])) {
             $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
@@ -138,6 +153,18 @@ class agent
     }
 
     public function deactivateclient($clientid = ''){
+        $id = $clientid;
+        $sql = "UPDATE tbllogindetails SET activated = 0 WHERE user_id = '$id'";
+        $res = mysqli_query($this->con, $sql);
+        if($res){
+            $this->data["success"] = true;
+        }else{
+            $this->data["success"] = false;
+        }
+        echo json_encode($this->data);
+    }
+
+    public function deactivateadmin($clientid = ''){
         $id = $clientid;
         $sql = "UPDATE tbllogindetails SET activated = 0 WHERE user_id = '$id'";
         $res = mysqli_query($this->con, $sql);
