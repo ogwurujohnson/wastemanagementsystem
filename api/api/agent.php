@@ -152,6 +152,36 @@ class agent
         echo json_encode($this->data);
     }
 
+    public function addNewAdmin(){
+        if (isset($_POST['txtfirstname'])) {
+            $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
+            $lastname = mysqli_real_escape_string($this->con, $_POST['txtlastname']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            $phonenumber = mysqli_real_escape_string($this->con, $_POST['txtphonenumber']);
+            $email = mysqli_real_escape_string($this->con, $_POST['txtemailaddress']);
+
+            if (!empty($firstname) && !empty($lastname) && !empty($address) && !empty($phonenumber) && !empty($email)) {
+                $sql = "INSERT INTO tbluser (firstname, lastname, phone, email, address) VALUES ('$firstname','$lastname','$phonenumber','$email', '$address')";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if ($res) {
+                    $id = mysqli_insert_id($this->con);
+                    $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','test','admin','$id', 1)";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    if($res){
+                        $this->data['success'] = true;
+                    }else{
+                        $this->data['success'] = false;
+                    }
+                } else {
+                    $this->data['success'] = false;
+                }
+            } else {
+                $this->data['error'] = "empty";
+            }
+        }
+        echo json_encode($this->data);
+    }
+
     public function deactivateclient($clientid = ''){
         $id = $clientid;
         $sql = "UPDATE tbllogindetails SET activated = 0 WHERE user_id = '$id'";
