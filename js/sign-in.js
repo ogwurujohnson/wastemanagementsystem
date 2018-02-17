@@ -41,7 +41,7 @@ $(document).ready(function () {
                     console.log(data);
                     if(data.accounttype === "admin") {
                         document.location.href = 'admin/index.html';
-                    }else{
+                    }else if(data.accounttype === "agent"){
                         document.location.href = 'user/index.html';
                     }
                 }

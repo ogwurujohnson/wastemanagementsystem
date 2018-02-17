@@ -38,8 +38,18 @@ class agent
         $sql = "SELECT * FROM tblproperty";
         $res = mysqli_query($this->con, $sql);
         $result = [];
-        while ($row = mysqli_fetch_row($res)) {
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
             $result[] = $row;
+            $sql1 = "SELECT firstname, lastname FROM tbluser WHERE id='".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]["name"] = $row1["firstname"]." ".$row1["lastname"];
+            $sql1 = "SELECT property_type FROM tblpropertygroup WHERE id='".$row["propertygroup_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]["propertygroupname"] = $row1['property_type'];
+            $count++;
         }
         header('Content-Type:application/json');
         echo json_encode($result);
@@ -80,6 +90,63 @@ class agent
         }
         header('Content-Type:application/json');
         echo json_encode($result);
+    }
+
+    public function getAllClients(){
+        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'agent' AND activated = 1";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
+            $sql1 = "SELECT * FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[] = $row1;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function addNewClient(){
+        if (isset($_POST['txtfirstname'])) {
+            $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
+            $lastname = mysqli_real_escape_string($this->con, $_POST['txtlastname']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            $phonenumber = mysqli_real_escape_string($this->con, $_POST['txtphonenumber']);
+            $email = mysqli_real_escape_string($this->con, $_POST['txtemailaddress']);
+
+            if (!empty($firstname) && !empty($lastname) && !empty($address) && !empty($phonenumber) && !empty($email)) {
+                $sql = "INSERT INTO tbluser (firstname, lastname, phone, email, address) VALUES ('$firstname','$lastname','$phonenumber','$email', '$address')";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if ($res) {
+                    $id = mysqli_insert_id($this->con);
+                    $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','test','agent','$id', 0)";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    if($res){
+                        $this->data['success'] = true;
+                    }else{
+                        $this->data['success'] = false;
+                    }
+                } else {
+                    $this->data['success'] = false;
+                }
+            } else {
+                $this->data['error'] = "empty";
+            }
+        }
+        echo json_encode($this->data);
+    }
+
+    public function deactivateclient($clientid = ''){
+        $id = $clientid;
+        $sql = "UPDATE tbllogindetails SET activated = 0 WHERE user_id = '$id'";
+        $res = mysqli_query($this->con, $sql);
+        if($res){
+            $this->data["success"] = true;
+        }else{
+            $this->data["success"] = false;
+        }
+        echo json_encode($this->data);
     }
 
     public function getAllPayments()
@@ -216,14 +283,14 @@ class agent
         echo json_encode($result);
     }
 
-    public function addproperty($userid = '')
+    public function addproperty()
     {
-        $id = $userid;
+        $id = $_SESSION['userid'];
         if (isset($_POST['txtpropertyname'])) {
             $propertyname = $propertygroupid = $address = $userid = "";
             $propertyname = mysqli_real_escape_string($this->con, $_POST['txtpropertyname']);
-            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupid']);
-            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            $propertygroupid = mysqli_real_escape_string($this->con, $_POST['ddPropertyGroup']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtpropertyaddress']);
             if (!empty($propertyname) && !empty($propertygroupid) && !empty($address)) {
                 $sql = "INSERT INTO tblproperty (property_name, propertygroup_id, address, user_id) VALUES ('$propertyname','$propertygroupid','$address','$id')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
@@ -242,9 +309,9 @@ class agent
 
     public function addpropertygroup()
     {
-        if (isset($_POST['txtpropertytype'])) {
-            $propertytype = mysqli_real_escape_string($this->con, $_POST['txtpropertytype']);
-            $propertyprice = mysqli_real_escape_string($this->con, $_POST['txtpropertyprice']);
+        if (isset($_POST['txtpropertygroupname'])) {
+            $propertytype = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupname']);
+            $propertyprice = mysqli_real_escape_string($this->con, $_POST['txtpropertygroupprice']);
             if (!empty($propertytype) && !empty($propertyprice)) {
                 $sql = "INSERT INTO tblpropertygroup (property_type, property_price) VALUES ('$propertytype','$propertyprice') ";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
@@ -351,7 +418,7 @@ class agent
         $id = $propertyid;
         if (isset($_POST)) {
 
-            $sql = "DELETE FROM tblproperty WHERE id = '$id' ";
+            $sql = "DELETE FROM tblproperty WHERE id = '$id'";
             $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
             if ($res) {
                 $this->data['success'] = true;
@@ -407,7 +474,9 @@ class agent
             $ticketstatus = mysqli_real_escape_string($this->con, $_POST['ddpropertystatus']);
             $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddpropertypriority']);
             $propertygroup = mysqli_real_escape_string($this->con, $_POST['ddpropertygroup']);
-            if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
+            $propertypickuptime = mysqli_real_escape_string($this->con, $_POST['propertypickuptime']);
+
+            if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($propertygroup) && !empty($ticketstatus) && $propertypickuptime) {
                 $sql = "INSERT into tbltickets (subject,status,priority,property_id,user_id) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if ($res) {

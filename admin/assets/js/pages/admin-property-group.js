@@ -1,12 +1,12 @@
 // JavaScript source code
 $(document).ready(function(){
     getUserDetails();
-    getTicketList();
+    getPropertyGroupList()
     $('#logout').click(function(){
         logout();
     });
 
-    $('#frmEditTicket').submit(function (event) {
+    $('#frmPropertyGroup').submit(function (event) {
         var formData = {
             'txtpropertyname': $('input[name=txtpropertyname]').val(),
             'txtpropertysubject':$('input[name=txtpropertysubject]').val(),
@@ -60,7 +60,7 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
-function getTicketList() {
+function getPropertyGroupList() {
     //fetch list of all tickets
     var data = '';
     var xmlhttp = new XMLHttpRequest();
@@ -74,25 +74,21 @@ function getTicketList() {
                 for(var i = 0; i<data.length; i++){
                     count++;
                     var html = '<tr id="tr'+data[i].id+'">\n' +
-                        '<td><span>'+count+'</span></td>'+
-                        '<td><h5>'+data[i].name+'</h5></td>\n' +
-                        '<td><h5>'+data[i].propertyname+'</h5></td>\n' +
-                        '<td><span class="text-muted">'+data[i].subject+'</span></td>\n' +
-                        '<td>'+data[i].propertygroup+'</td>\n' +
-                        '<td><span class="col-green">'+data[i].status+'</span></td>\n' +
-                        '<td>'+data[i].priority+'</td>\n'+
-                        '<td>'+data[i].pickup_date+'</td>\n'+
-                        '<td>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green" data-toggle="modal" data-target="#editticket"><i class="zmdi zmdi-edit" onclick="editTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deleteTicket(\''+data[i].id+'\')"></i></a>\n' +
+                        '<td><span>'+count+'</span></td>\n' +
+                        '<td><span>'+data[i].property_type+'</span></td>\n' +
+                        '<td><h5>'+data[i].property_price+'</h5></td>\n' +
+                        '<td><span>'+data[i].date+'</span></td>\n' +
+                        '<td>'+
+                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>\n' +
+                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deletePropertyGroup(\''+data[i].id+'\')"></i></a>\n' +
                         '</td>\n' +
                         '</tr>';
-                    $('#tblticketlist').append(html);
+                    $('#tblpropertygrouplist').append(html);
                 }
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/alltickets", true);
+    xmlhttp.open("GET", "/gafista/api/agent/getPropertyGroup", true);
     xmlhttp.send();
 }
 
@@ -108,7 +104,7 @@ function logout(){
     xmlhttp.send();
 }
 
-function deleteTicket(id){
+function deletePropertyGroup(id){
     var data = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -121,11 +117,11 @@ function deleteTicket(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/deleteTicket/"+data, true);
+    xmlhttp.open("GET", "/gafista/api/agent/deletepropertygroup/"+data, true);
     xmlhttp.send();
 }
 
-function editTicket(id){
+function editProperty(id){
     var ticketid = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -145,25 +141,6 @@ function editTicket(id){
         }
     };
     xmlhttp.open("GET", "/gafista/api/agent/getSingleTicket/"+ticketid, true);
-    xmlhttp.send();
-}
-
-function getPropertyGroup() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            data = JSON.parse(this.responseText);
-            if (data.isLoggedIn === false) {
-                document.location.href = "../sign-in.html";
-            } else {
-                for(var i = 0; i < data.length; i++) {
-                    var html = '<option value="'+data[0].id+'" selected>'+data[0].property_type+'</option>';
-                    $('#ddPropertyGroup').append(html);
-                }
-            }
-        }
-    };
-    xmlhttp.open("GET", "/gafista/api/agent/getPropertyGroup", true);
     xmlhttp.send();
 }
 

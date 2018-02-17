@@ -1,12 +1,12 @@
 // JavaScript source code
 $(document).ready(function(){
     getUserDetails();
-    getTicketList();
+    getClientList();
     $('#logout').click(function(){
         logout();
     });
 
-    $('#frmEditTicket').submit(function (event) {
+    $('#frmEditProperty').submit(function (event) {
         var formData = {
             'txtpropertyname': $('input[name=txtpropertyname]').val(),
             'txtpropertysubject':$('input[name=txtpropertysubject]').val(),
@@ -60,7 +60,7 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
-function getTicketList() {
+function getClientList() {
     //fetch list of all tickets
     var data = '';
     var xmlhttp = new XMLHttpRequest();
@@ -73,26 +73,45 @@ function getTicketList() {
                 var count = 0;
                 for(var i = 0; i<data.length; i++){
                     count++;
-                    var html = '<tr id="tr'+data[i].id+'">\n' +
-                        '<td><span>'+count+'</span></td>'+
-                        '<td><h5>'+data[i].name+'</h5></td>\n' +
-                        '<td><h5>'+data[i].propertyname+'</h5></td>\n' +
-                        '<td><span class="text-muted">'+data[i].subject+'</span></td>\n' +
-                        '<td>'+data[i].propertygroup+'</td>\n' +
-                        '<td><span class="col-green">'+data[i].status+'</span></td>\n' +
-                        '<td>'+data[i].priority+'</td>\n'+
-                        '<td>'+data[i].pickup_date+'</td>\n'+
-                        '<td>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green" data-toggle="modal" data-target="#editticket"><i class="zmdi zmdi-edit" onclick="editTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deleteTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '</td>\n' +
-                        '</tr>';
-                    $('#tblticketlist').append(html);
+                    var html = '            <li class="c_list" id="div'+data[i].id+'">\n' +
+                        '                <div class="row">\n' +
+                        '                    <div class="col-lg-5 col-md-5 col-10">\n' +
+                        '                        <div class="control">\n' +
+                        '                        </div>\n' +
+                        '                        <div class="avatar">\n' +
+                        '                            <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">\n' +
+                        '                        </div>\n' +
+                        '                        <div class="u_name">\n' +
+                        '                            <h5 class="c_name">'+data[i].firstname+ " "+ data[i].lastname+'<span class="badge badge-warning bg-blue hidden-sm-down">Work</span></h5>\n' +
+                        '                            <h6 class="phone"><i class="zmdi zmdi-phone"></i><span>'+data[i].phone+'</span></h6>\n' +
+                        '                        </div>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="col-lg-5 col-md-6 col-12 hidden-sm-down">\n' +
+                        '                        <span class="email"><a href="" title=""><i class="zmdi zmdi-email"></i>'+data[i].email+'</a></span>\n' +
+                        '                        <address><i class="zmdi zmdi-pin"></i>Nigeria</address>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="col-lg-2 col-md-1 col-2">\n' +
+                        '                        <ul class="header-dropdown list-unstyled">\n' +
+                        '                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>\n' +
+                        '                                <ul class="dropdown-menu">\n' +
+                        '                                    <li><a href="javascript:void(0);">Edit</a></li>\n' +
+                        '                                    <li><a onclick="deleteClient(\''+data[i].id+'\')" href="#">Delete</a></li>\n' +
+                        '                                </ul>\n' +
+                        '                            </li>\n' +
+                        '                        </ul>\n' +
+                        '                    </div>\n' +
+                        '                </div>\n' +
+                        '                <div class="action_btn">\n' +
+                        '                    <a href="javascript:void(0);" class="btn btn-default col-green"><i class="zmdi zmdi-edit"></i></a>\n' +
+                        '                    <a href="#" onclick="deleteClient(\''+data[i].id+'\')" class="btn btn-default col-red"><i class="zmdi zmdi-delete"></i></a>\n' +
+                        '                </div>\n' +
+                        '            </li>';
+                    $('#clientlist').append(html);
                 }
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/alltickets", true);
+    xmlhttp.open("GET", "/gafista/api/agent/getAllClients", true);
     xmlhttp.send();
 }
 
@@ -108,7 +127,7 @@ function logout(){
     xmlhttp.send();
 }
 
-function deleteTicket(id){
+function deleteClient(id){
     var data = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -117,15 +136,15 @@ function deleteTicket(id){
             if (data.isLoggedIn === false) {
                 document.location.href = "../sign-in.html";
             } else {
-                $('#tr' + id).hide(100);
+                $('#div' + id).hide(100);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/deleteTicket/"+data, true);
+    xmlhttp.open("GET", "/gafista/api/agent/deactivateclient/"+data, true);
     xmlhttp.send();
 }
 
-function editTicket(id){
+function editProperty(id){
     var ticketid = id;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
