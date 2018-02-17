@@ -276,6 +276,8 @@
             text-align: center;
         }
     </style>
+    <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/pages/admin-invoice.js"></script>
 </head>
 
 <body>
@@ -283,7 +285,7 @@
     <div class="container">
 
         <div class="company-address">
-            <h2 class="title"><img src="images/lawma.png" width="120px" height="50px"/></h2>
+            <h2 class="title"><img src="assets/images/lawma.png" width="120px" height="50px"/></h2>
             <p>
                 3, Otto Road Ijora Olopa,<br>
                 Tel: 01-7400795, 8196980, Fax: 01-5844784
@@ -302,7 +304,7 @@
 
 
         <div class="company-contact">
-            <left><img src="images/logo.png"/></left>
+            <left><img src="assets/images/logo.png"/></left>
 
             <br>
             35B, Bode THomas Street, Suru-Lere, Lagos. <br>
@@ -338,16 +340,15 @@
         <div class="details clearfix">
             <div class="client left">
                 <p>INVOICE TO:</p>
-                <p class="name">John Doe</p>
-                <p>796 Silver Harbour, TX 79273, US</p>
-                <a href="mailto:john@example.com">john@example.com</a>
+                <p class="name" id="clientname">John Doe</p>
+                <p id="clientaddress">796 Silver Harbour, TX 79273, US</p>
+                <a id="clientemail" href="mailto:john@example.com">john@example.com</a>
             </div>
             <div class="data right">
                 <div class="title">Invoice 3-2-1</div>
                 <div class="date">
-                    Date of Invoice: 01/06/2014<br>
-                    Due Date: 30/06/2014<br>
-                    PROPERTY CODE: GC58723
+                    Date of Invoice: <span id="clientdate">01/06/2014</span><br>
+                    INVOICE NUMBER: <span id="clientinvoicenumber"></span>
                 </div>
             </div>
         </div>
@@ -356,36 +357,24 @@
             <thead>
             <tr>
                 <th class="desc">Description</th>
-                <th class="qty">Unit</th>
-                <th class="unit">Unit Charge</th>
-                <th class="total">Total Charge</th>
+                <th class="total">Amount</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td class="desc"><h3>Website Design</h3>Creating a recognizable design solution based on the company's existing visual identity</td>
-                <td class="qty">30</td>
-                <td class="unit">$40.00</td>
-                <td class="total">$1,200.00</td>
+                <td class="desc"><h3>Credit Wallet</h3>Add money to wallet for ticket billing.</td>
+                <td class="total" id="clientamount">$1,200.00</td>
             </tr>
             <tr>
-                <td class="desc"><h3>Website Development</h3>Developing a Content Management System-based Website</td>
-                <td class="qty">80</td>
-                <td class="unit">$40.00</td>
-                <td class="total">$3,200.00</td>
-            </tr>
-            <tr>
-                <td class="desc"><h3>Search Engines Optimization</h3>Optimize the site for search engines (SEO)</td>
-                <td class="qty">20</td>
-                <td class="unit">$40.00</td>
-                <td class="total">$800.00</td>
+                <td class="desc"><h3>LAWMA FEE</h3>Issued by LAWMA on behalf of the Lagos State Government</td>
+                <td class="total">&#x20A6;100</td>
             </tr>
             </tbody>
         </table>
         <div class="no-break">
             <table class="grand-total">
                 <tbody>
-                <tr>
+<!--                <tr>
                     <td class="desc"></td>
                     <td class="qty"></td>
                     <td class="unit">SUBTOTAL:</td>
@@ -396,19 +385,17 @@
                     <td class="qty"></td>
                     <td class="unit">TAX 25%:</td>
                     <td class="total">$1,300.00</td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td class="desc"></td>
                     <td class="unit" colspan="2">GRAND TOTAL:</td>
-                    <td class="total">$6,500.00</td>
+                    <td class="total" id="grandtotal">$6,500.00</td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
-
-
 <footer>
     <div class="container">
         <div class="thanks">Thank you!</div>
@@ -417,10 +404,8 @@
             <b>N100 TRANSACTION CHARGE</b>
             <div>This bill is issued by LAWMA on behalf of the Lagos State Government by virtue of section 18 of the Lagos waste management<br> Law no 27 vol.40 law of lagos State 2007 any person who fails or neglects to pay the tariffsm, fees or charges presented by <br> Lagos Waste Management Authority shall be seemed to commit an offence and is liable to a fine or imprisonment. </div>
         </div>
-        <div class="end"> This Invoice was created from <img src="logo.png" width="50px; height="40px;"> WebApp and is valid without the signature and seal.</div>
+        <div class="end"> This Invoice was created from <img src="assets/images/logo.png" width="50px" height="40px"> WebApp and is valid without the signature and seal.</div>
     </div>
 </footer>
-
 </body>
-
 </html>

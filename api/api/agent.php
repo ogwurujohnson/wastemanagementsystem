@@ -179,7 +179,7 @@ class agent
     }
 
     public function getBilling(){
-        $sql = "SELECT Amount, Date, User_Id FROM tblpayments ORDER BY id DESC";
+        $sql = "SELECT Amount, Date, User_Id, id AS BillId FROM tblpayments ORDER BY id DESC";
         $res = mysqli_query($this->con,$sql);
         $result = [];
         $count = 0;
@@ -191,6 +191,28 @@ class agent
             $result[$count]["id"] = $row1[0] == null ? '' : $row1[0];
             $result[$count]["firstname"] = $row1[1] == null ? '' : $row1[1];
             $result[$count]["lastname"] = $row1[2] == null ? '' : $row1[2];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getBillingInvoice($billingId = ''){
+        $sql = "SELECT Amount, Transaction_Id, User_Id FROM tblpayments WHERE id = '".$billingId."'";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)){
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname, address, email, date FROM tbluser WHERE id = '".$row["User_Id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_row($res1);
+            $result[$count]["id"] = $row1[0] == null ? '' : $row1[0];
+            $result[$count]["firstname"] = $row1[1] == null ? '' : $row1[1];
+            $result[$count]["lastname"] = $row1[2] == null ? '' : $row1[2];
+            $result[$count]["address"] = $row1[3] == null ? '' : $row1[3];
+            $result[$count]["email"] = $row1[4] == null ? '' : $row1[4];
+            $result[$count]["date"] = $row1[5] == null ? '' : $row1[5];
             $count++;
         }
         header('Content-Type:application/json');

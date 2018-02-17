@@ -46,7 +46,7 @@ function getBilling() {
                         '<td>'+data[i].Date+'</td>\n' +
                         '<td><span class="col-green">Done</span></td>\n' +
                         '<td>\n' +
-                        '<a href="invoice.html?id='+data[i].id+'" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-eye"></i></a>\n' +
+                        '<a href="invoice.html?id='+data[i].BillId+'" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-eye"></i></a>\n' +
                         '</td>\n' +
                         '</tr>';
                     $('#tblbilling').append(html);
