@@ -148,7 +148,7 @@
             <li><a href="javascript:void(0)">Wallet</a>
                 <ul class="pullDown">
                     <li><a href="uvwallet.html">View Wallet</a> </li>
-                    <li><a href="atwallet.html">Add to Wallet</a> </li>
+                    <li><a href="atwallet.html">Fund Wallet</a> </li>
 
                 </ul>
             </li>
@@ -496,38 +496,30 @@
     </div>
 </div>
 
-<section class="content">
+<section class="content ecommerce-page">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-
-                <h2 class="text-muted">Welcome to Gafista Application
+                <h2>Your Ticket
+                <small class="text-muted">Welcome to Gafista Application</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item"><a href="ec-dashboard.html">Ticket</a></li>
+                    <li class="breadcrumb-item active">Your Ticket</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container-fluid">
-
-
-
         <div class="row clearfix">
-            <div class="col-lg-12 col-md-12">
-                <div class="card ">
-                    <div class="header">
-                        <h2>Your Tickets</h2>
-
-                    </div>
-
-                    <div class="body">
-                        <div class="table-responsive">
-                            <table class="table table-hover m-b-0">
-                                <thead>
+            <div class="col-lg-12">
+                <div class="card product_item_list">
+                    <div class="body table-responsive">
+                        <table class="table table-hover m-b-0">
+                            <thead>
                                 <tr>
                                     <th>Username</th>
                                     <th>Property Name</th>
@@ -538,17 +530,26 @@
                                     <th data-breakpoints="sm xs">Pick-Up Date</th>
                                     <th data-breakpoints="sm xs">Action</th>
                                 </tr>
-                                </thead>
-                                <tbody id="tblticketlist">
+                            </thead>
+                            <tbody id="tblticketlist">
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                            </tbody>
+                        </table>
+                    </div>        
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<!--            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+    </div>   
+</section>
+
+<div class="row clearfix">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="body">
@@ -557,10 +558,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
 <!-- Modal -->
 <!-- Default Size -->
 <form id="frmEditTicket">
@@ -623,24 +620,18 @@
         </div>
     </div>
 <!-- Jquery Core Js -->
-<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
-<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/countTo.bundle.js"></script>
-<script src="assets/bundles/sparkline.bundle.js"></script>
-<script src="assets/js/pages/widgets/infobox/infobox-1.js"></script>
-<script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
+<script src="assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/index2.js"></script>
-<!-- Jquery DataTable Plugin Js -->
-<script src="assets/bundles/datatablescripts.bundle.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/buttons.flash.min.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/buttons.html5.min.js"></script>
-<script src="assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+<script src="assets/js/pages/tables/footable.js"></script><!-- Custom Js -->
+<script src="assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js -->
+<script src="assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js -->
+<!-- Bootstrap Material Datetime Picker Plugin Js -->
+
+<script src="assets/js/pages/forms/basic-form-elements.js"></script>
 
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="assets/js/pages/tables/jquery-datatable.js"></script>

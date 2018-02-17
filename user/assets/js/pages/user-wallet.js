@@ -6,6 +6,8 @@ $(document).ready(function(){
     getUserDetails();
     getAllClientPropertiesCount();
     getAllClientTicketCount();
+    getUserWalletDetails();
+    getAllClientReceiptCount();
 
     $('#logout').click(function(){
         logout();
@@ -27,10 +29,30 @@ function getUserDetails(){
                 $('#phonenumber').html(data[3]);
                 $('#firstname').html(data[1]);
                 $('#lastname').html(data[2]);
+                $('#email').val(data[4]);
+                $('#id').val(data[0]);
             }
         }
     };
     xmlhttp.open("GET", "/gafista/api/client/getClientDetails", true);
+    xmlhttp.send();
+}
+
+function getUserWalletDetails(){
+    //fetch loggedin user details
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                $('#walletbalance').html(data[2]);
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/getClientWalletDetails", true);
     xmlhttp.send();
 }
 
@@ -49,6 +71,24 @@ function getAllClientPropertiesCount() {
         }
     };
     xmlhttp.open("GET", "/gafista/api/client/getAllClientsPropertiesCount", true);
+    xmlhttp.send();
+}
+
+function getAllClientReceiptCount() {
+    //gets total count of properties
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                $('#clientreceiptcount').html(data.count);
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/getAllClientReceiptsCount", true);
     xmlhttp.send();
 }
 

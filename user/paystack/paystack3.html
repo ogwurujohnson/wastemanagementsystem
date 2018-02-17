@@ -1,0 +1,43 @@
+<form >
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <input id="users" type="text"/>
+  <input id="email" type="text"/>
+  <button type="button" onclick="payWithPaystack()"> Pay </button> 
+</form>
+ 
+<script>
+
+  function usersAmount(){
+		return document.getElementById("users").value;
+  }
+  var pay_amount = document.getElementById("users").value;
+  function usersEmail(){
+	return document.getElementById("email").value;
+  }
+  var email = usersEmail();
+  
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_b8483c3605f63e0e32a5c797e7e9092402f48412',
+      email: usersEmail(),
+      amount: usersAmount(),
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          window.location = "entry.php?email="+usersEmail()+"&amount="+usersAmount();
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+</script>
