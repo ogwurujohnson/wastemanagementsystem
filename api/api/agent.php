@@ -154,6 +154,30 @@ class agent
         echo json_encode($result);
     }
 
+    public function getWallet(){
+        $sql = "SELECT id, firstname, lastname FROM tbluser";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)){
+            $result[] = $row;
+            $sql1 = "SELECT balance FROM tblwallet WHERE user_id = '".$row['id']."' ORDER BY id DESC";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_row($res1);
+            $result[$count]["Balance"] = $row1[0] == null ? 0 : $row1[0];
+
+            $sql1 = "SELECT Amount, Date FROM tblpayments WHERE User_Id = '".$row['id']."' ORDER BY id DESC";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_row($res1);
+            $result[$count]["lastfundadded"] = $row1[0] == null ? 0 : $row1[0];
+            $result[$count]["Date"] = $row1[1] == null ? '' : $row1[1];
+
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function addNewClient(){
         if (isset($_POST['txtfirstname'])) {
             $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
