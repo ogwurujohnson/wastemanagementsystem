@@ -122,6 +122,38 @@ class agent
         echo json_encode($result);
     }
 
+    public function getReport(){
+        $sql = "SELECT id, firstname, lastname FROM tbluser";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)){
+            $result[] = $row;
+            $sql1 = "SELECT SUM(Amount) as Total_Amount FROM tblpayments WHERE User_Id = '".$row['id']."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            while($row1 = mysqli_fetch_row($res1)){
+                $result[$count]["Total_Amount"] = $row1[0] == null ? 0 : $row1[0];
+            }
+            $sql1 = "SELECT id FROM tbltickets WHERE user_id = '".$row['id']."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $ticketcount = 0;
+            while($row1 = mysqli_fetch_row($res1)){
+                $ticketcount++;
+            }
+            $result[$count]["Total_Ticket"] = $ticketcount;
+            $sql1 = "SELECT id FROM tblproperty WHERE user_id = '".$row['id']."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $propertycount = 0;
+            while($row1 = mysqli_fetch_row($res1)){
+                $propertycount++;
+            }
+            $result[$count]["Total_Property"] = $propertycount;
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function addNewClient(){
         if (isset($_POST['txtfirstname'])) {
             $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
