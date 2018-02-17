@@ -3,11 +3,30 @@ $(document).ready(function(){
     getUserDetails();
     getAllClientPropertiesCount();
     getAllClientTicketCount();
+    getUserWalletDetails();
 
     $('#logout').click(function(){
         logout();
     });
 });
+
+function getUserWalletDetails(){
+    //fetch loggedin user details
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                $('#walletbalance').html(data[2]);
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/getClientWalletDetails", true);
+    xmlhttp.send();
+}
 
 function getUserDetails(){
     //fetch loggedin user details

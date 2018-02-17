@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hm-style.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+    <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user-wallet.js"></script>
+
 </head>
 
 <body class="theme-cyan index2">
@@ -144,7 +147,7 @@
             <li><a href="javascript:void(0)">Wallet</a>
                 <ul class="pullDown">                                   
                     <li><a href="uvwallet.html">View Wallet</a> </li>
-                    <li><a href="atwallet.html">Add to Wallet</a> </li>
+                    <li><a href="atwallet.html">Fund Wallet</a> </li>
                     
                 </ul>
             </li>
@@ -170,282 +173,8 @@
     </div>
 </div>
 
-<!-- Right Sidebar -->
-<aside id="rightsidebar" class="right-sidebar">
-    <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="index2.html#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="index2.html#settings">Setting</a></li>
-    </ul>
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
-            <ul class="choose-skin slim_scroll">
-                <h6>Flat Color</h6>                    
-                <li data-theme="purple">
-                    <div class="purple"></div>
-                    <span>Purple</span> </li>                   
-                <li data-theme="blue">
-                    <div class="blue"></div>
-                    <span>Blue</span> </li>
-                <li data-theme="cyan" class="active">
-                    <div class="cyan"></div>
-                    <span>Cyan</span> </li>
-                <h6>Multi Color</h6>
-                <li data-theme="black">
-                    <div class="black"></div>
-                    <span>Black</span> </li>
-                <li data-theme="deep-purple">
-                    <div class="deep-purple"></div>
-                    <span>Deep Purple</span> </li>
-                <li data-theme="red">
-                    <div class="red"></div>
-                    <span>Red</span> </li>
-                <h6>Gradient Color</h6>
-                <li data-theme="green">
-                    <div class="green"></div>
-                    <span>Green</span> </li>
-                <li data-theme="orange">
-                    <div class="orange"></div>
-                    <span>Orange</span> </li>
-                <li data-theme="blush">
-                    <div class="blush"></div>
-                    <span>Blush</span> </li>
-            </ul>
-        </div>
-        <div role="tabpanel" class="tab-pane pullUp" id="chat">
-            <div class="right_chat slim_scroll">
-                <div class="search">
-                    <div class="input-group">
-                        <div class="form-line">
-                            <input type="text" class="form-control" placeholder="Search..." required autofocus>
-                        </div>
-                    </div>
-                </div>
-                <h6>Recent</h6>
-                <ul class="list-unstyled">
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Sophia</span>
-                                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Grayson</span>
-                                    <span class="message">All the Lorem Ipsum generators on the</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="offline">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Isabella</span>
-                                    <span class="message">Contrary to popular belief, Lorem Ipsum</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="me">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">John</span>
-                                    <span class="message">It is a long established fact that a reader</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Alexander</span>
-                                    <span class="message">Richard McClintock, a Latin professor</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>                        
-                </ul>
-                <h6>Contacts</h6>
-                <ul class="list-unstyled">
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar10.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar6.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar7.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar8.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar9.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="online inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="online inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane slideLeft" id="settings">
-            <div class="settings slim_scroll">
-                <p class="text-left">General Settings</p>
-                <ul class="setting-list">
-                    <li> <span>Report Panel Usage</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" checked>
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li> <span>Email Redirect</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox">
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-                <p class="text-left">System Settings</p>
-                <ul class="setting-list">
-                    <li> <span>Notifications</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" checked>
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li> <span>Auto Updates</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" checked>
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-                <p class="text-left">Account Settings</p>
-                <ul class="setting-list">
-                    <li> <span>Offline</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox">
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li> <span>Location Permission</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" checked>
-                                <span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</aside>
+
+
 
 <!-- Chat-launcher -->
 <div class="chat-launcher"></div>
@@ -512,56 +241,82 @@
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
-                    <div class="header">
-                        
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="body">
-                        <form id="form_validation" method="POST">
-                          
-                            
+                        <form>
+                          <div class="form-group form-float">
 
+                              <div class="form-line" hidden>
+                                  <input type="text" id="id" class="form-control" name="id" required>
 
-                        
-                            <div class="form-group form-float">
+                              </div>
+                              <div class="form-line" hidden>
+                                  <input type="text" id="phonenumber" class="form-control" name="phone" required>
+
+                              </div>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="address" required>
+                                    <input type="text" id="email" class="form-control" name="email" required disabled>
+                                    <label class="form-label">Enter Email</label>
+                                </div>
+                                <div class="form-line">
+                                    <input type="text" id="amount" class="form-control" name="amount" required>
                                     <label class="form-label">Enter Amount</label>
                                 </div>
                             </div>
-
-                            
-
-                            
-                            
-                            
                             <div class="form-group">
                                 <input type="checkbox" id="checkbox" name="checkbox">
                                 <label for="checkbox">I have entered all the details correctly</label>
                             </div>
-                            <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>
+                            <button class="btn btn-raised btn-primary waves-effect" type="button" onclick="payWithPaystack()">SUBMIT</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">
-                        <p class="m-b-0">© 2018 Gafista Admin </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <script>
+
+            function usersAmount(){
+                return document.getElementById("amount").value;
+            }
+            var pay_amount = document.getElementById("amount").value;
+            function usersEmail(){
+                return document.getElementById("email").value;
+            }
+            var email = usersEmail();
+            function userId(){
+                return document.getElementById("id").value;
+            }
+            var user_id = userId();
+            function userPhone(){
+                return document.getElementById("phonenumber").value;
+            }
+            var user_phone = userPhone();
+
+            function payWithPaystack(){
+                var handler = PaystackPop.setup({
+                    key: 'pk_test_b8483c3605f63e0e32a5c797e7e9092402f48412',
+                    email: usersEmail(),
+                    amount: usersAmount(),
+                    ref: 'Gafista'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                    metadata: {
+                        custom_fields: [
+                            {
+                                display_name: "Mobile Number",
+                                variable_name: "mobile_number",
+                                value: user_phone
+                            }
+                        ]
+                    },
+                    callback: function(response){
+                        window.location = "paystack/entry.php?amount="+usersAmount()+"&user_id="+userId();
+                    },
+                    onClose: function(){
+                        alert('Payment Completed');
+                    }
+                });
+                handler.openIframe();
+            }
+        </script>
     </div>
 </section>
 
@@ -606,6 +361,7 @@
         //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
       
       });
-    </script>    
+    </script>
+<script src="paystack/inline.js"></script>
 </body>
 </html> 

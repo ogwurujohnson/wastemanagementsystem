@@ -81,6 +81,17 @@ class client
         echo json_encode($result);
     }
 
+
+    public function getClientWalletDetails(){
+        $id = $_SESSION['userid'];
+        $sql = "SELECT * FROM tblwallet WHERE user_id = '".$id."'";
+        $res = mysqli_query($this->con, $sql);
+        $row = mysqli_fetch_row($res);
+        $result = $row;
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function allclienttickets($userid = '')
     {
         $id = $_SESSION['userid'];
@@ -106,6 +117,11 @@ class client
         }
         header('Content-Type:application/json');
         echo json_encode($result);
+    }
+
+    public function totalmoneyspent(){
+        $id = $_SESSION['userid'];
+
     }
 
     public function allclientproperties($userid = '')
@@ -170,6 +186,8 @@ class client
         echo json_encode($result);
     }
 
+
+
     public function deleteTicket($data){
         $id = $data;
         $sql = "DELETE FROM tbltickets WHERE id = '".$id."'";
@@ -214,6 +232,16 @@ class client
         echo json_encode($result);
     }
 
+    public function getAllClientReceiptsCount(){
+        $id = $_SESSION['userid'];
+        $result = array();
+        $sql = "SELECT id FROM tblbilling WHERE user_id = $id";
+        $res = mysqli_query($this->con, $sql);
+        $result['count'] = mysqli_num_rows($res);
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function getSingleTicket($data){
         $ticketId = $data;
         $sql = "SELECT * FROM tbltickets WHERE id='".$ticketId."'";
@@ -239,6 +267,8 @@ class client
         header('Content-Type:application/json');
         echo json_encode($result);
     }
+
+
 
     public function getSingleProperty($data){
         $propertyId = $data;
@@ -392,6 +422,9 @@ class client
         echo json_encode($this->data);
     }
 
+
+
+
     public function fundwallet($userid = '')
     {
         $id = $userid;
@@ -434,6 +467,45 @@ class client
                 }
             } else {
                 $this->data['error'] = "empty";
+            }
+        }
+        echo json_encode($this->data);
+    }
+
+
+    public function deductfromwallet()
+    {
+        $id = $_SESSION['userid'];
+        if (isset($_POST['txtticketsubject'])) {
+            $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
+            if (!empty($ticketpropertyid)) {
+                $sql = "SELECT property_name, propertygroup_id FROM tblproperty WHERE id = '" . $ticketpropertyid . "'";
+                $res = mysqli_query($this->con, $sql);
+                $row = mysqli_fetch_assoc($res);
+                $sql1 = "SELECT property_price FROM tblpropertygroup WHERE id = ' " . $row["propertygroup_id"] . " ' ";
+                $res1 = mysqli_query($this->con, $sql1);
+                $row1 = mysqli_fetch_assoc($res1);
+                $sql4 = "SELECT id FROM tblwallet WHERE user_id = $id";
+                $res4 = mysqli_query($this->con, $sql4);
+                $row4 = mysqli_fetch_assoc($res4);
+                $sql5 = "INSERT into tblbilling (user_id,wallet_id,charge) VALUES ('$id','".$row4['id']."','" . $row1["property_price"] . "')";
+                $res5 = mysqli_query($this->con,$sql5);
+                $row5 = mysqli_fetch_assoc($res5);
+                $sql2 = "SELECT balance FROM tblwallet WHERE user_id = $id";
+                $res2 = mysqli_query($this->con, $sql2);
+                $row2 = mysqli_fetch_assoc($res2);
+                if ($row2['balance'] > $row1['property_price']) {
+                    $sql3 = "UPDATE tblwallet SET balance = balance - '" . $row1["property_price"] . "' ";
+                    $res3 = mysqli_query($this->con, $sql3) or die(mysqli_error($this->con));
+                    if ($res3) {
+                        $this->data['success'] = true;
+                    } else {
+                        $this->data['success'] = false;
+                    }
+
+                } else {
+                    $this->data['error'] = "Low Cash";
+                }
             }
         }
         echo json_encode($this->data);
