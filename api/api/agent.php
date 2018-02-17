@@ -178,6 +178,25 @@ class agent
         echo json_encode($result);
     }
 
+    public function getBilling(){
+        $sql = "SELECT Amount, Date, User_Id FROM tblpayments ORDER BY id DESC";
+        $res = mysqli_query($this->con,$sql);
+        $result = [];
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)){
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["User_Id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_row($res1);
+            $result[$count]["id"] = $row1[0] == null ? '' : $row1[0];
+            $result[$count]["firstname"] = $row1[1] == null ? '' : $row1[1];
+            $result[$count]["lastname"] = $row1[2] == null ? '' : $row1[2];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function addNewClient(){
         if (isset($_POST['txtfirstname'])) {
             $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);

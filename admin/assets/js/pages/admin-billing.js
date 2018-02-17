@@ -1,7 +1,7 @@
 // JavaScript source code
 $(document).ready(function(){
     getUserDetails();
-    getWallet();
+    getBilling();
     $('#logout').click(function(){
         logout();
     });
@@ -26,8 +26,8 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
-function getWallet() {
-    //fetch list of all tickets
+function getBilling() {
+    //fetch list of all billings
     var data = '';
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -41,24 +41,20 @@ function getWallet() {
                     count++;
                     var html = '<tr>\n' +
                         '<td>'+count+'</td>\n' +
-                        '<td>\n' +
-                        '<a href="#">'+data[i].firstname+" "+data[i].lastname+'</a>\n' +
-                        '</td>\n' +
-                        '<td>&#x20A6;'+data[i].Balance+'</td>\n' +
-                        '<td>&#x20A6;'+data[i].lastfundadded+'</td>\n' +
+                        '<td><h5>'+data[i].firstname+" "+data[i].lastname+'</h5></td>\n' +
+                        '<td><span class="text-muted">&#x20A6;'+data[i].Amount+'</span></td>\n' +
                         '<td>'+data[i].Date+'</td>\n' +
+                        '<td><span class="col-green">Done</span></td>\n' +
                         '<td>\n' +
-                        '<div class="progress" >\n' +
-                        '<div class="progress-bar l-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%;"></div>\n' +
-                        '</div>\n' +
+                        '<a href="invoice.html?id='+data[i].id+'" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-eye"></i></a>\n' +
                         '</td>\n' +
                         '</tr>';
-                    $('#tblwallet').append(html);
+                    $('#tblbilling').append(html);
                 }
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getWallet", true);
+    xmlhttp.open("GET", "/gafista/api/agent/getBilling", true);
     xmlhttp.send();
 }
 
