@@ -3,6 +3,7 @@
  */
 
 // JavaScript source code
+// properly working now
 $(document).ready(function () {
 
     $('#create_ticket').submit(function (event) {
