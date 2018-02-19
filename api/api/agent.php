@@ -107,6 +107,21 @@ class agent
         echo json_encode($result);
     }
 
+    public function getAllDrivers(){
+        $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'driver' AND activated = 1";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)) {
+            $sql1 = "SELECT * FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[] = $row1;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function getAllAdmins(){
         $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'admin' AND activated = 1";
         $res = mysqli_query($this->con, $sql);
@@ -197,6 +212,24 @@ class agent
         echo json_encode($result);
     }
 
+    public function getTimelineActivities(){
+        $result = [];
+        $sql = "SELECT Activity,User_Id, Date FROM tbltickettimeline ORDER BY id DESC";
+        $res = mysqli_query($this->con,$sql);
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)) {
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["User_Id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]['firstname'] = $row1['firstname'];
+            $result[$count]['lastname'] = $row1['lastname'];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function getBillingInvoice($billingId = ''){
         $sql = "SELECT Amount, Transaction_Id, User_Id FROM tblpayments WHERE id = '".$billingId."'";
         $res = mysqli_query($this->con,$sql);
@@ -249,6 +282,37 @@ class agent
         echo json_encode($this->data);
     }
 
+    public function addNewDriver(){
+        if (isset($_POST['txtfirstname'])) {
+            $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
+            $lastname = mysqli_real_escape_string($this->con, $_POST['txtlastname']);
+            $address = mysqli_real_escape_string($this->con, $_POST['txtaddress']);
+            $phonenumber = mysqli_real_escape_string($this->con, $_POST['txtphonenumber']);
+            $email = mysqli_real_escape_string($this->con, $_POST['txtemailaddress']);
+
+            if (!empty($firstname) && !empty($lastname) && !empty($address) && !empty($phonenumber) && !empty($email)) {
+                $sql = "INSERT INTO tbluser (firstname, lastname, phone, email, address) VALUES ('$firstname','$lastname','$phonenumber','$email', '$address')";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if ($res) {
+                    $id = mysqli_insert_id($this->con);
+                    $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','test','driver','$id', 0)";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    if($res){
+                        $this->data['success'] = true;
+                    }else{
+                        $this->data['success'] = false;
+                    }
+                } else {
+                    $this->data['success'] = false;
+                }
+            } else {
+                $this->data['error'] = "empty";
+            }
+        }
+        echo json_encode($this->data);
+    }
+
+
     public function addNewAdmin(){
         if (isset($_POST['txtfirstname'])) {
             $firstname = mysqli_real_escape_string($this->con, $_POST['txtfirstname']);
@@ -269,6 +333,28 @@ class agent
                     }else{
                         $this->data['success'] = false;
                     }
+                } else {
+                    $this->data['success'] = false;
+                }
+            } else {
+                $this->data['error'] = "empty";
+            }
+        }
+        echo json_encode($this->data);
+    }
+
+    public function saveEditedTicket(){
+        if (isset($_POST['txtpropertysubject'])) {
+            $ticketsubject = mysqli_real_escape_string($this->con, $_POST['txtpropertysubject']);
+            $ticketpriority = mysqli_real_escape_string($this->con, $_POST['ddpropertypriority']);
+            $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddpropertygroup']);
+            $ticketpropertystatus = mysqli_real_escape_string($this->con, $_POST['ddpropertystatus']);
+            $ticketpropertypickuptime = mysqli_real_escape_string($this->con, $_POST['propertypickuptime']);
+            if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
+                $sql = "UPDATE tbltickets SET subject = '".$ticketsubject."', priority = '".$ticketpriority."', property_id = '".$ticketpropertyid."', status = '".$ticketpropertystatus."', pickup_date='".$ticketpropertypickuptime."' WHERE id = '".$id."'";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if ($res) {
+                    $this->data['success'] = true;
                 } else {
                     $this->data['success'] = false;
                 }
@@ -324,6 +410,15 @@ class agent
         echo json_encode($result);
     }
 
+    public function getAllClientsCount(){
+        $result = array();
+        $sql = "SELECT id FROM tbllogindetails WHERE access = 'agent'";
+        $res = mysqli_query($this->con, $sql);
+        $result['count'] = mysqli_num_rows($res);
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
     public function getAllPaymentsCount(){
         $result = array();
         $sql = "SELECT id FROM tblpayments";
@@ -336,6 +431,87 @@ class agent
     public function getAllTicketsCount(){
         $result = array();
         $sql = "SELECT id FROM tbltickets";
+        $res = mysqli_query($this->con, $sql);
+        $result['count'] = mysqli_num_rows($res);
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getAllOngoingTickets(){
+        $result = array();
+        $sql = "SELECT id FROM tbltickets WHERE status = 'ongoing'";
+        $res = mysqli_query($this->con, $sql);
+        $result['count'] = mysqli_num_rows($res);
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getAllPendingTickets(){
+        $result = array();
+        $sql = "SELECT id FROM tbltickets WHERE status = 'pending'";
+        $res = mysqli_query($this->con, $sql);
+        $result['count'] = mysqli_num_rows($res);
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getPendingTickets(){
+        $result = array();
+        $sql = "SELECT user_id, subject, pickup_date, address, date FROM tbltickets WHERE status = 'pending'";
+        $res = mysqli_query($this->con, $sql);
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)) {
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]['firstname'] = $row1['firstname'];
+            $result[$count]['lastname'] = $row1['lastname'];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getOngoingTickets(){
+        $result = array();
+        $sql = "SELECT user_id, subject, pickup_date, address, date FROM tbltickets WHERE status = 'ongoing'";
+        $res = mysqli_query($this->con, $sql);
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)) {
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]['firstname'] = $row1['firstname'];
+            $result[$count]['lastname'] = $row1['lastname'];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getDoneTickets(){
+        $result = array();
+        $sql = "SELECT user_id, subject, pickup_date, address, date FROM tbltickets WHERE status = 'done'";
+        $res = mysqli_query($this->con, $sql);
+        $count = 0;
+        while($row = mysqli_fetch_assoc($res)) {
+            $result[] = $row;
+            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con, $sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]['firstname'] = $row1['firstname'];
+            $result[$count]['lastname'] = $row1['lastname'];
+            $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getAllResolvedTickets(){
+        $result = array();
+        $sql = "SELECT id FROM tbltickets WHERE status = 'done'";
         $res = mysqli_query($this->con, $sql);
         $result['count'] = mysqli_num_rows($res);
         header('Content-Type:application/json');
@@ -357,7 +533,26 @@ class agent
         $res = mysqli_query($this->con, $sql);
         $result['amount'] = 0;
         while ($row = mysqli_fetch_row($res)) {
-            $result['amount'] += $row;
+            $result['amount'] += $row[0];
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function getAllTicketsAmount(){
+        $result = array();
+        $sql = "SELECT property_id FROM tbltickets";
+        $res = mysqli_query($this->con, $sql);
+        $result['amount'] = 0;
+        while ($row = mysqli_fetch_row($res)) {
+            $sql1 = "SELECT propertygroup_id FROM tblproperty WHERE id = '".$row[0]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            while($row1 = mysqli_fetch_row($res1)){
+                $sql2 = "SELECT property_price FROM tblpropertygroup WHERE id = '".$row1[0]."'";
+                $res2 = mysqli_query($this->con,$sql2);
+                $row2 = mysqli_fetch_row($res2);
+                $result['amount'] += $row2[0];
+            }
         }
         header('Content-Type:application/json');
         echo json_encode($result);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2018 at 05:43 AM
+-- Generation Time: Feb 18, 2018 at 11:11 PM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -59,16 +59,18 @@ CREATE TABLE `tbllogindetails` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `access` varchar(255) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `activated` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbllogindetails`
 --
 
-INSERT INTO `tbllogindetails` (`id`, `email`, `password`, `access`, `user_id`) VALUES
-(2, 'daviddisu8@gmail.com', 'password', 'admin', 6),
-(3, 'ogwurujohnson@gmail.com', 'test', 'admin', 7);
+INSERT INTO `tbllogindetails` (`id`, `email`, `password`, `access`, `user_id`, `activated`) VALUES
+(2, 'daviddisu8@gmail.com', 'password', 'admin', 6, 1),
+(3, 'ogwurujohnson@gmail.com', 'test', 'agent', 7, 1),
+(4, 'tariak2@gmail.com', 'test', 'agent', 9, 0);
 
 -- --------------------------------------------------------
 
@@ -83,6 +85,16 @@ CREATE TABLE `tblpayments` (
   `Amount` varchar(255) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblpayments`
+--
+
+INSERT INTO `tblpayments` (`id`, `User_Id`, `Transaction_Id`, `Amount`, `Date`) VALUES
+(1, 6, 'REF-00001', '50000', '2018-02-16 22:37:28'),
+(2, 9, 'REF-0002', '65000', '2018-02-16 22:38:18'),
+(3, 6, 'REF-0003', '25000', '2018-02-16 22:38:38'),
+(4, 9, 'REF-0004', '100000', '2018-02-16 22:39:17');
 
 -- --------------------------------------------------------
 
@@ -104,7 +116,8 @@ CREATE TABLE `tblproperty` (
 --
 
 INSERT INTO `tblproperty` (`id`, `property_name`, `propertygroup_id`, `address`, `user_id`, `date`) VALUES
-(2, 'Sango Estate', 1, 'Nigeria', 6, '2018-01-25 05:31:40');
+(4, 'Compunet Limited', 1, 'Jos, Nigeria', 7, '2018-02-17 04:58:50'),
+(5, 'New Property', 1, 'Nigeria', 6, '2018-02-15 02:24:08');
 
 -- --------------------------------------------------------
 
@@ -135,25 +148,21 @@ INSERT INTO `tblpropertygroup` (`id`, `property_type`, `property_price`, `date`)
 CREATE TABLE `tbltickets` (
   `id` int(11) NOT NULL,
   `subject` varchar(255) NOT NULL,
-  `category_id` int(11) NOT NULL,
   `status` varchar(255) NOT NULL,
   `priority` varchar(255) NOT NULL,
   `property_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `pickup_date` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `tblticket_category`
+-- Dumping data for table `tbltickets`
 --
 
-CREATE TABLE `tblticket_category` (
-  `id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+INSERT INTO `tbltickets` (`id`, `subject`, `status`, `priority`, `property_id`, `user_id`, `pickup_date`, `date`) VALUES
+(1, 'To Dispose My Waste', 'done', 'High', 4, 6, 'Today', '2018-02-17 14:55:58'),
+(3, 'hurei', 'pending', 'high', 5, 7, 'Sunday 18 February 2018', '2018-02-17 12:05:26');
 
 -- --------------------------------------------------------
 
@@ -167,6 +176,7 @@ CREATE TABLE `tbluser` (
   `lastname` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -174,9 +184,10 @@ CREATE TABLE `tbluser` (
 -- Dumping data for table `tbluser`
 --
 
-INSERT INTO `tbluser` (`id`, `firstname`, `lastname`, `phone`, `email`, `date`) VALUES
-(6, 'David', 'Disu', '08188621047', 'daviddisu8@gmail.com', '2018-01-24 05:23:12'),
-(7, 'Johnson', 'Ogwuru', '0801122334', 'ogwurujohnson@gmail.com', '2018-01-26 22:11:27');
+INSERT INTO `tbluser` (`id`, `firstname`, `lastname`, `phone`, `email`, `address`, `date`) VALUES
+(6, 'David', 'Disu', '08188621047', 'daviddisu8@gmail.com', '', '2018-01-24 05:23:12'),
+(7, 'Johnson', 'Ogwuru', '0801122334', 'ogwurujohnson@gmail.com', '', '2018-01-26 22:11:27'),
+(9, 'Gloria', 'Okoro', '08184748234', 'tariak2@gmail.com', 'Jos, Nigeria', '2018-02-15 12:43:06');
 
 -- --------------------------------------------------------
 
@@ -221,7 +232,8 @@ ALTER TABLE `tbllogindetails`
 -- Indexes for table `tblpayments`
 --
 ALTER TABLE `tblpayments`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `User_Id` (`User_Id`);
 
 --
 -- Indexes for table `tblproperty`
@@ -243,14 +255,7 @@ ALTER TABLE `tblpropertygroup`
 ALTER TABLE `tbltickets`
   ADD PRIMARY KEY (`id`),
   ADD KEY `property_id` (`property_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `category_id` (`category_id`);
-
---
--- Indexes for table `tblticket_category`
---
-ALTER TABLE `tblticket_category`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `tbluser`
@@ -283,17 +288,17 @@ ALTER TABLE `tbllastlogin`
 -- AUTO_INCREMENT for table `tbllogindetails`
 --
 ALTER TABLE `tbllogindetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tblpayments`
 --
 ALTER TABLE `tblpayments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tblproperty`
 --
 ALTER TABLE `tblproperty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tblpropertygroup`
 --
@@ -303,17 +308,12 @@ ALTER TABLE `tblpropertygroup`
 -- AUTO_INCREMENT for table `tbltickets`
 --
 ALTER TABLE `tbltickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tblticket_category`
---
-ALTER TABLE `tblticket_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbluser`
 --
 ALTER TABLE `tbluser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tblwallet`
 --
@@ -343,6 +343,12 @@ ALTER TABLE `tbllogindetails`
   ADD CONSTRAINT `tbllogindetails_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
 
 --
+-- Constraints for table `tblpayments`
+--
+ALTER TABLE `tblpayments`
+  ADD CONSTRAINT `tblpayments_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `tbluser` (`id`);
+
+--
 -- Constraints for table `tblproperty`
 --
 ALTER TABLE `tblproperty`
@@ -354,8 +360,7 @@ ALTER TABLE `tblproperty`
 --
 ALTER TABLE `tbltickets`
   ADD CONSTRAINT `tbltickets_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `tblproperty` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tbltickets_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`),
-  ADD CONSTRAINT `tbltickets_ibfk_3` FOREIGN KEY (`category_id`) REFERENCES `tblticket_category` (`id`);
+  ADD CONSTRAINT `tbltickets_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
 
 --
 -- Constraints for table `tblwallet`

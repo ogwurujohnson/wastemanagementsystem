@@ -12,7 +12,7 @@ $(function () {
     "use strict";  
     initSparkline();
     initDonutChart();
-    getMorris('area', 'area_chart');
+    getMorris('', 'area_chart');
 });
 
 
@@ -21,36 +21,11 @@ function getMorris(type, element) {
         Morris.Area({
             element: element,
             data: [{
-                period: '2017 Q5',
+                period: '2018 Q1',
                 Sales: 3480,
                 Revenue: 2102,
                 Profit: 2365
-            }, {
-                    period: '2013 Q3',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
-                },{
-                    period: '2014 Q1',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028
-                }, {
-                    period: '2015 Q4',
-                    Sales: 6412,
-                    Revenue: 5713,
-                    Profit: 3450
-                },{
-                    period: '2016 Q3',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
-                },{
-                    period: '2017 Q5',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
-                }],
+            }],
             xkey: 'period',
             ykeys: ['Sales', 'Revenue', 'Profit'],
             labels: ['Sales', 'Revenue', 'Profit'],
