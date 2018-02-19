@@ -81,6 +81,17 @@ class client
         echo json_encode($result);
     }
 
+    public function totalmoneyspent(){
+        $id = $_SESSION['userid'];
+        $sql = "SELECT SUM(charge) AS total_charge FROM tblbilling WHERE user_id = $id ";
+        $res = mysqli_query($this->con,$sql);
+        $row = mysqli_fetch_assoc($res);
+        $sum = $row['total_charge'];
+
+        header('Content-Type:application/json');
+        echo json_encode($sum);
+    }
+
 
     public function getClientWalletDetails(){
         $id = $_SESSION['userid'];
@@ -119,10 +130,7 @@ class client
         echo json_encode($result);
     }
 
-    public function totalmoneyspent(){
-        $id = $_SESSION['userid'];
 
-    }
 
     public function allclientproperties($userid = '')
     {
@@ -143,6 +151,24 @@ class client
             $row1 = mysqli_fetch_assoc($res1);
             $result[$count]["propertygroup"] = $row1['property_type'];
             $count++;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+
+    public function gettransactiontimeline($user = '')
+    {
+        $id = $_SESSION['userid'];
+        $sql = "SELECT * FROM tblcreditdebit WHERE user_id = $id ORDER BY date DESC LIMIT 0,2";
+        $res = mysqli_query($this->con, $sql);
+        $result = [];
+        $count = 0;
+        while ($row = mysqli_fetch_assoc($res)){
+            $result[] = $row;
+            $sql1 = "SELECT firstname, lastname FROM tbluser WHERE id='".$row["user_id"]."'";
+            $res1 = mysqli_query($this->con,$sql1);
+            $row1 = mysqli_fetch_assoc($res1);
+            $result[$count]["name"] = $row1["firstname"]." ".$row1["lastname"];
         }
         header('Content-Type:application/json');
         echo json_encode($result);
@@ -180,6 +206,17 @@ class client
         $res = mysqli_query($this->con, $sql);
         $result = [];
         while ($row = mysqli_fetch_row($res)) {
+            $result[] = $row;
+        }
+        header('Content-Type:application/json');
+        echo json_encode($result);
+    }
+    public function clientProperty(){
+        $id = $_SESSION['userid'];
+        $result = [];
+        $sql = "SELECT * FROM tblproperty WHERE user_id = $id ";
+        $res = mysqli_query($this->con,$sql);
+        while($row = mysqli_fetch_assoc($res)){
             $result[] = $row;
         }
         header('Content-Type:application/json');
@@ -235,7 +272,7 @@ class client
     public function getAllClientReceiptsCount(){
         $id = $_SESSION['userid'];
         $result = array();
-        $sql = "SELECT id FROM tblbilling WHERE user_id = $id";
+        $sql = "SELECT id FROM tblcreditdebit WHERE user_id = $id";
         $res = mysqli_query($this->con, $sql);
         $result['count'] = mysqli_num_rows($res);
         header('Content-Type:application/json');
@@ -325,18 +362,7 @@ class client
         echo json_encode($result);
     }
 
-    public function clientproperty($userid = '')
-    {
-        $id = $_SESSION['userid'];
-        $sql = "SELECT * FROM tblproperty WHERE user_id = $id ";
-        $res = mysqli_query($this->con, $sql);
-        $result = [];
-        while ($row = mysqli_fetch_row($res)) {
-            $result[] = $row;
-        }
-        header('Content-Type:application/json');
-        echo json_encode($result);
-    }
+
 
     public function addproperty($userid = '')
     {
@@ -399,6 +425,7 @@ class client
     }
 
     public function createticket($userid = '')
+        //also serving as our deduct method
     {
         $id = $_SESSION['userid'];
         if (isset($_POST['txtticketsubject'])) {
@@ -408,13 +435,37 @@ class client
             $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
             $pickupdate = mysqli_real_escape_string($this->con, $_POST['txtpickupdate']);
             if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
-                $sql = "INSERT INTO tbltickets (subject,status,priority,property_id,user_id,pickup_date) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id','$pickupdate')";
-                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
-                if ($res) {
+
+                $sql1 = "SELECT property_name, propertygroup_id FROM tblproperty WHERE id = '" . $ticketpropertyid . "'";
+                $res1 = mysqli_query($this->con, $sql1);
+                $row1 = mysqli_fetch_assoc($res1);
+                $sql2 = "SELECT property_price FROM tblpropertygroup WHERE id = ' " . $row1["propertygroup_id"] . " ' ";
+                $res2 = mysqli_query($this->con, $sql2);
+                $row2 = mysqli_fetch_assoc($res2);
+                $sql7 = "SELECT id FROM tblwallet WHERE user_id = $id";
+                $res7 = mysqli_query($this->con, $sql7);
+                $row7 = mysqli_fetch_assoc($res7);
+                $sql4 = "SELECT balance FROM tblwallet WHERE user_id = $id";
+                $res4 = mysqli_query($this->con, $sql4);
+                $row4 = mysqli_fetch_assoc($res4);
+                if ($row4['balance'] >= $row2['property_price']) {
+                    $sql5 = "UPDATE tblwallet SET balance = balance - '" . $row2["property_price"] . "' ";
+                    $res5 = mysqli_query($this->con, $sql5) or die(mysqli_error($this->con));
+                
+                if ($res2 && $res5) {
+                    $sql = "INSERT INTO tbltickets (subject,status,priority,property_id,user_id,pickup_date) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id','$pickupdate')";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    $sql3 = "INSERT INTO tblcreditdebit (user_id,transaction_description,transaction_type,amount) VALUES ('$id','$ticketsubject', 'debit', '".$row2["property_price"]."') ";
+                    $res3 = mysqli_query($this->con,$sql3) or die(mysqli_error($this->con));
+                    $sql8 = "INSERT into tblbilling (user_id,wallet_id,charge) VALUES ('$id','".$row7['id']."','" . $row2["property_price"] . "')";
+                    $res8 = mysqli_query($this->con,$sql8) or die(mysqli_error($this->con));
                     $this->data['success'] = true;
                 } else {
                     $this->data['success'] = false;
                 }
+				}else{
+					$this->data['success'] = "error";
+				}
             } else {
                 $this->data['error'] = "empty";
             }
@@ -473,43 +524,6 @@ class client
     }
 
 
-    public function deductfromwallet()
-    {
-        $id = $_SESSION['userid'];
-        if (isset($_POST['txtticketsubject'])) {
-            $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddproperty']);
-            if (!empty($ticketpropertyid)) {
-                $sql = "SELECT property_name, propertygroup_id FROM tblproperty WHERE id = '" . $ticketpropertyid . "'";
-                $res = mysqli_query($this->con, $sql);
-                $row = mysqli_fetch_assoc($res);
-                $sql1 = "SELECT property_price FROM tblpropertygroup WHERE id = ' " . $row["propertygroup_id"] . " ' ";
-                $res1 = mysqli_query($this->con, $sql1);
-                $row1 = mysqli_fetch_assoc($res1);
-                $sql4 = "SELECT id FROM tblwallet WHERE user_id = $id";
-                $res4 = mysqli_query($this->con, $sql4);
-                $row4 = mysqli_fetch_assoc($res4);
-                $sql5 = "INSERT into tblbilling (user_id,wallet_id,charge) VALUES ('$id','".$row4['id']."','" . $row1["property_price"] . "')";
-                $res5 = mysqli_query($this->con,$sql5);
-                $row5 = mysqli_fetch_assoc($res5);
-                $sql2 = "SELECT balance FROM tblwallet WHERE user_id = $id";
-                $res2 = mysqli_query($this->con, $sql2);
-                $row2 = mysqli_fetch_assoc($res2);
-                if ($row2['balance'] > $row1['property_price']) {
-                    $sql3 = "UPDATE tblwallet SET balance = balance - '" . $row1["property_price"] . "' ";
-                    $res3 = mysqli_query($this->con, $sql3) or die(mysqli_error($this->con));
-                    if ($res3) {
-                        $this->data['success'] = true;
-                    } else {
-                        $this->data['success'] = false;
-                    }
-
-                } else {
-                    $this->data['error'] = "Low Cash";
-                }
-            }
-        }
-        echo json_encode($this->data);
-    }
 
 
     public function deactivateclientaccount($userid = '')

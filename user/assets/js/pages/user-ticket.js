@@ -6,6 +6,7 @@
 $(document).ready(function(){
     getUserDetails();
     getTicketList();
+    getPropertyDropdown();
     $('#logout').click(function(){
         logout();
     });
@@ -64,6 +65,8 @@ function getUserDetails(){
     xmlhttp.send();
 }
 
+
+
 function getTicketList() {
     //fetch list of all tickets
     var data = '';
@@ -83,10 +86,7 @@ function getTicketList() {
                         '<td><span class="col-green">'+data[i].status+'</span></td>\n' +
                         '<td>'+data[i].priority+'</td>\n'+
                         '<td>'+data[i].pickup_date+'</td>\n'+
-                        '<td>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green" data-toggle="modal" data-target="#editticket"><i class="zmdi zmdi-edit" onclick="editTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '<a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete" onclick="deleteTicket(\''+data[i].id+'\')"></i></a>\n' +
-                        '</td>\n' +
+
                         '</tr>';
                     $('#tblticketlist').append(html);
                 }
@@ -96,6 +96,9 @@ function getTicketList() {
     xmlhttp.open("GET", "/gafista/api/client/allclienttickets", true);
     xmlhttp.send();
 }
+
+
+
 
 function logout(){
     var data = "";

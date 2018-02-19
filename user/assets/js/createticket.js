@@ -5,7 +5,6 @@
 // JavaScript source code
 $(document).ready(function () {
 
-
     $('#create_ticket').submit(function (event) {
         var formData = {
             'txtticketsubject': $('input[name=txtticketsubject]').val(),
@@ -13,7 +12,6 @@ $(document).ready(function () {
             'ddproperty': $('select[name=ddproperty]').val(),
             'txtpickupdate': $('input[name=txtpickupdate]').val()
         };
-        console.log(formData);
 
         $.ajax({
             type: 'POST',
@@ -22,46 +20,23 @@ $(document).ready(function () {
             dataType: 'json',
             encode: true
         }).done(function (data) {
-            if (data.success === "errorEmpty") {
-                console.log(data);
-                $("#feedback").html("Empty Fields!");
-                $("#feedback").css({'color':'red'});
-            }
-            else if (data.success === true) {
+            if (data.success === true) {
                 document.location.href = 'cuticket.html';
+                alert("Ticket Created Successfully");
             }
+            else if (data.success === false) {
+                document.location.href = 'google.com';
+            }
+			else if(data.success === "error"){
+				alert("Insufficient fund in wallet, Please Do Fund your wallet to Continue.");
+			}
+
         });
 
         event.preventDefault();
     });
-    $('#create_ticket').submit(function (event) {
-        var formData = {
-            'txtticketsubject': $('input[name=txtticketsubject]').val(),
-            'ddticketpriority':$('select[name=ddticketpriority]').val(),
-            'ddproperty': $('select[name=ddproperty]').val(),
-            'txtpickupdate': $('input[name=txtpickupdate]').val()
-        };
-        console.log(formData);
 
-        $.ajax({
-            type: 'POST',
-            url: '../api/client/deductfromwallet',
-            data: formData,
-            dataType: 'json',
-            encode: true
-        }).done(function (data) {
-            if (data.success === "errorEmpty") {
-                console.log(data);
-                $("#feedback").html("Empty Fields!");
-                $("#feedback").css({'color':'red'});
-            }
-            else if (data.success === true) {
-                document.location.href = 'cuticket.html';
-            }
-        });
 
-        event.preventDefault();
-    });
 
 });
 

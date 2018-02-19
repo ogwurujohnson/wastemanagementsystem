@@ -150,7 +150,7 @@
             <li><a href="javascript:void(0)">Wallet</a>
                 <ul class="pullDown">                                   
                     <li><a href="uvwallet.html">View Wallet</a> </li>
-                    <li><a href="atwallet.html">Add to Wallet</a> </li>
+                    <li><a href="atwallet.html">Fund Wallet</a> </li>
                     
                 </ul>
             </li>
@@ -546,21 +546,20 @@
                                     <option value="medium">Medium</option>
                                </select>
                             </div>
-                            <div class="form-group form-float">
-                                <p> Property Group </p>
-                                <select  name="ddproperty" class="form-control">
-                                    <option value="1">Estate</option>
-                                    <option value="2">GRA</option>
-                                    <option value="3">Crescent</option>
+                            <div class="form-group">
+                                <p> Select Property </p>
+                                <select  name="ddproperty" class="form-control" id="propertylist">
+                                    <option value=""  selected> Select property</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
                                 <div class="form-line">
                                     <input type="text" name="txtpickupdate" class="datepicker form-control" placeholder="Please choose a date...">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" id="checkbox" name="checkbox">
+                                <input type="checkbox" id="checkbox" name="checkbox" required>
                                 <label for="checkbox">I have entered all the details correctly</label>
                             </div>
                             <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>

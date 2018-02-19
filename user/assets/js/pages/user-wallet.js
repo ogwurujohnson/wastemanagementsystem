@@ -8,11 +8,32 @@ $(document).ready(function(){
     getAllClientTicketCount();
     getUserWalletDetails();
     getAllClientReceiptCount();
+    getTotalSpent();
+    getTransactionTimeLine();
 
     $('#logout').click(function(){
         logout();
     });
 });
+
+function getTotalSpent(){
+    //fetch loggedin user details
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                $('#totalspent').html('&#x20A6;'+data);
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/totalmoneyspent", true);
+    xmlhttp.send();
+}
+
 
 function getUserDetails(){
     //fetch loggedin user details
@@ -48,7 +69,7 @@ function getUserWalletDetails(){
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
-                $('#walletbalance').html(data[2]);
+                $('#walletbalance').html('&#x20A6;'+data[2]);
             }
         }
     };
@@ -107,6 +128,32 @@ function getAllClientTicketCount() {
         }
     };
     xmlhttp.open("GET", "/gafista/api/client/getAllClientsTicketsCount", true);
+    xmlhttp.send();
+}
+
+function getTransactionTimeLine() {
+    //fetch list of all tickets
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if (data.isLoggedIn === false) {
+                document.location.href = "../sign-in.html";
+            } else {
+                for(var i = 0; i<data.length; i++){
+                    var html = '<tr id="tr'+data[i].id+'">\n' +
+                        '<td><h5>'+data[i].date+'</h5></td>\n' +
+                        '<td><h5>'+data[i].transaction_description+'</h5></td>\n' +
+                        '<td><h5>'+data[i].transaction_type+'</h5></td>\n' +
+                        '<td align="center">&#x20A6;'+data[i].amount+'</td>\n' +
+                        '</tr>';
+                    $('#transactiontimeline').append(html);
+                }
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/gettransactiontimeline", true);
     xmlhttp.send();
 }
 

@@ -4,6 +4,7 @@ $(document).ready(function(){
     getAllClientPropertiesCount();
     getAllClientTicketCount();
     getUserWalletDetails();
+    getClientProperty();
 
     $('#logout').click(function(){
         logout();
@@ -25,6 +26,27 @@ function getUserWalletDetails(){
         }
     };
     xmlhttp.open("GET", "/gafista/api/client/getClientWalletDetails", true);
+    xmlhttp.send();
+}
+
+
+function getClientProperty() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if (data.isLoggedIn === false) {
+                document.location.href = "../sign-in.html";
+            } else {
+                console.log(data);
+                for(var i = 0; i < data.length; i++) {
+                    var html = '<option value="'+data[i].id+'" selected>'+data[i].property_name+'</option>';
+                    $('#propertylist').append(html);
+                }
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/client/clientProperty", true);
     xmlhttp.send();
 }
 

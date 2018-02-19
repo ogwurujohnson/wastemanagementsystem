@@ -25,14 +25,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblbilling`
+-- Table structure for table `tblcreditdebit`
 --
 
-CREATE TABLE `tblbilling` (
+CREATE TABLE `tblcreditdebit` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `wallet_id` int(11) NOT NULL,
-  `charge` int(11) NOT NULL,
+  `transaction_description` varchar(255) NOT NULL,
+  `transaction_type` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -119,6 +120,20 @@ CREATE TABLE `tblproperty` (
 INSERT INTO `tblproperty` (`id`, `property_name`, `propertygroup_id`, `address`, `user_id`, `date`) VALUES
 (4, 'Compunet Limited', 1, 'Jos, Nigeria', 7, '2018-02-17 04:58:50'),
 (5, 'New Property', 1, 'Nigeria', 6, '2018-02-15 02:24:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblbilling`
+--
+
+CREATE TABLE `tblbilling` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `wallet_id` int(11) NOT NULL,
+  `charge` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -238,6 +253,7 @@ ALTER TABLE `tblbilling`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `wallet_id` (`wallet_id`);
+  
 
 --
 -- Indexes for table `tbllastlogin`
@@ -266,6 +282,13 @@ ALTER TABLE `tblpayments`
 ALTER TABLE `tblproperty`
   ADD PRIMARY KEY (`id`),
   ADD KEY `propertygroup_id` (`propertygroup_id`),
+  ADD KEY `user_id` (`user_id`);
+  
+--
+-- Indexes for table `tblcreditdebit`
+--
+ALTER TABLE `tblcreditdebit`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -372,6 +395,18 @@ ALTER TABLE `tblbilling`
 --
 ALTER TABLE `tbllastlogin`
   ADD CONSTRAINT `tbllastlogin_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
+
+--
+-- AUTO_INCREMENT for table `tblcreditdebit`
+--
+
+ALTER TABLE `tblcreditdebit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- Constraints for table `tblcreditdebit`
+--
+ALTER TABLE `tblcreditdebit`
+  ADD CONSTRAINT `tblcreditdebit_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
 
 --
 -- Constraints for table `tbllogindetails`
