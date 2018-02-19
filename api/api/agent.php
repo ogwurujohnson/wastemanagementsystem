@@ -726,7 +726,13 @@ class agent
                 $sql = "INSERT INTO tbltickets (subject,status,priority,property_id,user_id) VALUES ('$ticketsubject','pending','$ticketpriority','$ticketpropertyid','$id')";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if ($res) {
-                    $this->data['success'] = true;
+                    $sql = "INSERT INTO tbltickettimeline (Activity, User_Id) VALUES ('Ticket created', '$id')";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    if($res) {
+                        $this->data['success'] = true;
+                    }else{
+                        $this->data['success'] = false;
+                    }
                 } else {
                     $this->data['success'] = false;
                 }
@@ -805,6 +811,8 @@ class agent
         $sql = "DELETE FROM tbltickets WHERE id = '".$id."'";
         $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
         if($res){
+            $sql = "INSERT INTO tbltickettimeline (Activity, User_Id) VALUES ('Ticket deleted', '$id')";
+            $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
             $this->data['success'] = true;
         }else{
             $this->data['success'] = false;
@@ -852,10 +860,16 @@ class agent
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
                 if ($res) {
                     $this->data['success'] = true;
+                    $sql = "INSERT INTO tbltickettimeline (Activity, User_Id) VALUES ('Ticket updated', '$id')";
+                    $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    if($res){
+                        $this->data['success'] = true;
+                    }
                 } else {
                     $this->data['success'] = false;
                 }
             } else {
+
                 $this->data['error'] = "empty";
             }
         }

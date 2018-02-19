@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 18, 2018 at 11:11 PM
+-- Generation Time: Feb 19, 2018 at 07:10 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -69,8 +69,9 @@ CREATE TABLE `tbllogindetails` (
 
 INSERT INTO `tbllogindetails` (`id`, `email`, `password`, `access`, `user_id`, `activated`) VALUES
 (2, 'daviddisu8@gmail.com', 'password', 'admin', 6, 1),
-(3, 'ogwurujohnson@gmail.com', 'test', 'agent', 7, 1),
-(4, 'tariak2@gmail.com', 'test', 'agent', 9, 0);
+(3, 'ogwurujohnson@gmail.com', 'test', 'driver', 7, 1),
+(4, 'tariak2@gmail.com', 'test', 'agent', 9, 0),
+(5, 'json@mail.com', 'test', 'driver', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -153,6 +154,8 @@ CREATE TABLE `tbltickets` (
   `property_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `pickup_date` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `driver_id` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -160,9 +163,30 @@ CREATE TABLE `tbltickets` (
 -- Dumping data for table `tbltickets`
 --
 
-INSERT INTO `tbltickets` (`id`, `subject`, `status`, `priority`, `property_id`, `user_id`, `pickup_date`, `date`) VALUES
-(1, 'To Dispose My Waste', 'done', 'High', 4, 6, 'Today', '2018-02-17 14:55:58'),
-(3, 'hurei', 'pending', 'high', 5, 7, 'Sunday 18 February 2018', '2018-02-17 12:05:26');
+INSERT INTO `tbltickets` (`id`, `subject`, `status`, `priority`, `property_id`, `user_id`, `pickup_date`, `address`, `driver_id`, `date`) VALUES
+(1, 'To Dispose My Waste', 'done', 'High', 4, 6, 'Today', 'Nigeria', 0, '2018-02-19 01:38:19'),
+(4, 'Fish Head', 'ongoing', 'high', 5, 7, 'Tomorrow', 'Nigeria', 10, '2018-02-19 03:18:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbltickettimeline`
+--
+
+CREATE TABLE `tbltickettimeline` (
+  `id` int(11) NOT NULL,
+  `Activity` varchar(255) NOT NULL,
+  `User_Id` int(11) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbltickettimeline`
+--
+
+INSERT INTO `tbltickettimeline` (`id`, `Activity`, `User_Id`, `Date`) VALUES
+(1, 'Added new feature', 6, '2018-02-19 01:00:47'),
+(2, 'New ticket created', 6, '2018-02-19 01:01:22');
 
 -- --------------------------------------------------------
 
@@ -187,7 +211,8 @@ CREATE TABLE `tbluser` (
 INSERT INTO `tbluser` (`id`, `firstname`, `lastname`, `phone`, `email`, `address`, `date`) VALUES
 (6, 'David', 'Disu', '08188621047', 'daviddisu8@gmail.com', '', '2018-01-24 05:23:12'),
 (7, 'Johnson', 'Ogwuru', '0801122334', 'ogwurujohnson@gmail.com', '', '2018-01-26 22:11:27'),
-(9, 'Gloria', 'Okoro', '08184748234', 'tariak2@gmail.com', 'Jos, Nigeria', '2018-02-15 12:43:06');
+(9, 'Gloria', 'Okoro', '08184748234', 'tariak2@gmail.com', 'Jos, Nigeria', '2018-02-15 12:43:06'),
+(10, 'Johnson Jnr', 'Ogwuru', '093049593', 'json@mail.com', 'Somalia', '2018-02-19 02:29:59');
 
 -- --------------------------------------------------------
 
@@ -258,6 +283,13 @@ ALTER TABLE `tbltickets`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `tbltickettimeline`
+--
+ALTER TABLE `tbltickettimeline`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `tbltickettimeline_ibfk_1` (`User_Id`);
+
+--
 -- Indexes for table `tbluser`
 --
 ALTER TABLE `tbluser`
@@ -288,7 +320,7 @@ ALTER TABLE `tbllastlogin`
 -- AUTO_INCREMENT for table `tbllogindetails`
 --
 ALTER TABLE `tbllogindetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tblpayments`
 --
@@ -308,12 +340,17 @@ ALTER TABLE `tblpropertygroup`
 -- AUTO_INCREMENT for table `tbltickets`
 --
 ALTER TABLE `tbltickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbltickettimeline`
+--
+ALTER TABLE `tbltickettimeline`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbluser`
 --
 ALTER TABLE `tbluser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tblwallet`
 --
@@ -361,6 +398,12 @@ ALTER TABLE `tblproperty`
 ALTER TABLE `tbltickets`
   ADD CONSTRAINT `tbltickets_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `tblproperty` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tbltickets_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tbluser` (`id`);
+
+--
+-- Constraints for table `tbltickettimeline`
+--
+ALTER TABLE `tbltickettimeline`
+  ADD CONSTRAINT `tbltickettimeline_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `tbluser` (`id`);
 
 --
 -- Constraints for table `tblwallet`
