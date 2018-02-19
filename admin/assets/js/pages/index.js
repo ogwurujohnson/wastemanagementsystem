@@ -1,13 +1,5 @@
 ﻿//[custom Javascript]
 
-//Project:	Nexa - Responsive Bootstrap 4 Template
-//Version:  1.0
-//Last change:  15/12/2017
-//Primary use:	Nexa - Responsive Bootstrap 4 Template
-
-//should be included in all pages. It controls some layout
-
-
 $(function () {
     "use strict";  
     initSparkline();
@@ -15,45 +7,89 @@ $(function () {
     getMorris('area', 'area_chart');
 });
 
+var clients;
+var tickets;
+var payments;
+
+function getClients(){
+    //gets total count of users
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                clients = data.count;
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/agent/getAllClientsCount", true);
+    xmlhttp.send();
+}
+
+function getPayments(){
+    //gets total payments
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                payments = data.amount;
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/agent/getTotalPaymentsAmount", true);
+    xmlhttp.send();
+}
+
+function getTickets() {
+    //gets total tickets
+    var data = '';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            console.log(data);
+            if(data.isLoggedIn === false){
+                document.location.href = "../sign-in.html";
+            }else{
+                tickets = data.amount;
+            }
+        }
+    };
+    xmlhttp.open("GET", "/gafista/api/agent/getAllTicketsAmount", true);
+    xmlhttp.send();
+}
+
+getClients();
+getPayments();
+getTickets();
 
 function getMorris(type, element) {
     if (type === 'area') {
         Morris.Area({
             element: element,
-            data: [{
-                period: '2017 Q5',
-                Sales: 3480,
-                Revenue: 2102,
-                Profit: 2365
-            }, {
-                    period: '2013 Q3',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
-                },{
-                    period: '2014 Q1',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028
-                }, {
-                    period: '2015 Q4',
-                    Sales: 6412,
-                    Revenue: 5713,
-                    Profit: 3450
-                },{
-                    period: '2016 Q3',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
-                },{
-                    period: '2017 Q5',
-                    Sales: 4215,
-                    Revenue: 4460,
-                    Profit: 2028                
+            data: [
+                {
+                    period: '2017 Q4',
+                    Tickets: 0,
+                    Payments: 0,
+                    Clients: 0
+                },
+                {
+                    period: '2018 Q5',
+                    Tickets: parseInt(tickets),
+                    Payments: parseInt(payments),
+                    Clients: parseInt(clients)
                 }],
             xkey: 'period',
-            ykeys: ['Sales', 'Revenue', 'Profit'],
-            labels: ['Sales', 'Revenue', 'Profit'],
+            ykeys: ['Tickets', 'Payments', 'Clients'],
+            labels: ['Tickets', 'Payments', 'Clients'],
             pointSize: 3,
             hideHover: 'auto',
             lineColors: ['rgba(254, 191, 15,0.3)', 'rgba(25, 161, 183, 0.3)', 'rgba(134, 139, 239, 0.3)']

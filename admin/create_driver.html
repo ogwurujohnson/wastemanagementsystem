@@ -6,22 +6,14 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title>:: Gafista::</title>
+<title>Gafista admin</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Favicon-->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/footable-bootstrap/css/footable.bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/footable-bootstrap/css/footable.standalone.min.css">
-    <!-- Bootstrap Material Datetime Picker Css -->
-    <link href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
-    <!-- Wait Me Css -->
-
 <!-- Custom Css -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ecommerce.css">
+<link  rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
     <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/pages/admin-ticket.js"></script>
+    <script type="text/javascript" src="assets/js/pages/admin-add-driver.js"></script>
 </head>
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -31,10 +23,10 @@
 		<div class="line"></div>
 		<div class="line"></div>
         <p>Please wait...</p>
-        <div class="m-t-30"><img src="assets/images/logop.png" width="48" height="48" alt="Gafista"></div>
+        <div class="m-t-30"><img src="assets/images/logop.svg" width="48" height="48" alt="Gafista"></div>
     </div>
 </div>
-<!-- Overlay For Sidebars -->
+
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
@@ -117,6 +109,7 @@
         </ul>
     </div>
 </nav>
+
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
     <!-- User Info -->
@@ -199,123 +192,84 @@
     </div>
     <!-- #Menu -->
 </aside>
-<div class="chat-launcher"></div>
-<div class="chat-wrapper">
-    <div class="card">
-        <div class="header">
-            <h2>TL Groups</h2>                    
-        </div>
-        <div class="body">
-            <div class="chat-widget">
-            <ul class="chat-scroll-list clearfix">
-                <li class="left float-left">
-                    <img src="assets/images/xs/avatar3.jpg"  alt="">
-                    <div class="chat-info">
-                        <a class="name" href="javascript:void(0);">Alexander</a>
-                        <span class="datetime">6:12</span>                            
-                        <span class="message">Hello, John </span>
-                    </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:15</span> <span class="message">Hi, Alexander<br> How are you!</span> </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg"  alt="">
-                    <div class="chat-info"> <a class="name" href="javascript:void(0);">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg"  alt="">
-                    <div class="chat-info"> <a class="name" href="javascript:void(0);">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
-                </li>
-                    <li class="right">
-                    <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
-                </li>
-            </ul>
-            </div>
-            <div class="input-group">
-                <div class="form-line">
-                    <input type="text" class="form-control date" placeholder="Enter your email...">
-                </div>
-                <span class="input-group-addon"> <i class="material-icons">send</i> </span>
-            </div>
-        </div>
-    </div>
-</div>
 
-<section class="content ecommerce-page">
+<section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Ticket List
-                <small class="text-muted">Welcome to Gafista Application</small>
+                <h2>Add Driver
+                <small class="text-muted"></small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.html">Tickect</a></li>
-                    <li class="breadcrumb-item active">Ticket List</li>
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Gafista</a></li>
+                    <li class="breadcrumb-item"><a href="view_drivers.html">Drivers</a></li>
+                    <li class="breadcrumb-item active">Add Driver</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid">        
+        <!-- Vertical Layout -->
         <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card product_item_list">
-                    <div class="body table-responsive">
-                        <table class="table table-hover m-b-0">
-                            <thead>
-                                <tr>
-                                    <th>S/N</th>
-                                    <th>Username</th>
-                                    <th>Property Name</th>
-                                    <th data-breakpoints="sm xs">Summary</th>
-                                    <th data-breakpoints="sm xs">Property Group</th>
-                                    <th data-breakpoints="sm xs">Status</th>
-                                    <th data-breakpoints="sm xs">Priority</th>
-                                    <th data-breakpoints="sm xs">Pick-Up Date</th>
-                                    <th data-breakpoints="sm xs">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tblticketlist">
-
-                            </tbody>
-                        </table>
-                    </div>        
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <form id="frmAddDriver">
+                                <div class="row clearfix">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" placeholder="Enter Firstname" name="txtfirstname" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" placeholder="Enter Lastname" name="txtlastname"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="address" class="form-control" placeholder="Enter address" name="txtaddress" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" name="txtphonenumber" />
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" id="email_address" class="form-control" placeholder="Enter email address" name="txtemailaddress" />
+                                </div>
+                            </div>
+                           
+                            <input type="checkbox" id="remember_me" class="filled-in" required>
+                            <label for="remember_me">I have correctly filled all fields</label>
+                            <br>
+                            <button type="submit" class="btn btn-raised btn-primary m-t-15 waves-effect">SUBMIT</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-<!--            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-    </div>   
-</section>
-<!-- Jquery Core Js -->
-<!-- Modal -->
-<!-- Default Size -->
-<form id="frmEditTicket" method="post">
-<div class="modal fade" id="editticket" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+        <!-- #END# Vertical Layout --> 
+        
     </div>
-</div>
-</form>
+</section>
+<!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
-
-<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="assets/js/pages/tables/footable.js"></script><!-- Custom Js -->
-<script src="assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js -->
-<script src="assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js -->
-<!-- Bootstrap Material Datetime Picker Plugin Js -->
-<script src="assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-<script src="assets/js/pages/forms/basic-form-elements.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
 </body>
+
+
 </html>

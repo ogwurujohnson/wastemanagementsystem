@@ -312,6 +312,26 @@ class agent
         echo json_encode($this->data);
     }
 
+    public function assignPickup(){
+        if (isset($_POST['ddDrivers'])) {
+            $driver = mysqli_real_escape_string($this->con, $_POST['ddDrivers']);
+            $ticket = mysqli_real_escape_string($this->con, $_POST['ddPendingTickets']);
+
+            if (!empty($ticket) && !empty($driver)) {
+                $sql = "UPDATE tbltickets SET driver_id = '".$driver."', status='ongoing' WHERE id = '".$ticket."'";
+                $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                if ($res) {
+                        $this->data['success'] = true;
+                    }else{
+                        $this->data['success'] = false;
+                    }
+                } else {
+                $this->data['error'] = "empty";
+                }
+            }
+        echo json_encode($this->data);
+    }
+
 
     public function addNewAdmin(){
         if (isset($_POST['txtfirstname'])) {
@@ -350,6 +370,7 @@ class agent
             $ticketpropertyid = mysqli_real_escape_string($this->con, $_POST['ddpropertygroup']);
             $ticketpropertystatus = mysqli_real_escape_string($this->con, $_POST['ddpropertystatus']);
             $ticketpropertypickuptime = mysqli_real_escape_string($this->con, $_POST['propertypickuptime']);
+            $id = mysqli_real_escape_string($this->con, $_POST['propertyid']);
             if (!empty($ticketsubject) && !empty($ticketpriority) && !empty($ticketpropertyid)) {
                 $sql = "UPDATE tbltickets SET subject = '".$ticketsubject."', priority = '".$ticketpriority."', property_id = '".$ticketpropertyid."', status = '".$ticketpropertystatus."', pickup_date='".$ticketpropertypickuptime."' WHERE id = '".$id."'";
                 $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
@@ -457,12 +478,12 @@ class agent
 
     public function getPendingTickets(){
         $result = array();
-        $sql = "SELECT user_id, subject, pickup_date, address, date FROM tbltickets WHERE status = 'pending'";
+        $sql = "SELECT id, user_id, subject, pickup_date, address, date FROM tbltickets WHERE status = 'pending'";
         $res = mysqli_query($this->con, $sql);
         $count = 0;
         while($row = mysqli_fetch_assoc($res)) {
             $result[] = $row;
-            $sql1 = "SELECT id, firstname, lastname FROM tbluser WHERE id = '".$row["user_id"]."'";
+            $sql1 = "SELECT firstname, lastname FROM tbluser WHERE id = '".$row["user_id"]."'";
             $res1 = mysqli_query($this->con, $sql1);
             $row1 = mysqli_fetch_assoc($res1);
             $result[$count]['firstname'] = $row1['firstname'];
@@ -503,6 +524,7 @@ class agent
             $row1 = mysqli_fetch_assoc($res1);
             $result[$count]['firstname'] = $row1['firstname'];
             $result[$count]['lastname'] = $row1['lastname'];
+            $result[$count]['pickup_date'] = $row['pickup_date'];
             $count++;
         }
         header('Content-Type:application/json');

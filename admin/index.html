@@ -165,7 +165,9 @@
                     <li><a href="create_user.html">Create Clients</a> </li>
                     <li><a href="contact_admin.html">View Admins</a></li>
                     <li><a href="create_agent.html">Create Admins</a></li>
-                    <li><a href="form-upload.html">File Upload</a></li>
+                    <li><a href="view_drivers.html">View Drivers</a></li>
+                    <li><a href="create_driver.html">Create Drivers</a> </li>
+                    <!--<li><a href="form-upload.html">File Upload</a></li>-->
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Reports</span> </a>
@@ -260,7 +262,7 @@
                   <div class="row">
                     <div class="col-7">
                       <h5 class="m-t-0">Users</h5>
-                      <small class="text-small">4% higher than last month</small>
+                      <small class="text-small"></small>
                     </div>
                     <div class="col-5 text-right">
                       <h2 class="" id="userscount">20</h2>
@@ -268,7 +270,7 @@
                     </div>
                     <div class="col-12">
                       <div class="progress m-t-20">
-                        <div class="progress-bar l-green" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+                        <div class="progress-bar l-green" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                       </div>
                     </div>
                   </div>
@@ -279,7 +281,7 @@
                   <div class="row">
                     <div class="col-7">
                       <h5 class="m-t-0">Properties</h5>
-                      <small class="text-small">6% higher than last month</small>
+                      <small class="text-small"></small>
                     </div>
                     <div class="col-5 text-right">
                       <h2 class="" id="propertiescount">12%</h2>
@@ -287,7 +289,7 @@
                     </div>
                     <div class="col-12">
                       <div class="progress m-t-20">
-                        <div class="progress-bar l-blush" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+                        <div class="progress-bar l-blush" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                       </div>
                     </div>
                   </div>
@@ -297,8 +299,8 @@
                 <div class="body">
                   <div class="row">
                     <div class="col-7">
-                      <h5 class="m-t-0">Daily Payments</h5>
-                      <small class="text-small" id="paymentsamount">Total &#x20A6;0</small>
+                      <h5 class="m-t-0">Payments</h5>
+                      <small class="text-small" id="paymentsamount"></small>
                     </div>
                     <div class="col-5 text-right">
                       <h2 class="" id="paymentscount">39</h2>
@@ -306,7 +308,7 @@
                     </div>
                     <div class="col-12">
                       <div class="progress m-t-20">
-                        <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
+                        <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                       </div>
                     </div>
                   </div>
@@ -316,16 +318,16 @@
                 <div class="body">
                   <div class="row">
                     <div class="col-7">
-                      <h5 class="m-t-0">Daily Tickets</h5>
-                      <small class="text-small">Total &#x20A6;0</small>
+                      <h5 class="m-t-0">Tickets</h5>
+                      <small class="text-small"></small>
                     </div>
                     <div class="col-5 text-right">
-                      <h2 class="">8</h2>
+                      <h2 class="" id="ticketscount">8</h2>
                       <small class="info">tickets</small>
                     </div>
                     <div class="col-12">
                       <div class="progress m-t-20">
-                        <div class="progress-bar l-blue" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
+                        <div class="progress-bar l-blue" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                       </div>
                     </div>
                   </div>
@@ -338,37 +340,28 @@
                 <div class="card product-report">
                     <div class="header">
                         <h2>Annual Report</h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
                     <div class="body">
                         <div class="row clearfix m-b-15">
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="icon l-amber"><i class="zmdi zmdi-chart-donut"></i></div>
                                 <div class="col-in">
-                                    <h3 class="counter m-b-0">$4,516</h3>
-                                    <small class="text-muted m-t-0">Quarterly Report</small>
+                                    <h3 class="counter m-b-0" id="ttticketamount">$4,516</h3>
+                                    <small class="text-muted m-t-0">Total Ticket</small>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-turquoise"><i class="zmdi zmdi-chart"></i></div>
+                                <div class="icon l-turquoise"><i class="zmdi zmdi-card"></i></div>
                                 <div class="col-in">
-                                    <h3 class="counter m-b-0">$6,481</h3>
-                                    <small class="text-muted m-t-0">Annual Revenue </small>
+                                    <h3 class="counter m-b-0" id="ttpaymentamount">$6,481</h3>
+                                    <small class="text-muted m-t-0">Total Payment</small>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-parpl"><i class="zmdi zmdi-card"></i></div>
+                                <div class="icon l-parpl"><i class="zmdi zmdi-chart"></i></div>
                                 <div class="col-in">
-                                    <h3 class="counter m-b-0">$3,915</h3>
-                                    <small class="text-muted m-t-0">Total Profit</small>
+                                    <h3 class="counter m-b-0" id="ttusers">$3,915</h3>
+                                    <small class="text-muted m-t-0">Total Clients</small>
                                 </div>
                             </div>
                         </div>
@@ -381,36 +374,36 @@
                     <div class="col-lg-12 col-md-6 col-sm-12">
                         <div class="card top-report">
                             <div class="body">
-                                <h3 class="m-t-0">120 <i class="zmdi zmdi-trending-up float-right"></i></h3>
-                                <p class="text-muted">New Users</p>
+                                <h3 class="m-t-0"><span id="ongoingtickets">120</span> <i class="zmdi zmdi-trending-up float-right"></i></h3>
+                                <p class="text-muted">Ongoing Tickets</p>
                                 <div class="progress">
-                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                                 </div>
-                                <small>Change 5%</small>
+                                <small></small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-6 col-sm-12">
                         <div class="card top-report">
                             <div class="body">
-                                <h3 class="m-t-0">1,600 <i class="zmdi zmdi-trending-up float-right"></i></h3>
+                                <h3 class="m-t-0"><span id="pendingtickets">1,600</span> <i class="zmdi zmdi-trending-up float-right"></i></h3>
                                 <p class="text-muted">Pending Tickets</p>
                                 <div class="progress">
-                                    <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                    <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                                 </div>
-                                <small>Change 15%</small>
+                                <small></small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="card top-report">
                             <div class="body">
-                                <h3 class="m-t-0">26.8% <i class="zmdi zmdi-trending-down float-right"></i></h3>
+                                <h3 class="m-t-0"><span id="resolvedtickets">26.8%</span> <i class="zmdi zmdi-trending-down float-right"></i></h3>
                                 <p class="text-muted">Resolved Tickets</p>
                                 <div class="progress">
-                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width:32%;"></div>
+                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
                                 </div>
-                                <small>Change 17%</small>
+                                <small></small>
                             </div>
                         </div>
                     </div>
@@ -418,7 +411,7 @@
             </div>
         </div>
 
-        <div class="row clearfix">
+        <div class="row clearfix" style="display:none">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card">
                     <div class="header">

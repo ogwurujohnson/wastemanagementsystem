@@ -19,25 +19,30 @@ $(document).ready(function(){
 
         console.log(formData);
 
-/*        $.ajax({
+        $.ajax({
             type: 'POST',
-            url: 'api/users/signin',
+            url: '/gafista/api/agent/saveEditedTicket',
             data: formData,
             dataType: 'json',
             encode: true
         })
             .done(function (data) {
+                console.log(data);
                 if (data.success === "errorEmpty") {
                     console.log(data);
                     $("#feedback").html("Empty Fields!");
                     $("#feedback").css({'color':'red'});
                 }
                 else if (data.success === "success") {
-                    console.log(data);
+                    alert('Ticket Edited Successfully!');
+                    location.reload();
                 }
             });
-*/
         event.preventDefault();
+    });
+
+    $('#editticket').on('hidden.bs.modal', function () {
+        $('.modal-dialog').empty();
     });
 });
 
@@ -134,13 +139,66 @@ function editTicket(id){
             if (data.isLoggedIn === false) {
                 document.location.href = "../sign-in.html";
             } else {
-                $('#propertyId').val(ticketid);
-                $('#propertyname').val(data[0].propertyname);
-                $('#propertysubject').val(data[0].subject);
+                var html = '        <div class="modal-content">\n' +
+                    '            <div class="modal-header">\n' +
+                    '                <h4 class="modal-title" id="defaultModalLabel">Edit Ticket</h4>\n' +
+                    '            </div>\n' +
+                    '            <div class="modal-body">\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <input type="text" class="form-control" placeholder="Property Name" name="txtpropertyname" id="propertyname" value="'+data[0].propertyname+'" />\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <input type="text" class="form-control" placeholder="Property Subject" name="txtpropertysubject" id="propertysubject" value="'+data[0].subject+'">\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <select class="form-control" name="ddpropertygroup" id="ddPropertyGroup">\n' +
+                    '                           <option value="'+data[0].id+'" selected>'+data[0].property_type+'</option>\n'+
+                    '                        </select>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <select class="form-control" name="ddpropertystatus" id="ddPropertyStatus">\n' +
+                    '                            <option value="'+data[0].status+'" selected>'+data[0].status+'</option>\n'+
+                    '                            <option value="pending">Pending</option>\n' +
+                    '                            <option value="done">Done</option>\n' +
+                    '                            <option value="ongoing">Ongoing</option>\n' +
+                    '                        </select>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <select class="form-control" name="ddpropertypriority">\n' +
+                    '                            <option value="'+data[0].priority+'">'+data[0].priority+'</option>'+
+                    '                            <option value="high">High</option>\n' +
+                    '                            <option value="medium">Medium</option>\n' +
+                    '                            <option value="low">Low</option>\n' +
+                    '                        </select>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="form-line">\n' +
+                    '                        <input type="text" class="datepicker form-control" placeholder="Pick-Up Time" name="propertypickuptime" id="propertypickuptime" value="'+data[0].pickup_date+'" />\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '                <input type="text" value="'+ticketid+'" name="propertyid" id="propertyId" hidden />\n' +
+                    '            </div>\n' +
+                    '            <div class="modal-footer">\n' +
+                    '                <button type="submit" class="btn  btn-raised btn-info waves-effect">Save</button>\n' +
+                    '                <button type="button" class="btn btn-raised btn-default waves-effect" data-dismiss="modal">CLOSE</button>\n' +
+                    '            </div>\n' +
+                    '        </div>';
+
+                $('.modal-dialog').append(html);
                 getPropertyGroup();
-                $('#ddPropertyStatus').val(data[0].status);
-                $('#ddPropertyPriority').val(data[0].priority);
-                $('#propertypickuptime').val(data[0].pickup_date);
             }
         }
     };
