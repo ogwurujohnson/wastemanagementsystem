@@ -3,7 +3,7 @@
 	$amount = $_GET['amount'];
 	$user_id = $_GET['user_id'];
 	
-	
+	//modified paystack code
 	$query = "INSERT into tblpayments (Amount,User_Id) VALUES ('$amount','$user_id')";
 	$insert_v = mysqli_query($conn,$query);
 
