@@ -4,8 +4,8 @@
 
 // JavaScript source code
 $(document).ready(function () {
-
-
+    getPropertyGroup();
+    
     $('#add_property').submit(function (event) {
         var formData = {
             'txtpropertyname': $('input[name=txtpropertyname]').val(),
@@ -34,6 +34,27 @@ $(document).ready(function () {
     });
 
 });
+
+function getPropertyGroup() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            if (data.isLoggedIn === false) {
+                document.location.href = "../sign-in.html";
+            } else {
+                console.log(data);
+                for(var i = 0; i < data.length; i++) {
+                    var html = '<option value="'+data[i].id+'" selected>'+data[i].property_type+'</option>';
+                    $('#ddPropertyGroup').append(html);
+                }
+            }
+        }
+    };
+    xmlhttp.open("GET", "../api/client/getPropertyGroup", true);
+    xmlhttp.send();
+}
+
 
 
 

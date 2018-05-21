@@ -1,0 +1,10 @@
+[21-Feb-2018 08:48:54 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/gafistac/public_html/user/paystack/db.php on line 3
+[21-Feb-2018 08:48:54 UTC] PHP Fatal error:  Call to undefined function error() in /home/gafistac/public_html/user/paystack/db.php on line 7
+[21-Feb-2018 08:49:27 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/gafistac/public_html/user/paystack/db.php on line 3
+[21-Feb-2018 08:49:27 UTC] PHP Fatal error:  Call to undefined function error() in /home/gafistac/public_html/user/paystack/db.php on line 7
+[21-Feb-2018 08:49:39 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/gafistac/public_html/user/paystack/db.php on line 3
+[21-Feb-2018 08:49:39 UTC] PHP Fatal error:  Call to undefined function error() in /home/gafistac/public_html/user/paystack/db.php on line 7
+[21-Feb-2018 09:01:16 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/gafistac/public_html/user/paystack/db.php on line 3
+[21-Feb-2018 09:01:16 UTC] PHP Fatal error:  Call to undefined function error() in /home/gafistac/public_html/user/paystack/db.php on line 7
+[21-Feb-2018 09:04:55 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/gafistac/public_html/user/paystack/db.php on line 3
+[21-Feb-2018 09:04:55 UTC] PHP Fatal error:  Call to undefined function error() in /home/gafistac/public_html/user/paystack/db.php on line 7

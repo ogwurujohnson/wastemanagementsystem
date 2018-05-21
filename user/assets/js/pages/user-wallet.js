@@ -30,7 +30,7 @@ function getTotalSpent(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/totalmoneyspent", true);
+    xmlhttp.open("GET", "../api/client/totalmoneyspent", true);
     xmlhttp.send();
 }
 
@@ -55,7 +55,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getClientDetails", true);
+    xmlhttp.open("GET", "../api/client/getClientDetails", true);
     xmlhttp.send();
 }
 
@@ -73,7 +73,7 @@ function getUserWalletDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getClientWalletDetails", true);
+    xmlhttp.open("GET", "../api/client/getClientWalletDetails", true);
     xmlhttp.send();
 }
 
@@ -91,7 +91,7 @@ function getAllClientPropertiesCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getAllClientsPropertiesCount", true);
+    xmlhttp.open("GET", "../api/client/getAllClientsPropertiesCount", true);
     xmlhttp.send();
 }
 
@@ -109,7 +109,7 @@ function getAllClientReceiptCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getAllClientReceiptsCount", true);
+    xmlhttp.open("GET", "../api/client/getAllClientReceiptsCount", true);
     xmlhttp.send();
 }
 
@@ -127,7 +127,7 @@ function getAllClientTicketCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getAllClientsTicketsCount", true);
+    xmlhttp.open("GET", "../api/client/getAllClientsTicketsCount", true);
     xmlhttp.send();
 }
 
@@ -153,7 +153,7 @@ function getTransactionTimeLine() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/gettransactiontimeline", true);
+    xmlhttp.open("GET", "../api/client/gettransactiontimeline", true);
     xmlhttp.send();
 }
 
@@ -169,6 +169,6 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/logout", true);
+    xmlhttp.open("GET", "../api/client/logout", true);
     xmlhttp.send();
 }

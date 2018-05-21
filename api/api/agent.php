@@ -17,9 +17,9 @@ class agent
         header('Content-Type:application/json');
         session_start();
         $host = "localhost";
-        $user = "root";
-        $pass = "";
-        $db = "wastemanagement";
+        $user = "gafistac_user";
+        $pass = "*rUeF16j@w)T";
+        $db = "gafistac_db";
         $this->con = mysqli_connect($host, $user, $pass, $db);
         $this->authUser();
     }

@@ -19,7 +19,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: 'POST',
-            url: '/gafista/api/agent/assignPickup',
+            url: '../api/agent/assignPickup',
             data: formData,
             dataType: 'json',
             encode: true
@@ -55,7 +55,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "../api/agent/getAgentDetails", true);
     xmlhttp.send();
 }
 
@@ -88,7 +88,7 @@ function getPendingTickets() {
                 }
             }
         };
-        xmlhttp.open("GET", "/gafista/api/agent/getPendingTickets", true);
+        xmlhttp.open("GET", "../api/agent/getPendingTickets", true);
         xmlhttp.send();
 }
 
@@ -120,7 +120,7 @@ function getOngoingTickets() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getOngoingTickets", true);
+    xmlhttp.open("GET", "../api/agent/getOngoingTickets", true);
     xmlhttp.send();
 }
 
@@ -152,7 +152,7 @@ function getDoneTickets() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getDoneTickets", true);
+    xmlhttp.open("GET", "../api/agent/getDoneTickets", true);
     xmlhttp.send();
 }
 
@@ -173,7 +173,7 @@ function getDriversList() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllDrivers", true);
+    xmlhttp.open("GET", "../api/agent/getAllDrivers", true);
     xmlhttp.send();
 }
 
@@ -185,7 +185,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "../api/agent/logout", true);
     xmlhttp.send();
 }
 

@@ -64,7 +64,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getClientDetails", true);
+    xmlhttp.open("GET", "../api/client/getClientDetails", true);
     xmlhttp.send();
 }
 
@@ -94,7 +94,7 @@ function getPropertyList() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/allclientproperties", true);
+    xmlhttp.open("GET", "../api/client/allclientproperties", true);
     xmlhttp.send();
 }
 
@@ -106,7 +106,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/logout", true);
+    xmlhttp.open("GET", "../api/client/logout", true);
     xmlhttp.send();
 }
 
@@ -123,7 +123,7 @@ function deleteProperty(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/deleteProperty/"+data, true);
+    xmlhttp.open("GET", "../api/client/deleteProperty/"+data, true);
     xmlhttp.send();
 }
 
@@ -146,7 +146,7 @@ function editProperty(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getSingleTicket/"+ticketid, true);
+    xmlhttp.open("GET", "../api/client/getSingleTicket/"+ticketid, true);
     xmlhttp.send();
 }
 
@@ -165,7 +165,7 @@ function getPropertyGroup() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getPropertyGroup", true);
+    xmlhttp.open("GET", "../api/client/getPropertyGroup", true);
     xmlhttp.send();
 }
 

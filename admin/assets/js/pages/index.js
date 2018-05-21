@@ -1,15 +1,24 @@
-﻿//[custom Javascript]
+//[custom Javascript]
 
 $(function () {
     "use strict";  
+    
+    var clients;
+    var payments;
+    
+    getClients();
+    getPayments();
+    
     initSparkline();
     initDonutChart();
-    getMorris('area', 'area_chart');
+    
+    console.log(clients);
+    console.log(payments);
+    console.log(tickets());
+    
+    getMorris('area', 'area_chart', clients, payments, tickets);
+    
 });
-
-var clients;
-var tickets;
-var payments;
 
 function getClients(){
     //gets total count of users
@@ -21,11 +30,11 @@ function getClients(){
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
-                clients = data.count;
+                clients = parseInt(data.count);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllClientsCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllClientsCount", true);
     xmlhttp.send();
 }
 
@@ -39,16 +48,17 @@ function getPayments(){
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
-                payments = data.amount;
+                payments = parseInt(data.amount);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getTotalPaymentsAmount", true);
+    xmlhttp.open("GET", "../api/agent/getTotalPaymentsAmount", true);
     xmlhttp.send();
 }
 
-function getTickets() {
+var tickets = function getTickets() {
     //gets total tickets
+    var obj = this;
     var data = '';
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -58,19 +68,16 @@ function getTickets() {
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
-                tickets = data.amount;
+                obj.tickets = parseInt(data.amount);
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllTicketsAmount", true);
+    xmlhttp.open("GET", "../api/agent/getAllTicketsAmount", true);
     xmlhttp.send();
+    return obj.tickets;
 }
 
-getClients();
-getPayments();
-getTickets();
-
-function getMorris(type, element) {
+function getMorris(type, element, val1, val2, val3) {
     if (type === 'area') {
         Morris.Area({
             element: element,
@@ -83,9 +90,9 @@ function getMorris(type, element) {
                 },
                 {
                     period: '2018 Q5',
-                    Tickets: parseInt(tickets),
-                    Payments: parseInt(payments),
-                    Clients: parseInt(clients)
+                    Tickets: val1,
+                    Payments: val2,
+                    Clients: val3
                 }],
             xkey: 'period',
             ykeys: ['Tickets', 'Payments', 'Clients'],
@@ -224,7 +231,7 @@ $(function () {
         markerStyle: {
             initial: {
                 fill: '#fff',
-                stroke: '#FFC107 '
+                stroke: '#FFC107'
             }
         },
         markers: [

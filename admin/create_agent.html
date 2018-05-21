@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/color_skins.css">
     <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="assets/js/pages/admin-add-admin.js"></script>
+    <script type="text/javascript" src="assets/js/pages/admin-notifications.js"></script>
 </head>
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -30,74 +31,24 @@
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
-
         <div class="navbar-header">
-            <a href="javascript:void(0);" class="bars" style="display: none;"></a>
+            <a href="javascript:void(0);" class="bars"></a>
             <a class="navbar-brand" href="index.html">Gafista</a>
         </div>
         <ul class="nav navbar-nav navbar-left">
             <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="zmdi zmdi-notifications"></i>
-                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+                <div class="notify"><span class=""></span><span class="point"></span></div>
             </a>
                 <ul class="dropdown-menu slideDown">
                     <li class="header">NOTIFICATIONS</li>
                     <li class="body">
-                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 254px;"><ul class="menu list-unstyled" style="overflow: hidden; width: auto; height: 254px;">
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-coral"> <i class="material-icons">person_add</i> </div>
-                                <div class="menu-info">
-                                    <h4>12 new members joined</h4>
-                                    <p> <i class="material-icons">access_time</i> 14 mins ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-turquoise"> <i class="material-icons">add_shopping_cart</i> </div>
-                                <div class="menu-info">
-                                    <h4>4 sales made</h4>
-                                    <p> <i class="material-icons">access_time</i> 22 mins ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle g-bg-cyan"> <i class="material-icons">delete_forever</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy Doe</b> deleted account</h4>
-                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle g-bg-blue"> <i class="material-icons">mode_edit</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy</b> changed name</h4>
-                                    <p> <i class="material-icons">access_time</i> 2 hours ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-slategray"> <i class="material-icons">comment</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> commented your post</h4>
-                                    <p> <i class="material-icons">access_time</i> 4 hours ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-seagreen"> <i class="material-icons">cached</i> </div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> updated status</h4>
-                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
-                                </div>
-                            </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle l-blue"> <i class="material-icons">settings</i> </div>
-                                <div class="menu-info">
-                                    <h4>Settings updated</h4>
-                                    <p> <i class="material-icons">access_time</i> Yesterday </p>
-                                </div>
-                            </a> </li>
-                        </ul><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.2); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                        <ul class="menu list-unstyled" id="notify">
+                        </ul>
                     </li>
-                    <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
+                    <li class="footer"> <a href="display_notifications.html">View All Notifications</a> </li>
                 </ul>
             </li>
             <li>

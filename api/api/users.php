@@ -14,14 +14,16 @@ class users
     function __construct(){
         session_start();
         $host = "localhost";
-        $user = "root";
-        $pass = "";
-        $db = "wastemanagement";
-        $this->con = mysqli_connect($host,$user,$pass,$db);
+        $user = "gafistac_user";
+        $pass = "*rUeF16j@w)T";
+        $db = "gafistac_db";
+        $this->con = mysqli_connect($host, $user, $pass, $db);
+        
     }
 
     public function index(){
-
+        $data["response"] = "success";
+        echo json_encode($data);
     }
 
     public function signin(){
@@ -94,6 +96,8 @@ class users
                             $id = mysqli_insert_id($this->con);
                             $sql = "INSERT INTO tbllogindetails (email, password, access, user_id) VALUES ('$email','$password','agent','$id')";
                             $res = mysqli_query($this->con, $sql);
+                            $sql1 = "INSERT INTO tblwallet (user_id) VALUES ('$id')";
+                            $res1 = mysqli_query($this->con, $sql1);
                             if ($res) {
                                 $data['success'] = true;
                             } else {
@@ -113,4 +117,26 @@ class users
         }
         echo json_encode($data);
     }
+    
+        public function changepassword(){
+        $result = array();
+        if(isset($_POST['txtpassword'])) {
+            $password = "";
+            $password = mysqli_real_escape_string($this->con, $_POST['txtpassword']);
+            $id = $_SESSION['userid'];
+            if(!empty($password)){
+                $sql = "UPDATE tbllogindetails SET password = '$password' WHERE user_id='$id'";
+                $res = mysqli_query($this->con, $sql);
+                if($res){
+                    $result['success'] = true;
+                }else{
+                    $result['success'] = false;
+                }
+            }else{
+                $result['success'] = false;
+            }
+        }
+        echo json_encode($result);
+    }
+    
 }

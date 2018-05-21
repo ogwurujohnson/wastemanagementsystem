@@ -25,7 +25,7 @@ function getUserWalletDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getClientWalletDetails", true);
+    xmlhttp.open("GET", "../api/client/getClientWalletDetails", true);
     xmlhttp.send();
 }
 
@@ -46,7 +46,7 @@ function getClientProperty() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/clientProperty", true);
+    xmlhttp.open("GET", "../api/client/clientProperty", true);
     xmlhttp.send();
 }
 
@@ -68,7 +68,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getClientDetails", true);
+    xmlhttp.open("GET", "../api/client/getClientDetails", true);
     xmlhttp.send();
 }
 
@@ -86,7 +86,7 @@ function getAllClientPropertiesCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getAllClientsPropertiesCount", true);
+    xmlhttp.open("GET", "../api/client/getAllClientsPropertiesCount", true);
     xmlhttp.send();
 }
 
@@ -104,7 +104,7 @@ function getAllClientTicketCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/getAllClientsTicketsCount", true);
+    xmlhttp.open("GET", "../api/client/getAllClientsTicketsCount", true);
     xmlhttp.send();
 }
 
@@ -120,6 +120,6 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/client/logout", true);
+    xmlhttp.open("GET", "../api/client/logout", true);
     xmlhttp.send();
 }

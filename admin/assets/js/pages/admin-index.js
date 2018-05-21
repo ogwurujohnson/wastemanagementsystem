@@ -31,7 +31,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "../api/agent/getAgentDetails", true);
     xmlhttp.send();
 }
 
@@ -50,7 +50,7 @@ function getAllClientsCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllClientsCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllClientsCount", true);
     xmlhttp.send();
 }
 
@@ -68,7 +68,7 @@ function getAllUsersCount(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllUsersCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllUsersCount", true);
     xmlhttp.send();
 }
 
@@ -86,7 +86,7 @@ function getAllPropertiesCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllPropertiesCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllPropertiesCount", true);
     xmlhttp.send();
 }
 
@@ -97,7 +97,6 @@ function getTotalPaymentsCount() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -105,7 +104,7 @@ function getTotalPaymentsCount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllPaymentsCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllPaymentsCount", true);
     xmlhttp.send();
 }
 
@@ -116,7 +115,6 @@ function getTotalPaymentsAmount(){
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -124,7 +122,7 @@ function getTotalPaymentsAmount(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getTotalPaymentsAmount", true);
+    xmlhttp.open("GET", "../api/agent/getTotalPaymentsAmount", true);
     xmlhttp.send();
 }
 
@@ -135,7 +133,6 @@ function getTotalTickets() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -143,7 +140,7 @@ function getTotalTickets() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllTicketsCount", true);
+    xmlhttp.open("GET", "../api/agent/getAllTicketsCount", true);
     xmlhttp.send();
 }
 
@@ -154,7 +151,6 @@ function getAllTicketsAmount() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -162,7 +158,7 @@ function getAllTicketsAmount() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllTicketsAmount", true);
+    xmlhttp.open("GET", "../api/agent/getAllTicketsAmount", true);
     xmlhttp.send();
 }
 
@@ -173,7 +169,6 @@ function getOngoingTickets(){
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -181,7 +176,7 @@ function getOngoingTickets(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllOngoingTickets", true);
+    xmlhttp.open("GET", "../api/agent/getAllOngoingTickets", true);
     xmlhttp.send();
 }
 
@@ -192,7 +187,6 @@ function getPendingTickets(){
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -200,7 +194,7 @@ function getPendingTickets(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllPendingTickets", true);
+    xmlhttp.open("GET", "../api/agent/getAllPendingTickets", true);
     xmlhttp.send();
 }
 
@@ -211,7 +205,6 @@ function getResolvedTickets() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            console.log(data);
             if(data.isLoggedIn === false){
                 document.location.href = "../sign-in.html";
             }else{
@@ -219,7 +212,7 @@ function getResolvedTickets() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAllResolvedTickets", true);
+    xmlhttp.open("GET", "../api/agent/getAllResolvedTickets", true);
     xmlhttp.send();
 }
 
@@ -231,7 +224,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "../api/agent/logout", true);
     xmlhttp.send();
 }
 

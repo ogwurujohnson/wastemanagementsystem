@@ -21,7 +21,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: 'POST',
-            url: '/gafista/api/agent/saveEditedTicket',
+            url: '../api/agent/saveEditedTicket',
             data: formData,
             dataType: 'json',
             encode: true
@@ -61,7 +61,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "../api/agent/getAgentDetails", true);
     xmlhttp.send();
 }
 
@@ -97,7 +97,7 @@ function getTicketList() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/alltickets", true);
+    xmlhttp.open("GET", "../api/agent/alltickets", true);
     xmlhttp.send();
 }
 
@@ -109,7 +109,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "../api/agent/logout", true);
     xmlhttp.send();
 }
 
@@ -126,7 +126,7 @@ function deleteTicket(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/deleteTicket/"+data, true);
+    xmlhttp.open("GET", "../api/agent/deleteTicket/"+data, true);
     xmlhttp.send();
 }
 
@@ -202,7 +202,7 @@ function editTicket(id){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getSingleTicket/"+ticketid, true);
+    xmlhttp.open("GET", "../api/agent/getSingleTicket/"+ticketid, true);
     xmlhttp.send();
 }
 
@@ -221,7 +221,7 @@ function getPropertyGroup() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getPropertyGroup", true);
+    xmlhttp.open("GET", "../api/agent/getPropertyGroup", true);
     xmlhttp.send();
 }
 

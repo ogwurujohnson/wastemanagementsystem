@@ -1,0 +1,47 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^gafistaconcepts.com [NC]
+RewriteRule ^(.*)$ https://www.gafistaconcepts.com/$1 [L,R=301]
+
+RewriteOptions inherit
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(.*)/facebook(.*)+ [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ index.php?p=facebook&pid=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_URI} !^(.*)/n_(.*)+ [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)?$ index.php?p=$1 [QSA,L]
+
+
+
+
+
+RewriteCond %{HTTP_HOST} ^gafistaconcepts\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.gafistaconcepts\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^public_html\/?(.*)$ "https\:\/\/gafistaconcepts\.com\/$1" [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.)?[OFFENDINGDOMAIN]\.[TLD]$ [NC]
+
+RewriteRule (.*) – [F]
+
+
+
+
+

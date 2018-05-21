@@ -22,7 +22,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "../api/agent/getAgentDetails", true);
     xmlhttp.send();
 }
 
@@ -54,7 +54,7 @@ function getBilling() {
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getBilling", true);
+    xmlhttp.open("GET", "../api/agent/getBilling", true);
     xmlhttp.send();
 }
 
@@ -66,7 +66,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "../api/agent/logout", true);
     xmlhttp.send();
 }
 

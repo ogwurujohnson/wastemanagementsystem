@@ -56,7 +56,7 @@
 							</ul>	
 						</div>
 					</div>				
-					<div class="col-md-3 col-sm-4">
+				<!--	<div class="col-md-3 col-sm-4">
 						<div class="header-tp-right">
 							<div class="header-right dropdown">					
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">en<span class="fa fa-angle-down"></span></a>	
@@ -71,7 +71,7 @@
 								</ul>								
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="appointment">
 						<a href="sign-up.html">SignUp</a>
 					</div>					
@@ -178,27 +178,41 @@
 					</div>					
 					<div class="col-md-7" id="about">
 						<div class="about-desc">
-							<h1>We provied best solution for your home and offices and Waste Product.</h1>
+							<h1>We provide best solution for your home and offices and Waste Product.</h1>
 							<p>Cleaning up the environment. Thanks to all our supporters around the planet, there is a big difference in the amount of recyclable beverage containers that aren’t making it back to the land fill or into the gutters and out to the ocean where they harm animals and the environment. </p>
-							<div class="about-countup">
+							<?php
+                            $host = "localhost";
+                            $user = "gafistac_user";
+                            $pass = "*rUeF16j@w)T";
+                            $db = "gafistac_db";
+                            $con = mysqli_connect($host,$user,$pass,$db);
+                            $result = array();
+                            $sql = "SELECT user_id FROM tbllogindetails WHERE access = 'agent' AND activated = 1";
+                            $res = mysqli_query($con, $sql);
+                            $result['clients'] = mysqli_num_rows($res);
+                            $sql = "SELECT id FROM tbltickets WHERE status = 'done'";
+                            $res = mysqli_query($con, $sql);
+                            $result['tickets'] = mysqli_num_rows($res);
+                            echo '<div class="about-countup">
 								<div class="counting-inner">
 									<div class="countup-text">
-										<h2 class="counter">5874</h2>
+										<h2 class="counter" id="projectcount">'.$result["tickets"].'</h2>
 										<h4>project done</h4>						
 									</div>
 								</div>						
 								<div class="counting-inner">
 									<div class="countup-text">
-										<h2 class="counter">6894</h2>
+										<h2 class="counter" id="clientcount">'.$result["clients"].'</h2>
 										<h4>happy client</h4>						
 									</div>
 								</div>							
 								<div class="counting-inner">
 									<div class="countup-text">
-										<h2 class="counter">218</h2>
+										<h2 class="counter">0</h2>
 										<h4>total award</h4>						
 									</div>
-								</div>
+								</div>';
+                            ?>
 							</div>
 							<p> Pick up from your home or office, we’d be happy to coordinate a pick up at your location..</p>
 						</div>				
@@ -396,7 +410,7 @@
 		<div class="footer-sec">
 			<div class="container">
 				<div class="row">				
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-4 col-sm-6">
 						<div class="footer-wedget-one">
 							<a href="index.php"><img src="img/logo.png" alt=""/></a>
 							<p>Cleaning up the environment. Thanks to all our supporters around the planet.</p>
@@ -414,13 +428,13 @@
 								<li><a href="#">optimization</a></li>
 								<li><a href="#">support</a></li>
 								<li><a href="#">investment</a></li>
-								<li><a href="#">marketing  strateecies</a></li>
+								<li><a href="#">recycling  strategy</a></li>
 							</ul>
 						</div>
 					</div>	
-					<div class="col-md-3 col-sm-6">
+					<!--	<div class="col-md-3 col-sm-6">
 						<div class="footer-wedget-two">
-							<h2>letest tag </h2>
+						<h2>letest tag </h2>
 							<ul>
 								<li><a href="#">content</a></li>
 								<li><a href="#">cost</a></li>
@@ -430,8 +444,8 @@
 								<li><a href="#">expert</a></li>								
 							</ul>
 						</div>
-					</div>					
-					<div class="col-md-3 col-sm-6">
+					</div>	-->				
+					<div class="col-md-5 col-sm-6">
 						<div class="footer-wedget-four">
 							<h2>contact us </h2>
 								<div class="inner-box">
@@ -498,6 +512,21 @@
 	<script src="js/jquery.meanmenu.min.js"></script>
 	<script src="js/custom.js"></script>
 	<!-- Scripts Js End -->	
+	
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a7201724b401e45400c8fb0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->	
+	
 </body>
 
 <!-- Mirrored from themeearth.com/tf/html/seobiz/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Jan 2018 00:04:44 GMT -->

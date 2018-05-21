@@ -39,10 +39,14 @@ $(document).ready(function () {
                 }
                 else if (data.success === "success") {
                     console.log(data);
-                    if(data.accounttype === "admin") {
-                        document.location.href = 'admin/index.html';
-                    }else if(data.accounttype === "agent"){
-                        document.location.href = 'user/index.html';
+                    if($('input[name=txtpassword]').val() === 'test' || $('input[name=txtpassword]').val() === 'Test' || $('input[name=txtpassword]').val() === 'TEST'){
+                        document.location.href = 'changepassword.html';
+                    }else {
+                        if (data.accounttype === "admin") {
+                            document.location.href = 'admin/index.html';
+                        } else if (data.accounttype === "agent") {
+                            document.location.href = 'user/index.html';
+                        }
                     }
                 }
             });

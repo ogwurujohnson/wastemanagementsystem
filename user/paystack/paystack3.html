@@ -11,6 +11,7 @@
 		return document.getElementById("users").value;
   }
   var pay_amount = document.getElementById("users").value;
+  
   function usersEmail(){
 	return document.getElementById("email").value;
   }
@@ -21,7 +22,7 @@
       key: 'pk_test_b8483c3605f63e0e32a5c797e7e9092402f48412',
       email: usersEmail(),
       amount: usersAmount(),
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      ref: 'Gafista -'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
       metadata: {
          custom_fields: [
             {

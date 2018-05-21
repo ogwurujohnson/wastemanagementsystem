@@ -18,7 +18,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: 'POST',
-            url: '/gafista/api/agent/addNewDriver',
+            url: '../api/agent/addNewDriver',
             data: formData,
             dataType: 'json',
             encode: true
@@ -52,7 +52,7 @@ function getUserDetails(){
             }
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/getAgentDetails", true);
+    xmlhttp.open("GET", "../api/agent/getAgentDetails", true);
     xmlhttp.send();
 }
 
@@ -64,7 +64,7 @@ function logout(){
             document.location.href = "../sign-in.html";
         }
     };
-    xmlhttp.open("GET", "/gafista/api/agent/logout", true);
+    xmlhttp.open("GET", "../api/agent/logout", true);
     xmlhttp.send();
 }
 

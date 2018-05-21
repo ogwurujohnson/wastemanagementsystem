@@ -1,0 +1,251 @@
+
+
+
+*::before,
+*::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+
+.title {
+  padding: 10px 20px;
+}
+.title span {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.half-transparent {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.year-block {
+  font-size: 5vmin;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.date-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.date-block__month {
+  font-size: 3vmin;
+  font-weight: bold;
+}
+.date-block__date {
+  font-size: 6vmin;
+  font-weight: bold;
+}
+.date-block__day {
+  font-size: 3vmin;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.calendar {
+  width: 100vmin;
+  height: 60vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #CA3644;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.5);
+          box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.5);
+}
+.calendar__days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vmin;
+}
+.calendar__day {
+  font-size: 1.4vmin;
+  display: inline-block;
+  width: 14.2857142857%;
+  height: 2vmin;
+}
+.calendar__month {
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 20%;
+  height: 33.33333%;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2vmin;
+  position: relative;
+}
+.calendar__month .title {
+  font-weight: bold;
+  font-size: 2vmin;
+}
+.calendar__month:nth-child(4n+1) {
+  background: #1AA1AF;
+}
+.calendar__month:nth-child(4n+2) {
+  background: #E86948;
+}
+.calendar__month:nth-child(4n+3) {
+  background: #EBC85B;
+}
+.calendar__month:nth-child(4n+4) {
+  background: #CA3644;
+}
+
+.clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+}
+.clock__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.clock__dot {
+  width: 5%;
+  height: 5%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+}
+.clock__hour {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  -webkit-animation: rotate 43200s infinite linear;
+          animation: rotate 43200s infinite linear;
+}
+.clock__hour__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.clock__hour::before {
+  width: 3%;
+  height: 30%;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  background: white;
+}
+.clock__minute {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  -webkit-animation: rotate 3600s infinite linear;
+          animation: rotate 3600s infinite linear;
+}
+.clock__minute__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.clock__minute::before {
+  width: 2%;
+  height: 40%;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  background: white;
+}
+.clock__second {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  -webkit-animation: rotate 60s infinite steps(60);
+          animation: rotate 60s infinite steps(60);
+}
+.clock__second__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.clock__second::before {
+  width: 1%;
+  height: 45%;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  background: white;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
