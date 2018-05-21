@@ -2,7 +2,7 @@ Options -MultiViews
 
 RewriteEngine On
 
-RewriteBase /api
+RewriteBase /gafista/api
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

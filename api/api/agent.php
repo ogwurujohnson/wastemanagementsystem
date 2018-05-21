@@ -16,10 +16,13 @@ class agent
     {
         header('Content-Type:application/json');
         session_start();
-        $host = "localhost";
+        /*$host = "localhost";
         $user = "gafistac_user";
         $pass = "*rUeF16j@w)T";
-        $db = "gafistac_db";
+        $db = "gafistac_db";*/
+        $user = "root";
+        $pass = "";
+        $db = "wastemanagement";
         $this->con = mysqli_connect($host, $user, $pass, $db);
         $this->authUser();
     }
