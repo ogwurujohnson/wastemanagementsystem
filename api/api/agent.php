@@ -270,6 +270,8 @@ class agent
                     $id = mysqli_insert_id($this->con);
                     $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','test','agent','$id', 0)";
                     $res = mysqli_query($this->con, $sql) or die(mysqli_error($this->con));
+                    $sql1 = "INSERT INTO tblwallet (user_id) VALUES ('$id')";
+                    $res1 = mysqli_query($this->con, $sql1);
                     if($res){
                         $this->data['success'] = true;
                     }else{

@@ -292,9 +292,7 @@
 				Website: www.lawma.org
 				</p>
 			</div>
-
-
-<b>LAGOS WASTE MANAGEMENT AUTHORITY </b>
+			<b>LAGOS WASTE MANAGEMENT AUTHORITY </b>
 
 
 
@@ -332,6 +330,8 @@
 			
 		</div>
 	</header>
+
+
 
 	<section>
 		<div class="container">

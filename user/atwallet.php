@@ -17,7 +17,6 @@
 <link rel="stylesheet" href="assets/css/color_skins.css">
     <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="assets/js/pages/user-wallet.js"></script>
-    
 
 </head>
 
@@ -165,41 +164,47 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="body">
-                        <!--modified to talk to paystack API -->
+                        <!--modified to talk to Interswitch API -->
+                        <?php 
+	                        
+	                        $_SESSION["txn_ref"] = "JB"  . intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) ); // random(ish) 7 digit int
+	
+                        ?>
                         <form action="interswitchxxx/confirm.php" method="POST">
                           <div class="form-group form-float">
 
                               <div class="form-line" hidden>
-                                  <input type="text" id="id" class="form-control" name="id" required>
+                                  <input type="text" id="id" class="form-control" name="cust_id" required>
 
                               </div>
-                              <div class="form-line" hidden>
-                                  <input type="text" id="phonenumber" class="form-control" name="phone" required>
-
-                              </div>
-                              
                                 <div class="form-line">
-                                    <input type="text" id="email" class="form-control" name="email" required disabled>
+                                    <input type="text" id="email" class="form-control" name="useremail"  required disabled>
+                                </div>
+                                <div class="form-line">
+                                    <input type="text" id="firstname" class="form-control" name="firstname" required>
                                     
                                 </div>
                                 <div class="form-line">
-                                    <input type="text" id="amount" class="form-control" name="amount" required placeholder="enter amount"
+                                    <input type="text" id="lastname" class="form-control" name="lastname" required>
                                     
                                 </div>
-                                
+                                <div class="form-line">
+                                    <input type="text" id="amount" class="form-control" name="amount" placeholder="Enter Amount" required>
+                                   
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" id="checkbox" name="checkbox">
                                 <label for="checkbox">I have entered all the details correctly</label>
                             </div>
-                            <button class="btn btn-raised btn-primary waves-effect" type="button" onclick="payWithPaystack()">SUBMIT</button>
+                            <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-       <!--<script>
+        <!--<script>
 
             function usersAmount(){
                 return document.getElementById("amount").value;
