@@ -102,7 +102,7 @@
 <div class="menu-container">
     <div class="menu">
         <ul class="pullDown">
-            <li><a href="index2.html">Dashboard</a>
+            <li><a href="index.html">Dashboard</a>
                 
             </li>
 
@@ -123,6 +123,7 @@
                                     
                 </ul>
             </li>
+            <li><a href="userprofile.html">Verify Payments Made in Bank</a>
 
             <li><a href="javascript:void(0)">Property</a>
                 <ul class="pullDown">

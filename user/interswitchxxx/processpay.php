@@ -20,9 +20,7 @@ $returnedreference = $_POST["retRef"];
 $description = $_POST["desc"];
 $convertedamount = $submittedamt/100;
 
-if($response == "00"){
-    echo '<div class="alert alert-danger"><strong>Great!</strong> <a href="javascript:void(0);" class="alert-link">Your Transaction was successfull</a> and your wallet has been funded.</div>';
-}
+
 
 
 $servername = "localhost";
@@ -49,7 +47,7 @@ $res1 = mysqli_query($conn,$sql1);
 }else{}
 
 if ($conn->query($sql) === TRUE) {
-    
+    header('Location: https://www.gafistaconcepts.com/user/uvwallet.php?status=$response');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

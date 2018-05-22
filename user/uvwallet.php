@@ -1,4 +1,5 @@
 <?php
+$response = $_GET['status'];
 if($response == "00"){
     echo '<div class="alert alert-danger"><strong>Great!</strong> <a href="javascript:void(0);" class="alert-link">Your Transaction was successfull</a> and your wallet has been funded.</div>';
 }
@@ -120,7 +121,7 @@ if($response == "00"){
             </li>
             <li><a href="javascript:void(0)">Wallet</a>
                 <ul class="pullDown">                                   
-                    <li><a href="uvwallet.html">View Wallet</a> </li>
+                    <li><a href="uvwallet.php">View Wallet</a> </li>
                     <li><a href="atwallet.php">Fund Wallet</a> </li>
                     
                 </ul>
