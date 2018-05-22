@@ -162,7 +162,7 @@ class client
     public function gettransactiontimeline($user = '')
     {
         $id = $_SESSION['userid'];
-        $sql = "SELECT * FROM tblcreditdebit WHERE user_id = $id ORDER BY date DESC LIMIT 0,2";
+        $sql = "SELECT * FROM tblcreditdebit WHERE user_id = $id ORDER BY date DESC LIMIT 0,5";
         $res = mysqli_query($this->con, $sql);
         $result = [];
         $count = 0;

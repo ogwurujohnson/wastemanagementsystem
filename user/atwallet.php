@@ -111,8 +111,8 @@
             </li>
             <li><a href="javascript:void(0)">Wallet</a>
                 <ul class="pullDown">                                   
-                    <li><a href="uvwallet.html">View Wallet</a> </li>
-                    <li><a href="atwallet.html">Fund Wallet</a> </li>
+                    <li><a href="uvwallet.php">View Wallet</a> </li>
+                    <li><a href="atwallet.php">Fund Wallet</a> </li>
                     
                 </ul>
             </li>

@@ -6,7 +6,7 @@
 	
 	$pay_item_id = 101;
 	
-	$site_redirect_url = "https://localhost/gafista/user/uvwallet.php";
+	$site_redirect_url = "https://localhost/gafista/user/interswitchxxx/processpay.php";
     //$txn_ref = "JB4005559";
     $txn_ref = "JB"  . intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) ); // random(ish) 7 digit int
     $_SESSION["txn_ref"] = $txn_ref;	
