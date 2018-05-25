@@ -35,10 +35,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO tblpayments (User_Id, Transaction_Id, Amount, responseType, payReference, returnedReference, description)
-VALUES ('$userid', '$submittedref', '$convertedamount','$response','$payrefernce','$returnedreference','$description')";
+$sql = "UPDATE tblpayments SET status = '1', responseType = '$response', payReference = '$payrefernce', returnedReference = '$returnedreference', description = '$description' WHERE User_Id = '$userid' && status = '0' && Transaction_Id = '$submittedref' ";
 
-if($response == "00"){
+if($response == "00" && $conn->query($sql) === TRUE){
 $query = "UPDATE tblwallet SET balance = balance + $convertedamount WHERE user_id = $userid ";
 $insert_v = mysqli_query($conn,$query);
 
@@ -47,7 +46,8 @@ $res1 = mysqli_query($conn,$sql1);
 }else{}
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: https://www.gafistaconcepts.com/user/uvwallet.php?status=$response');
+    header("Location: https://localhost/gafista/user/uvwallet.php");
+    
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

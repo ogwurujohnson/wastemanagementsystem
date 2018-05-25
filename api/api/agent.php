@@ -16,8 +16,8 @@ class agent
     {
         header('Content-Type:application/json');
         session_start();
-        /*$host = "localhost";
-        $user = "gafistac_user";
+        $host = "localhost";
+		/*$user = "gafistac_user";
         $pass = "*rUeF16j@w)T";
         $db = "gafistac_db";*/
         $user = "root";

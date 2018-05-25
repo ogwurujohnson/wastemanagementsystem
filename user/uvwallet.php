@@ -1,9 +1,4 @@
-<?php
-$response = $_GET['status'];
-if($response == "00"){
-    echo '<div class="alert alert-danger"><strong>Great!</strong> <a href="javascript:void(0);" class="alert-link">Your Transaction was successfull</a> and your wallet has been funded.</div>';
-}
-?>
+
 
 <!doctype html>
 <html class="no-js " lang="en">

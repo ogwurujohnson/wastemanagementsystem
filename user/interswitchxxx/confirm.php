@@ -24,16 +24,37 @@
 	//QUICKTELLER
 	//$product_id = 800;	//QUICKTELLER
 	//$mac    = "B57380CE4A0E45C50F1EB4D8899D061735A7AFAB0C3BD3AE90CFF5A2117962C177DCFC319AC35F49E5CA06B0DFAD83EB2E321E44CD35B7C502EFF84E45458524";
-    
-    $originalamount = $_POST["amount"];
-	$amount = $_POST["amount"] * 100;
+    $userenteredamount = $_POST["amount"];
+    $originalamount = $_POST["amount"] + 100;
+	$amount = $originalamount * 100;
     $cust_id = $_POST["cust_id"];
     $hashv  = $txn_ref . $product_id . $pay_item_id . $amount . $site_redirect_url . $mac;
     $customerName = $_POST["firstname"]." ".$_POST["lastname"];
     $hash  = hash('sha512',$hashv);       
     $_SESSION["amount"] = $amount;
-	
-	
+    
+    
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "wastemanagement";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        } 
+
+        $sql = "INSERT INTO tblpayments (User_Id, Transaction_Id, Amount, status)
+        VALUES ('$cust_id', '$txn_ref', '$originalamount','0')";
+    
+        if ($conn->query($sql) === TRUE) {
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        
+        $conn->close();
 	
 	$url = "https://sandbox.interswitchng.com/collections/w/pay"; // SANDBOX
 	//$url = "https://webpay.interswitchng.com/collections/w/pay"; // LIVE
@@ -402,7 +423,7 @@
 				<tbody>
 					<tr>
 						<td class="desc"><h3>Fund Wallet</h3>You are funding your wallet for waste-pickup ticket generation on the system</td>
-						<td class="qty"><?php echo $originalamount ?></td>
+						<td class="qty"><?php echo $userenteredamount ?></td>
 						
 					</tr>
 				</tbody>
@@ -414,7 +435,7 @@
 							<td class="desc"></td>
 							<td class="qty"></td>
 							<td class="unit">SUBTOTAL:</td>
-							<td class="total"><?php echo $originalamount; ?></td>
+							<td class="total"><?php echo $userenteredamount; ?></td>
 						</tr>
 						<tr>
 							<td class="desc"></td>
@@ -425,7 +446,7 @@
 						<tr>
 							<td class="desc"></td>
 							<td class="unit" colspan="2">GRAND TOTAL:</td>
-							<td class="total"><?php $newamount = $originalamount + 100; echo $newamount; ?></td>
+							<td class="total"><?php $newamount = $userenteredamount + 100; echo $newamount; ?></td>
 						</tr>
 					</tbody>
 				</table>
