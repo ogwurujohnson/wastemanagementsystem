@@ -151,7 +151,7 @@
                                     
                                 </div>
                                 <div class="form-line">
-                                    <input type="text" id="amount" class="form-control" name="amount" placeholder="Enter Amount" required>
+                                    <input type="number" id="amount" class="form-control" name="amount" placeholder="Enter Amount" required>
                                    
                                 </div>
                             </div>

@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html class="no-js " lang="en">
 <head>
@@ -126,12 +124,47 @@
             </div>
         </div>
     </div>
-
-
-
-
-    
-    <div class="container-fluid">
+<?php
+if(!$_GET){
+}
+else{
+$txnRef = $_GET["response"];
+$submittedref = $_GET["submittedref"];
+if($txnRef === '00'){
+   echo '<div class="alert bg-green alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Successful</br>Transaction Reference:' .$submittedref.'</div>';
+   
+}
+  elseif($txnRef === '61'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Exceeds Withdrawal Limit </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '14'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Invalid Card Number </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '51'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Insufficient Funds </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '54'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Expired Card </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '56'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: No Card Record </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '55'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Incorrect PIN </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '01'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Refer to Financial Institution </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  elseif($txnRef === '02'){
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Refer to Financial Institution, Special Condition </br>Transaction Reference:' .$submittedref.' </div>';
+  }
+  else{
+      echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br></br>Transaction Reference:' .$submittedref.' </div>';
+      
+    }
+}
+?>
+<div class="container-fluid">
         
      
      

@@ -140,7 +140,7 @@
     echo  	'Transaction Amount (N):<input class="form-control" type="text" name="amount"/></br></br>';
     echo '</div>';
     echo '<div class = "form-inline">';
-    echo  '<input class="btn btn-raised btn-primary waves-effect" type="submit" name="submit"/>';
+    echo  '<input class="btn btn-raised btn-primary waves-effect" type="submit" value="Requery" name="submit"/>';
     echo '</div>';
 	echo  '</form>';
 	//HTML Form

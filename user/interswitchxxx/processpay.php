@@ -46,7 +46,7 @@ $res1 = mysqli_query($conn,$sql1);
 }else{}
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: https://localhost/gafista/user/uvwallet.php");
+    header("Location: https://localhost/gafista/user/uvwallet.php?response=$response&&submittedref=$submittedref ");
     
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
