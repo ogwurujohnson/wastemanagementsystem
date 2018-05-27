@@ -1,11 +1,12 @@
-$(function () {
+/*$(function () {
     $('.js-basic-example').DataTable();
 
     //Exportable table
-    $('.js-exportable').DataTable({
+    $('').DataTable({
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
     });
-});
+});*/
+

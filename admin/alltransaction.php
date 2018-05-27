@@ -1,24 +1,24 @@
-<!doctype html>
+<!Doctype html>
 <html class="no-js " lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<meta name="description" content="">
+<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title>:: Gafista ::</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>:: Gafista Admin ::</title>
 <!-- Favicon-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/footable-bootstrap/css/footable.bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/footable-bootstrap/css/footable.standalone.min.css">
-
+<!-- JQuery DataTable Css -->
+<link rel="stylesheet" href="assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css"/>
+<link rel="stylesheet" href="assets/plugins/morrisjs/morris.css" />
 <!-- Custom Css -->
 <link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ecommerce.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
     <script type="text/javascript" src="assets/js/pages/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/pages/admin-property.js"></script>
+    <script type="text/javascript" src="assets/js/pages/admin-index.js"></script>
     <script type="text/javascript" src="assets/js/pages/admin-notifications.js"></script>
 </head>
 <body class="theme-orange">
@@ -29,9 +29,10 @@
 		<div class="line"></div>
 		<div class="line"></div>
         <p>Please wait...</p>
-        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
+        <div class="m-t-30"><img src="assets/images/logop.png" width="48" height="48" alt="Gafista"></div>
     </div>
 </div>
+<!-- Overlay For Sidebars -->
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
@@ -45,7 +46,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
                 <div class="notify"><span class=""></span><span class="point"></span></div>
-            </a>
+                </a>
                 <ul class="dropdown-menu slideDown">
                     <li class="header">NOTIFICATIONS</li>
                     <li class="body">
@@ -57,7 +58,7 @@
             </li>
             <li>
                 <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true">
-                    <i class="zmdi zmdi-fullscreen"></i>
+                    <i class="zmdi zmdi-fullscreen"></i>                   
                 </a>
             </li>
             <li><a href="#" class="mega-menu" data-close="true" id="logout"><i class="zmdi zmdi-power"></i></a></li>
@@ -139,7 +140,7 @@
             </li>
 
             <li> <a href="alltransaction.php" class="menu-toggle"><i class="zmdi zmdi-book"></i><span>All Transactions</span> </a>
-                <li> <a href="requery.php" class="menu-toggle"><i class="zmdi zmdi-refresh"></i><span>Requery Pending Transactions</span> </a>
+            <li> <a href="requery.php" class="menu-toggle"><i class="zmdi zmdi-refresh"></i><span>Requery Pending Transactions</span> </a>
 
 
 
@@ -159,9 +160,9 @@
             <div class="chat-widget">
             <ul class="chat-scroll-list clearfix">
                 <li class="left float-left">
-                    <img src="assets/images/xs/avatar3.jpg"  alt="">
+                    <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
                     <div class="chat-info">
-                        <a class="name" href="javascript:void(0);">Alexander</a>
+                        <a class="name" href="index.html#">Alexander</a>
                         <span class="datetime">6:12</span>                            
                         <span class="message">Hello, John </span>
                     </div>
@@ -172,11 +173,11 @@
                 <li class="right">
                     <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
                 </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg"  alt="">
-                    <div class="chat-info"> <a class="name" href="javascript:void(0);">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
+                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
+                    <div class="chat-info"> <a class="name" href="index.html#">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
                 </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg"  alt="">
-                    <div class="chat-info"> <a class="name" href="javascript:void(0);">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
+                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
+                    <div class="chat-info"> <a class="name" href="index.html#">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
                 </li>
                     <li class="right">
                     <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
@@ -192,65 +193,91 @@
         </div>
     </div>
 </div>
-
-<section class="content ecommerce-page">
+<!-- Main Content -->
+<section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Property List
-                <small class="text-muted">Welcome to Gafista Application</small>
+                <h2>All Transaction Details TABLE 
+                <small class="text-muted">Welcome to Gafista</small>
                 </h2>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
-                <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Gafista</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.html">Property</a></li>
-                    <li class="breadcrumb-item active">Property List</li>
-                </ul>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card product_item_list">
-                    <div class="body table-responsive">
-                        <table class="table table-hover m-b-0">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <table id= "transactions" class="table table-bordered table-striped table-hover dataTable">
                             <thead>
                                 <tr>
-                                    <th data-breakpoints="sm xs">S/N</th>
-                                    <th data-breakpoints="sm xs">UserName</th>
-                                    <th data-breakpoints="sm xs">Property Name</th>
-                                    <th data-breakpoints="sm xs">Property Group</th>
-                                    <th data-breakpoints="sm xs">Address</th>
-                                    <th data-breakpoints="sm xs">Date</th>
-                                    <th data-breakpoints="sm xs">Action</th>
+                                <th>Name</th>
+                                <th>Transaction_Id</th>
+                                <th>Amount</th>
+                                <th>responseType</th>
+                                <th>description</th>
+                                <th>date</th>
                                 </tr>
                             </thead>
-                            <tbody id="tblpropertylist">
-
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Transaction_Id</th>
+                                    <th>Amount</th>
+                                    <th>responseType</th>
+                                    <th>description</th>
+                                    <th>date</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
                             </tbody>
                         </table>
-                    </div>        
+                    </div>
                 </div>
             </div>
         </div>
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="contact.html#">Previous</a></li>
-            <li class="page-item active"><a class="page-link" href="contact.html#">1</a></li>
-            <li class="page-item"><a class="page-link" href="contact.html#">2</a></li>
-            <li class="page-item"><a class="page-link" href="contact.html#">3</a></li>
-            <li class="page-item"><a class="page-link" href="contact.html#">Next</a></li>
-            </ul>
-    </div>   
+    </div>
 </section>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#transactions').DataTable({
+            "columns": [
+                {"data": "Name"},
+                {"data": "Transaction_Id"},
+                {"data": "Amount"},
+                {"data": "responseType"},
+                {"data": "description"},
+                {"data": "Date"}
+            ],
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: 'fetchalltransaction.php',
+                type: 'POST'
+            },
+            dom: 'Bfrtip',
+            buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        });
+    });
+</script>
+
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<!-- Jquery DataTable Plugin Js --> 
+<script src="assets/bundles/datatablescripts.bundle.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/buttons.flash.min.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/buttons.html5.min.js"></script>
+<script src="assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="assets/js/pages/tables/footable.js"></script><!-- Custom Js --> 
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+<script src="assets/js/pages/tables/jquery-datatable.js"></script>
 </body>
 </html>

@@ -194,12 +194,14 @@
     </div>
 </div>
 <!-- Main Content -->
-<section class="content home">
+
+
+<section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Dashboard
-                <small class="text-muted">Welcome to Gasfista Application</small>
+                
+                <h2 class="text-muted">Welcome to Gafista Application
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
@@ -211,202 +213,276 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="card widget_2">
-            <ul class="row clearfix list-unstyled m-b-0">
-              <li class="col-lg-3 col-md-6 col-sm-12">
-                <div class="body">
-                  <div class="row">
-                    <div class="col-7">
-                      <h5 class="m-t-0">Users</h5>
-                      <small class="text-small"></small>
-                    </div>
-                    <div class="col-5 text-right">
-                      <h2 class="" id="userscount">20</h2>
-                      <small class="info">users</small>
-                    </div>
-                    <div class="col-12">
-                      <div class="progress m-t-20">
-                        <div class="progress-bar l-green" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-lg-3 col-md-6 col-sm-12">
-                <div class="body">
-                  <div class="row">
-                    <div class="col-7">
-                      <h5 class="m-t-0">Properties</h5>
-                      <small class="text-small"></small>
-                    </div>
-                    <div class="col-5 text-right">
-                      <h2 class="" id="propertiescount">12%</h2>
-                      <small class="info">properties</small>
-                    </div>
-                    <div class="col-12">
-                      <div class="progress m-t-20">
-                        <div class="progress-bar l-blush" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-lg-3 col-md-6 col-sm-12">
-                <div class="body">
-                  <div class="row">
-                    <div class="col-7">
-                      <h5 class="m-t-0">Payments</h5>
-                      <small class="text-small" id="paymentsamount"></small>
-                    </div>
-                    <div class="col-5 text-right">
-                      <h2 class="" id="paymentscount">39</h2>
-                      <small class="info">payments</small>
-                    </div>
-                    <div class="col-12">
-                      <div class="progress m-t-20">
-                        <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-lg-3 col-md-6 col-sm-12">
-                <div class="body">
-                  <div class="row">
-                    <div class="col-7">
-                      <h5 class="m-t-0">Tickets</h5>
-                      <small class="text-small"></small>
-                    </div>
-                    <div class="col-5 text-right">
-                      <h2 class="" id="ticketscount">8</h2>
-                      <small class="info">tickets</small>
-                    </div>
-                    <div class="col-12">
-                      <div class="progress m-t-20">
-                        <div class="progress-bar l-blue" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>       
         <div class="row clearfix">
-            <div class="col-lg-8 col-md-12">
-                <div class="card product-report">
-                    <div class="header">
-                        <h2>Annual Report</h2>
-                    </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
                     <div class="body">
-                        <div class="row clearfix m-b-15">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-amber"><i class="zmdi zmdi-chart-donut"></i></div>
-                                <div class="col-in">
-                                    <h3 class="counter m-b-0" id="ttticketamount">$4,516</h3>
-                                    <small class="text-muted m-t-0">Total Ticket</small>
+                        <!--modified to talk to Interswitch API -->
+                        <?php
+	$subpdtid = 1076; // your product ID is always constant
+	
+	//Form
+    echo  '<form action="" method="post">';
+    echo '<div class = "form-group form-float">';
+    echo '<div class = "form-inline">';
+    echo  	'Transaction Reference:<input class="form-control" type="text" name="txn_ref"/></br></br>';
+    echo '</div>';
+    echo '<div class = "form-inline">';
+    echo  	'Transaction Amount (N):<input class="form-control" type="text" name="amount"/></br></br>';
+    echo '</div>';
+    echo '<div class = "form-inline">';
+    echo  '<input class="btn btn-raised btn-primary waves-effect" type="submit" value="Requery" name="submit"/>';
+    echo '</div>';
+	echo  '</form>';
+	//HTML Form
+	
+	if(!empty($_POST['submit'])) 
+	{
+		$submittedamt = $_POST["amount"] * 100;	//submitted amount (eg 8353349)
+		$submittedref = $_POST["txn_ref"];	//submitted transaction reference (eg 250OID100000164)
+	  
+		//Calculate HASH
+		$mac = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F" ; // the mac key sent to you. Always constant.
+		$string_to_hash = $subpdtid.$submittedref.$mac;  // concatenate the strings ("Prod_ID"."txn_ref"."mac") for hash again
+        $hash = hash('sha512',$string_to_hash); 	//hash to be passed in header
+		
+		$query_elements = array(
+			"productid"=>$subpdtid,
+			"amount"=>$submittedamt,
+			"transactionreference"=>$submittedref
+			
+		);
+		$link_query_values = http_build_query($query_elements);
+		
+		$url = "https://sandbox.interswitchng.com/collections/api/v1/gettransaction.json?" . $link_query_values; // json
+		
+		
+		echo '</br>------------------------------------------------------------------</br>';
+		echo "<u><b>COMPLETE REQUERY URL</b></u></br>";
+		echo $url;
+		echo '</br>------------------------------------------------------------------</br>';
+
+		
+		//header details. Put hash here
+		$headers = array(
+						"GET /HTTP/1.1",
+						"Host: sandbox.interswitchng.com",
+						"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.1) Gecko/2008070208 Firefox/3.0.1",
+						//"Content-type:  multipart/form-data",
+						//"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
+						"Accept-Language: en-us,en;q=0.5",
+						//"Accept-Encoding: gzip,deflate",
+						//"Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7",
+						"Keep-Alive: 300",
+						"Connection: keep-alive",
+						"Hash: $hash"	//hash value
+                    );        
+	   //print_r2($headers);
+		$ch = curl_init();  //INITIALIZE CURL///////////////////////////////
+//               
+
+		//curl_setopt($ch, CURLOPT_PROXYUSERPWD,'john.bello:VioladagambA1%');
+		//curl_setopt($ch, CURLOPT_PROXY,'172.16.10.20:8080');
+
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 60); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); 
+		curl_setopt($ch, CURLOPT_POST, false );
+//
+		$data = curl_exec($ch);  //EXECUTE CURL STATEMENT///////////////////////////////
+		$json = null;
+		if (curl_errno($ch)) 
+		{ 
+			print "Error: " . curl_error($ch) . "</br></br>";
+			
+			$errno = curl_errno($ch);
+			$error_message = curl_strerror($errno);
+			print $error_message . "</br></br>";;
+			
+			print_r($headers);
+		}
+		else 
+		{  
+			// Show me the result
+			$json = json_decode($data, TRUE);
+			//print_r2($json);
+			curl_close($ch);    //END CURL SESSION///////////////////////////////
+			
+			//print_r(array_values($json));
+			
+ 			// Display Array Elements///////////////
+			echo "Transaction Amount: ".$json["Amount"]."</br>";
+			echo "Card Number: ".$json["CardNumber"]."</br>";
+			echo "Transaction Reference: ".$json["MerchantReference"]."</br>";
+			echo "Payment Reference: ".$json["PaymentReference"]."</br>";
+			echo "Retrieval Reference Number: ".$json["RetrievalReferenceNumber"]."</br>";
+			//echo "Lead Bank CBN Code:".$json["LeadBankCbnCode"]."</br>";
+			//echo "Lead Bank Name: ".$json["LeadBankName"]."</br>";
+			//echo "Split Accounts: ".$json["SplitAccounts"]."</br>";
+			echo "Transaction Date: ".$json["TransactionDate"]."</br>";
+			echo "Response: ";if($json["ResponseCode"] === '00'){echo 'Successful Transaction';}else{echo 'Transaction failed';} echo "</br>";
+			echo "Response Description: ".$json["ResponseDescription"]."</br>";	
+			// //////Display Array Elements//////////// 
+        }
+        
+                
+		session_write_close();
+	}
+	else               
+	{
+		// Display the Form and the Submit Button
+		echo "NO POST DATA";
+	}	
+	
+	function print_r2($val)
+{
+        echo '<pre>';
+        print_r($val);
+        echo  '</pre>';
+}
+
+
+?>
+
+                       <!-- <form action="interswitchxxx/confirm.php" method="POST">
+                          <div class="form-group form-float">
+
+                              <div class="form-line" hidden>
+                                  <input type="text" id="id" class="form-control" name="cust_id" required>
+
+                              </div>
+                                <div class="form-line">
+                                    <input type="text" id="email" class="form-control" name="useremail"  required disabled>
+                                </div>
+                                <div class="form-line">
+                                    <input type="text" id="firstname" class="form-control" name="firstname" placeholder="Payers Firstname" required>
+                                    
+                                </div>
+                                <div class="form-line">
+                                    <input type="text" id="lastname" class="form-control" name="lastname" placeholder="Payers Lastname" required>
+                                    
+                                </div>
+                                <div class="form-line">
+                                    <input type="text" id="amount" class="form-control" name="amount" placeholder="Enter Amount" required>
+                                   
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-turquoise"><i class="zmdi zmdi-card"></i></div>
-                                <div class="col-in">
-                                    <h3 class="counter m-b-0" id="ttpaymentamount">$6,481</h3>
-                                    <small class="text-muted m-t-0">Total Payment</small>
-                                </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox" name="checkbox">
+                                <label for="checkbox">I have entered all the details correctly</label>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-parpl"><i class="zmdi zmdi-chart"></i></div>
-                                <div class="col-in">
-                                    <h3 class="counter m-b-0" id="ttusers">$3,915</h3>
-                                    <small class="text-muted m-t-0">Total Clients</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="area_chart" class="graph"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="row clearfix">
-                    <div class="col-lg-12 col-md-6 col-sm-12">
-                        <div class="card top-report">
-                            <div class="body">
-                                <h3 class="m-t-0"><span id="ongoingtickets">120</span> <i class="zmdi zmdi-trending-up float-right"></i></h3>
-                                <p class="text-muted">Ongoing Tickets</p>
-                                <div class="progress">
-                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                </div>
-                                <small></small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-6 col-sm-12">
-                        <div class="card top-report">
-                            <div class="body">
-                                <h3 class="m-t-0"><span id="pendingtickets">1,600</span> <i class="zmdi zmdi-trending-up float-right"></i></h3>
-                                <p class="text-muted">Pending Tickets</p>
-                                <div class="progress">
-                                    <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                </div>
-                                <small></small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="card top-report">
-                            <div class="body">
-                                <h3 class="m-t-0"><span id="resolvedtickets">26.8%</span> <i class="zmdi zmdi-trending-down float-right"></i></h3>
-                                <p class="text-muted">Resolved Tickets</p>
-                                <div class="progress">
-                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
-                                </div>
-                                <small></small>
-                            </div>
-                        </div>
+                            <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>
+                        </form>-->
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row clearfix" style="display:none">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Browser Usage</h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu slideUp ">
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="donut_chart" class="dashboard-donut-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">
-                        <p class="m-b-0">© 2018 Gafista Admin </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--<script>
+
+            function usersAmount(){
+                return document.getElementById("amount").value;
+            }
+            var pay_amount = document.getElementById("amount").value;
+            function usersEmail(){
+                return document.getElementById("email").value;
+            }
+            var email = usersEmail();
+            function userId(){
+                return document.getElementById("id").value;
+            }
+            var user_id = userId();
+            function userPhone(){
+                return document.getElementById("phonenumber").value;
+            }
+            var user_phone = userPhone();
+
+            function payWithPaystack(){
+                var handler = PaystackPop.setup({
+                    key: 'pk_test_b8483c3605f63e0e32a5c797e7e9092402f48412',
+                    email: usersEmail(),
+                    amount: usersAmount(),
+                    ref: 'Gafista'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                    metadata: {
+                        custom_fields: [
+                            {
+                                display_name: "Mobile Number",
+                                variable_name: "mobile_number",
+                                value: user_phone
+                            }
+                        ]
+                    },
+                    callback: function(response){
+                        window.location = "paystack/entry.php?amount="+usersAmount()+"&user_id="+userId();
+                    },
+                    onClose: function(){
+                        alert('Payment Completed');
+                    }
+                });
+                handler.openIframe();
+            }
+        </script>-->
     </div>
 </section>
+
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+<script src="assets/bundles/countTo.bundle.js"></script>
+<script src="assets/bundles/sparkline.bundle.js"></script>
+<script src="assets/js/pages/widgets/infobox/infobox-1.js"></script>
 <script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
-<script src="assets/bundles/sparkline.bundle.js"></script> <!-- Sparkline Plugin Js -->
-<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob Plugin Js -->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/index.js"></script>
-<script src="assets/js/pages/charts/jquery-knob.min.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script> 
+<script src="assets/js/pages/index2.js"></script>
+<script>
+    /*global $ */
+    $(document).ready(function() {
+        "use strict";
+        $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+        //Checks if li has sub (ul) and adds class for toggle icon - just an UI
+      
+        $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+      
+        $(".menu > ul > li").hover(function(e) {
+          if ($(window).width() > 943) {
+            $(this).children("ul").stop(true, false).fadeToggle(150);
+            e.preventDefault();
+          }
+        });
+        //If width is more than 943px dropdowns are displayed on hover    
+        $(".menu > ul > li").on('click',function() {
+          if ($(window).width() <= 943) {
+            $(this).children("ul").fadeToggle(150);
+          }
+        });
+        //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+      
+        $(".h-bars").on('click',function(e) {
+          $(".menu > ul").toggleClass('show-on-mobile');
+          e.preventDefault();
+        });
+        //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+      
+      });
+    </script>
+<script src="paystack/inline.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a7201724b401e45400c8fb0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
-</html>
+</html> 
