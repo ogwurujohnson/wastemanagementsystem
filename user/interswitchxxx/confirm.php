@@ -46,8 +46,8 @@
         die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "INSERT INTO tblpayments (Name,User_Id, Transaction_Id, Amount, status)
-        VALUES ('$customerName','$cust_id', '$txn_ref', '$originalamount','0')";
+        $sql = "INSERT INTO tblpayments (Name,User_Id, Transaction_Id, Amount,responseType,payReference,returnedReference,description, status)
+        VALUES ('$customerName','$cust_id', '$txn_ref', '$originalamount','-','-','-','-','0')";
     
         if ($conn->query($sql) === TRUE) {
         } else {

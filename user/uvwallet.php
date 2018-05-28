@@ -158,6 +158,9 @@ if($txnRef === '00'){
   elseif($txnRef === '02'){
       echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Refer to Financial Institution, Special Condition </br>Transaction Reference:' .$submittedref.' </div>';
   }
+  elseif($txnRef === 'Z6'){
+    echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br>Reason: Incomplete Transaction, Cancelled By User </br>Transaction Reference:' .$submittedref.' </div>';
+}
   else{
       echo '<div class="alert bg-red alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Transaction Unsuccessful</br></br>Transaction Reference:' .$submittedref.' </div>';
       

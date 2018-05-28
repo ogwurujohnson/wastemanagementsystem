@@ -97,7 +97,7 @@ class users
                         $res = mysqli_query($this->con, $sql);
                         if ($res) {
                             $id = mysqli_insert_id($this->con);
-                            $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','$password','agent','$id','0')";
+                            $sql = "INSERT INTO tbllogindetails (email, password, access, user_id, activated) VALUES ('$email','$password','agent','$id','1')";
                             $res = mysqli_query($this->con, $sql);
                             $sql1 = "INSERT INTO tblwallet (user_id) VALUES ('$id')";
                             $res1 = mysqli_query($this->con, $sql1);
